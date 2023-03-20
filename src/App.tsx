@@ -1,30 +1,48 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+//import libraries:
+import { createBrowserRouter, Route, RouterProvider, createRoutesFromElements, Navigate } from "react-router-dom";
+
+//import components:
+import Layout from "./components/Layout/Layout";
+
+//import pages:
+import AdminPanel from "./pages/AdminPanel.page";
+import Homepage from "./pages/Homepage.page";
+import HowClient from "./pages/HowClient.page";
+import HowFreelancer from "./pages/HowFreelancer.page";
+import LinkContainer from "./pages/LinkContainer.page";
+import Login from "./pages/Login.page";
+import NotFound from "./pages/NotFound.page";
+import ProfileClient from "./pages/ProfileClient.page";
+import ProfileFreelancer from "./pages/ProfileFreelancer.page";
+import Register from "./pages/Register.page";
+import Search from "./pages/Search.page";
+import GlobalStyle from "./theme/globalStyles";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<Layout />}>
+        <Route index element={<LinkContainer />} />
+        <Route path="homepage" element={<Homepage />} />
+        <Route path="admin" element={<AdminPanel />} />
+        <Route path="howclient" element={<HowClient />} />
+        <Route path="howfreelancer" element={<HowFreelancer />} />
+        <Route path="login" element={<Login />} />
+        <Route path="client" element={<ProfileClient />} />
+        <Route path="freelancer" element={<ProfileFreelancer />} />
+        <Route path="register" element={<Register />} />
+        <Route path="search" element={<Search />} />
+        <Route path="not-found" element={<NotFound />} />
+        <Route path="*" element={<Navigate to="not-found" replace={true} />} />
+      </Route>,
+    ),
+  );
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-    </div>
+    <>
+      <GlobalStyle />
+      <RouterProvider router={router} />
+    </>
   );
 }
 
