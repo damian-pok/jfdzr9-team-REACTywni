@@ -12,10 +12,12 @@ import HowFreelancer from "./pages/HowFreelancer.page";
 import LinkContainer from "./pages/LinkContainer.page";
 import Login from "./pages/Login.page";
 import NotFound from "./pages/NotFound.page";
+import PrivacyPolicy from "./pages/PrivacyPolicy.page";
 import ProfileClient from "./pages/ProfileClient.page";
 import ProfileFreelancer from "./pages/ProfileFreelancer.page";
 import Register from "./pages/Register.page";
 import Search from "./pages/Search.page";
+import Statute from "./pages/Statute.page";
 import GlobalStyle from "./theme/globalStyles";
 
 function App() {
@@ -32,6 +34,8 @@ function App() {
         <Route path="freelancer" element={<ProfileFreelancer />} />
         <Route path="register" element={<Register />} />
         <Route path="search" element={<Search />} />
+        <Route path="privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="statute" element={<Statute />} />
         <Route path="not-found" element={<NotFound />} />
         <Route path="*" element={<Navigate to="not-found" replace={true} />} />
       </Route>,
