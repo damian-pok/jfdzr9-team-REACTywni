@@ -7,8 +7,10 @@ ${normalize}
 :root {
   //global color styles - template wireframes colors:
   --dark-grey-color: #3B5266;
+  --blue-grey-color: #5d81a0;
+  --light-blue-grey-color: #a3bfcf;
   --light-grey-color: #C2D1D9;
-  --very-light-color: #F5F9FC;
+  --very-light-grey-color: #F5F9FC;
   --white-color: #fff;
   
   //global color styles - light mode:
@@ -31,20 +33,26 @@ ${normalize}
    //import font style:
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 
-  //global font style:
-  max-width: 1440px;
-  padding: 2rem;
-  color: var(--dark-grey-color);
+  //global style:
   line-height: 1.8;
-
-}
-body {
+  color: var(--dark-grey-color);
   background-color: var(--very-light-color);
-  display: flex;
+  margin: 0;
+  padding: 0;
 }
+
+html{
+  width: auto;
+}
+
+main{
+  width: 100%;
+}
+
 h1 {
   font-size: var(--Default-Headline-1-size);
 }
+
 a {
   color: var(--dark-grey-color);
   text-decoration: none;
