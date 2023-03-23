@@ -32,16 +32,27 @@ ${normalize}
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 
   //global font style:
-  max-width: 1440px;
-  padding: 2rem;
   color: var(--dark-grey-color);
   line-height: 1.8;
-
 }
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+    width: auto;
+}
+
 body {
   background-color: var(--very-light-color);
-  display: flex;
 }
+
+.root{
+    min-width: 100vh;
+}
+
 h1 {
   font-size: var(--Default-Headline-1-size);
 }
