@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const FooterField = styled.div`
-  width: 100%;
   height: fit-content;
   display: flex;
   flex-direction: row;
