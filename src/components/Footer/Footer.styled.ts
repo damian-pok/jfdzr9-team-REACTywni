@@ -8,7 +8,7 @@ export const FooterField = styled.div`
   justify-content: space-between;
   align-items: center;
   box-sizing: content-box;
-  padding: 20px 30px;
+  padding: 1.5rem 2.5rem;
   background-color: var(--color-white);
   border-top: 1px solid var(--light-grey-color);
 `;
@@ -17,7 +17,7 @@ export const FooterNavField = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 50px;
+  gap: 3rem;
 `;
 
 export const LinkFooter = styled(Link)`
