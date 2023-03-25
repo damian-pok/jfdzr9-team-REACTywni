@@ -1,4 +1,4 @@
-import SearchPageNavigation from "../components/SearchPageNavigation/SearchPageNavigation.component";
+import SearchPageNavigation from "../components/HowClientDescription/HowClientDescription.component";
 
 const Search = () => {
   return <SearchPageNavigation />;

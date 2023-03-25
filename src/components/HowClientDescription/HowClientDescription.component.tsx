@@ -1,17 +1,17 @@
-import { SearchPageDescription } from "./SearchPageNavigation.styled";
+import { SearchPageDescription } from "./HowClientDescription.styled";
 
-const SearchPageNavigation = () => {
+const HowClientDescription = () => {
   return (
     <>
       <SearchPageDescription>
-        <section>
-          <h1>Znajdź designera</h1>
+        <h1>Znajdź designera</h1>
+        <p>
           Potrzebujesz kogoś niebanalnego, kto zrealizuje Twój projekt? Nie mogłeś lepiej trafić! Dzięki nam znajdziesz
           designera, który sprawi, że Twój projekt wkrótce zachwyci wszystkich!
-        </section>
+        </p>
       </SearchPageDescription>
     </>
   );
 };
 
-export default SearchPageNavigation;
+export default HowClientDescription;

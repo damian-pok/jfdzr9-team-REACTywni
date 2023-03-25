@@ -1,5 +1,11 @@
+import HowClientDescription from "../components/HowClientDescription/HowClientDescription.component";
+
 const HowClient = () => {
-  return <h1>How it works - for Client!</h1>;
+  return (
+    <>
+      <HowClientDescription />
+    </>
+  );
 };
 
 export default HowClient;
