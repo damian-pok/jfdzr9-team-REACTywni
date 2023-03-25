@@ -16,6 +16,7 @@ import Login from "./pages/Login.page";
 import NotFound from "./pages/NotFound.page";
 import PrivacyPolicy from "./pages/PrivacyPolicy.page";
 import ProfileClient from "./pages/ProfileClient.page";
+import ProfileForm from "./pages/ProfileForm.page";
 import ProfileFreelancer from "./pages/ProfileFreelancer.page";
 import Register from "./pages/Register.page";
 import Search from "./pages/Search.page";
@@ -32,6 +33,7 @@ function App() {
         <Route path="howclient" element={<HowClient />} />
         <Route path="howfreelancer" element={<HowFreelancer />} />
         <Route path="login" element={<Login />} />
+        <Route path="profile" element={<ProfileForm />} />
         <Route path="client" element={<ProfileClient />} />
         <Route path="freelancer" element={<ProfileFreelancer />} />
         <Route path="register" element={<Register />} />
