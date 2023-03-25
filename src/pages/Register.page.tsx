@@ -24,9 +24,13 @@ const Register = () => {
   const [error, setError] = useState("");
 
   const onSubmit: SubmitHandler<IForm> = ({ email, password }) => {
-    createUserWithEmailAndPassword(auth, email, password).catch((error: FirebaseError) => {
-      setError(firebaseErrors[error.code as FirebaseErrorsKeys]);
-    });
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        console.log(userCredential.user);
+      })
+      .catch((error: FirebaseError) => {
+        setError(firebaseErrors[error.code as FirebaseErrorsKeys]);
+      });
   };
 
   return (
