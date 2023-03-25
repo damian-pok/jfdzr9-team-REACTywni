@@ -10,6 +10,8 @@ import { ChoiceRadio, ChoiceRadioGroup, ProfileInput } from "../components/Profi
 //firebase config files
 import { firebaseErrors } from "../firebase/firebase.errors";
 import { auth } from "../firebase/firebase.config";
+import { ProfileInputClient } from "../components/ProfileInputClient/ProfileInputClient.component";
+import { ProfileInputFreelancer } from "../components/ProfileInputFreelancer/ProfileInputFreelancer.component";
 
 //types and interfaces
 interface IProfileForm {
@@ -37,7 +39,7 @@ const ProfileForm = () => {
             control={control}
             render={() => (
               <ChoiceRadio>
-                <input name={"role"} type={"radio"} value={"Client"} onChange={radioHandler} />{" "}
+                <input name={"role"} type={"radio"} value={"client"} onChange={radioHandler} />{" "}
                 <label htmlFor="Freelancer">Client</label>
               </ChoiceRadio>
             )}
@@ -47,13 +49,14 @@ const ProfileForm = () => {
             control={control}
             render={() => (
               <ChoiceRadio>
-                <input name={"role"} type={"radio"} value={"Freelancer"} onChange={radioHandler} />{" "}
+                <input name={"role"} type={"radio"} value={"freelancer"} onChange={radioHandler} />{" "}
                 <label htmlFor="Freelancer">Freelancer</label>
               </ChoiceRadio>
             )}
           />
         </ChoiceRadioGroup>
-        {role && <h2>{role}</h2>}
+        {role === "client" && <ProfileInputClient />}
+        {role === "freelancer" && <ProfileInputFreelancer />}
       </ProfileInput>
     </>
   );
