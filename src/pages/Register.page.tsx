@@ -28,13 +28,9 @@ const Register = () => {
   const navigate = useNavigate();
 
   const onSubmit: SubmitHandler<IForm> = ({ email, password }) => {
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        setUser(userCredential.user.uid);
-      })
-      .catch((error: FirebaseError) => {
-        setError(firebaseErrors[error.code as FirebaseErrorsKeys]);
-      });
+    createUserWithEmailAndPassword(auth, email, password).catch((error: FirebaseError) => {
+      setError(firebaseErrors[error.code as FirebaseErrorsKeys]);
+    });
   };
 
   useEffect(() => {
