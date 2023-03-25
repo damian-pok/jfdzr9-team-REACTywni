@@ -7,8 +7,10 @@ ${normalize}
 :root {
   //global color styles - template wireframes colors:
   --dark-grey-color: #3B5266;
+  --blue-grey-color: #5d81a0;
+  --light-blue-grey-color: #a3bfcf;
   --light-grey-color: #C2D1D9;
-  --very-light-color: #F5F9FC;
+  --very-light-grey-color: #F5F9FC;
   --white-color: #fff;
   
   //global color styles - light mode:
@@ -53,9 +55,11 @@ body {
     min-width: 100vh;
 }
 
+
 h1 {
   font-size: var(--Default-Headline-1-size);
 }
+
 a {
   color: var(--dark-grey-color);
   text-decoration: none;
