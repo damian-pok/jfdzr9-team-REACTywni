@@ -1,4 +1,4 @@
-export const MenuElements = [
+export const menuElements = [
   {
     id: 1,
     title: "Branding",
