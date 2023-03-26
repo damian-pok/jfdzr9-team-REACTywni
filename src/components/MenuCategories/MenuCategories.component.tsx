@@ -5,7 +5,7 @@ import { DropDownList } from "../DropDownLists/DropDownLists.component";
 import { useState } from "react";
 
 export const MenuCategories = () => {
-  const [hovered, setHovered] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
 
   return (
     <>
@@ -13,9 +13,9 @@ export const MenuCategories = () => {
         {menuElements.map((item) => {
           if (item.title === "Branding") {
             return (
-              <MenuButton key={item.id} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+              <MenuButton key={item.id} onMouseEnter={() => setDropdown(true)} onMouseLeave={() => setDropdown(false)}>
                 {item.title}
-                {hovered && <DropDownList />}
+                {dropdown && <DropDownList />}
               </MenuButton>
             );
           }
