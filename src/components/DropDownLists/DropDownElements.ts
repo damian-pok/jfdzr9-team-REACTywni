@@ -97,3 +97,23 @@ export const dropDownIlustracje = [
     path: "./ilustracje/opcja3",
   },
 ];
+
+export const dropDownInne = [
+  {
+    id: 1,
+    title: "opcja1",
+    path: "./inne/opcja1",
+  },
+
+  {
+    id: 2,
+    title: "opcja2",
+    path: "./inne/opcja2",
+  },
+
+  {
+    id: 3,
+    title: "opcja3",
+    path: "./inne/opcja3",
+  },
+];
