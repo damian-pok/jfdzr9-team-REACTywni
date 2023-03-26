@@ -12,7 +12,7 @@ import { firebaseErrors } from "../firebase/firebase.errors";
 import { auth } from "../firebase/firebase.config";
 
 //types and interfaces
-interface IForm {
+export interface IForm {
   email: string;
   password: string;
 }
