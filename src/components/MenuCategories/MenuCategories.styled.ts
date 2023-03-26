@@ -21,6 +21,9 @@ export const MenuButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.3s all ease-out;
+  cursor: pointer;
+
   :hover {
     color: var(--white-color);
     background-color: var(--blue-grey-color);
