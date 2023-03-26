@@ -1,15 +1,13 @@
 import { Link } from "react-router-dom";
 import { PrimaryButton } from "../UI/Buttons/Buttons.styled";
 import { ComponentsField, NavigationBox } from "./NavigationFreelancerClient.styled";
+import DeflautImageHomepage from "./../../assets/deflaut-image-homepage.png";
 
 const NavigationFreelancerClient = () => {
   return (
     <ComponentsField>
       <NavigationBox>
-        <img
-          src="./../../../public/deflaut-image-homepage.png"
-          alt="Dla designera, przejście do strony głównej dla designerów"
-        />
+        <img src={DeflautImageHomepage} alt="Dla designera, przejście do strony głównej dla designerów" />
         <h2>Dla designera</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend, leo ac dictum bibendum, ante nunc
@@ -21,10 +19,7 @@ const NavigationFreelancerClient = () => {
         </Link>
       </NavigationBox>
       <NavigationBox>
-        <img
-          src="./../../../public/deflaut-image-homepage.png"
-          alt="Dla zleceniodawcy, przejście do strony głównej dla zleceniodawców"
-        />
+        <img src={DeflautImageHomepage} alt="Dla zleceniodawcy, przejście do strony głównej dla zleceniodawców" />
         <h2>Dla zleceniodawcy</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eleifend, leo ac dictum bibendum, ante nunc
