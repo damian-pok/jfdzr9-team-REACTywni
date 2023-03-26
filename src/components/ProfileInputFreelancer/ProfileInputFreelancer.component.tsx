@@ -39,7 +39,7 @@ export const ProfileInputFreelancer = () => {
 
   return (
     <>
-      <ProfileInputFreelancerStyled onSubmit={handleSubmit(onSubmit)}>
+      <ProfileInputFreelancerStyled onSubmit={onSubmit}>
         <Controller
           name="firstName"
           control={control}

@@ -38,7 +38,7 @@ export const ProfileInputClient = () => {
 
   return (
     <>
-      <ProfileInputClientStyled onSubmit={handleSubmit(onSubmit)}>
+      <ProfileInputClientStyled onSubmit={onSubmit}>
         <Controller
           name="company"
           control={control}
