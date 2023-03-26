@@ -12,6 +12,14 @@ export const MenuCategories = () => {
     <>
       <MenuCategoriesButtons>
         {menuElements.map((item) => {
+          if (item.title === "Branding") {
+            return (
+              <MenuButton key={item.id} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+                <Link to={item.path}>{item.title}</Link>
+                {hovered && <DropDownList />}
+              </MenuButton>
+            );
+          }
           return (
             <MenuButton key={item.id}>
               <Link to={item.path}>{item.title}</Link>
