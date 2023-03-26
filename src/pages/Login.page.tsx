@@ -23,6 +23,7 @@ const Login = () => {
 
   const onSubmit: SubmitHandler<IForm> = ({ email, password }) => {
     signInWithEmailAndPassword(auth, email, password)
+      .then()
       .then((userCredentials) => setUser(userCredentials.user.uid))
       .catch((error: FirebaseError) => {
         setError(firebaseErrors[(error as FirebaseError).code as FirebaseErrorsKeys]);
