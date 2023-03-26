@@ -34,6 +34,8 @@ ${normalize}
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 
   //global font style:
+  max-width: 1440px;
+  padding: 2rem;
   color: var(--dark-grey-color);
   line-height: 1.8;
 }
@@ -49,6 +51,7 @@ html{
 
 body {
   background-color: var(--very-light-color);
+  display: flex;
 }
 
 .root{
@@ -66,6 +69,10 @@ a {
   :hover{
     color: var(--light-grey-color);
   }
+}
+
+input {
+  min-height: var(--Default-Headline-3-size);
 }
 `;
 

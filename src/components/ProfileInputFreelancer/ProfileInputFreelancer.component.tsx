@@ -1,9 +1,13 @@
 //libraries
+import { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import { addFreelancer } from "../../firebase/addFreelancer";
 import { AboutMeStyled, ProfileInputFreelancerStyled } from "./ProfileInputFreelancer.styled";
 
 //types
-interface IProfileInputFreelancer {
+export interface IProfileInputFreelancer {
+  uid: string;
   firstName: string;
   secondName: string;
   email: string;
@@ -16,10 +20,26 @@ interface IProfileInputFreelancer {
 }
 
 export const ProfileInputFreelancer = () => {
-  const { control } = useForm<IProfileInputFreelancer>();
+  const { control, handleSubmit } = useForm<IProfileInputFreelancer>();
+  const [success, setSuccess] = useState(false);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (success) {
+      navigate("/search");
+    }
+  }, [success]);
+
+  const onSubmit = handleSubmit((data) => {
+    addFreelancer(data).then(() => {
+      setSuccess(true);
+    });
+  });
+
   return (
     <>
-      <ProfileInputFreelancerStyled>
+      <ProfileInputFreelancerStyled onSubmit={handleSubmit(onSubmit)}>
         <Controller
           name="firstName"
           control={control}
@@ -66,7 +86,7 @@ export const ProfileInputFreelancer = () => {
           render={({ field }) => <input placeholder="Galeria" type={"text"} {...field} />}
         />
 
-        <button>Send</button>
+        <button type="submit">Send</button>
       </ProfileInputFreelancerStyled>
     </>
   );

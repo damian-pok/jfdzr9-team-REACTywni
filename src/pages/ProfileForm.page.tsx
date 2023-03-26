@@ -1,15 +1,10 @@
 //import libraries
-import { useForm, Controller, SubmitHandler } from "react-hook-form";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { FirebaseError } from "@firebase/util";
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useForm, Controller } from "react-hook-form";
 //import styles
 import { ChoiceRadio, ChoiceRadioGroup, ProfileInput } from "../components/ProfileInput/ProfileInput.styled";
 
 //firebase config files
-import { firebaseErrors } from "../firebase/firebase.errors";
-import { auth } from "../firebase/firebase.config";
 import { ProfileInputClient } from "../components/ProfileInputClient/ProfileInputClient.component";
 import { ProfileInputFreelancer } from "../components/ProfileInputFreelancer/ProfileInputFreelancer.component";
 
@@ -18,8 +13,6 @@ interface IProfileForm {
   client: string;
   freelancer: string;
 }
-
-type FirebaseErrorsKeys = keyof typeof firebaseErrors;
 
 const ProfileForm = () => {
   const { control } = useForm<IProfileForm>();
@@ -55,9 +48,9 @@ const ProfileForm = () => {
             )}
           />
         </ChoiceRadioGroup>
-        {role === "client" && <ProfileInputClient />}
-        {role === "freelancer" && <ProfileInputFreelancer />}
       </ProfileInput>
+      {role === "client" && <ProfileInputClient />}
+      {role === "freelancer" && <ProfileInputFreelancer />}
     </>
   );
 };

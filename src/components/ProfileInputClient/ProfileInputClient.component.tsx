@@ -1,11 +1,15 @@
 //libraries
 import { Controller, useForm } from "react-hook-form";
+import { useEffect, useState } from "react";
 
 //components
 import { ProfileInputClientStyled } from "./ProfileInputClient.styled";
+import { addClient } from "../../firebase/addClient";
+import { useNavigate } from "react-router-dom";
 
 //types
-interface IProfileInputClient {
+export interface IProfileInputClient {
+  uid: string;
   company: string;
   email: string;
   nip: number;
@@ -15,10 +19,26 @@ interface IProfileInputClient {
 }
 
 export const ProfileInputClient = () => {
-  const { control } = useForm<IProfileInputClient>();
+  const { control, handleSubmit } = useForm<IProfileInputClient>();
+  const [success, setSuccess] = useState(false);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (success) {
+      navigate("/search");
+    }
+  }, [success]);
+
+  const onSubmit = handleSubmit((data) => {
+    addClient(data).then(() => {
+      setSuccess(true);
+    });
+  });
+
   return (
     <>
-      <ProfileInputClientStyled>
+      <ProfileInputClientStyled onSubmit={handleSubmit(onSubmit)}>
         <Controller
           name="company"
           control={control}
@@ -49,7 +69,7 @@ export const ProfileInputClient = () => {
           control={control}
           render={({ field }) => <input placeholder="Ulica i numer" type={"text"} {...field} />}
         />
-        <button>Send</button>
+        <button type="submit">Send</button>
       </ProfileInputClientStyled>
     </>
   );

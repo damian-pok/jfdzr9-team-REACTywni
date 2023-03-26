@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ProfileInputFreelancerStyled = styled.div`
+export const ProfileInputFreelancerStyled = styled.form`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
