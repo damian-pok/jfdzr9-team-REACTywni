@@ -1,4 +1,5 @@
 import { PlansArea } from "./Plans.styled";
+import SinglePlanWidget from "../SinglePlanWidget/SinglePlanWidget.component";
 
 export const Plans = () => {
   return (
@@ -9,6 +10,7 @@ export const Plans = () => {
         exercitationem dolore? Rem odit excepturi deserunt distinctio sequi hic aliquam. Cumque deserunt officia ad
         excepturi, suscipit repellat?
       </p>
+      <SinglePlanWidget />
     </PlansArea>
   );
 };
