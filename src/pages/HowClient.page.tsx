@@ -1,9 +1,10 @@
-import HowClientDescription from "../components/HowClientDescription/HowClientDescription.component";
+import { MenuCategories } from "../components/MenuCategories/MenuCategories.component";
 
 const HowClient = () => {
   return (
     <>
-      <HowClientDescription />
+      <h1>How it works - for Client!</h1>
+      <MenuCategories />
     </>
   );
 };
