@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const SearchPageDescription = styled.div`
+  height: fit-content;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
   text-align: center;
-
-  width: 557px;
+  padding: 4rem;
 `;
