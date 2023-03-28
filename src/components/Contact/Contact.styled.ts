@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ContactFormField = styled.div`
+export const SectionContactField = styled.div`
   width: 1440px;
   display: flex;
   flex-direction: column;
@@ -11,7 +11,6 @@ export const ContactFormField = styled.div`
 `;
 
 export const ContactField = styled.div`
-  width: 1440px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -20,7 +19,7 @@ export const ContactField = styled.div`
 `;
 
 export const ContactInformationField = styled.div`
-  //width: 50%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

@@ -1,4 +1,4 @@
-import { ContactFormField, ContactField, ContactInformationField, IconField } from "./Contact.styled";
+import { SectionContactField, ContactField, ContactInformationField, IconField } from "./Contact.styled";
 //icon import
 import PhoneIcon from "./../../assets/phone-icon.png";
 import MailIcon from "./../../assets/mail-icon.png";
@@ -7,7 +7,7 @@ import ContactForm from "../ContactForm/ContactForm.components";
 
 const Contact = () => {
   return (
-    <ContactFormField>
+    <SectionContactField>
       <h2>Masz pytania? Jesteśmy dla Ciebie!</h2>
       <ContactField>
         <ContactInformationField>
@@ -28,7 +28,7 @@ const Contact = () => {
         </ContactInformationField>
         <ContactForm />
       </ContactField>
-    </ContactFormField>
+    </SectionContactField>
   );
 };
 
