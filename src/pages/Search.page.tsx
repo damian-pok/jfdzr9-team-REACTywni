@@ -1,5 +1,7 @@
+import SearchPageNavigation from "../components/HowClientDescription/HowClientDescription.component";
+
 const Search = () => {
-  return <h1>Szukajka!</h1>;
+  return <SearchPageNavigation />;
 };
 
 export default Search;
