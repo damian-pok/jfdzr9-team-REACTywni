@@ -1,6 +1,7 @@
 import { MenuCategories } from "../components/MenuCategories/MenuCategories.component";
 import HowItWorksDescription from "../components/HowItWorksDescription/HowItWorksDescription.component";
 import Plans from "../components/Plans/Plans.component";
+import { FAQ } from "../components/FAQ/FAQ.component";
 
 const HowClient = () => {
   return (
@@ -8,6 +9,7 @@ const HowClient = () => {
       <HowItWorksDescription />
       <MenuCategories />
       <Plans />
+      <FAQ />
     </>
   );
 };
