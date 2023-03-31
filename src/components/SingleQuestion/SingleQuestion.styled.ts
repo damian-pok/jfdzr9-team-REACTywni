@@ -16,10 +16,8 @@ export const QuestionField = styled.div`
 `;
 
 export const QuestionButton = styled.button`
-  font-weight: bold;
-  font-size: 30px;
   border: none;
+  background: none;
   cursor: pointer;
   padding: 0.4rem;
-  background-color: none;
 `;
