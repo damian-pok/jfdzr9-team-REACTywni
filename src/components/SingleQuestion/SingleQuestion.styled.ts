@@ -21,4 +21,5 @@ export const QuestionButton = styled.button`
   border: none;
   cursor: pointer;
   padding: 0.4rem;
+  background-color: none;
 `;
