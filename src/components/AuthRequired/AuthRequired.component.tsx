@@ -4,7 +4,7 @@ import { useAuth } from "../../context/auth.context";
 const AuthRequired = () => {
   const { user, loading } = useAuth();
 
-  if (loading) return <div>Loading ...</div>;
+  if (loading) return <div>Loading...</div>;
 
   return user ? <Outlet /> : <Navigate to={"/login"} />;
 };
