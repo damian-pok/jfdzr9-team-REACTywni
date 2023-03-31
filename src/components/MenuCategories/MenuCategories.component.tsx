@@ -4,23 +4,40 @@ import { menuElements } from "./MenuElements";
 import { DropDownList } from "../DropDownLists/DropDownLists.component";
 import { useState } from "react";
 
-export const MenuCategories = () => {
-  const [dropdown, setDropdown] = useState(false);
+type MenuElement = {
+  title: string;
+};
+
+export const MenuCategories = (props) => {
+  const [dropdown, setDropdown] = useState("");
+  const [option, setOption] = useState(false);
+
+  const handleSelectChange = (event) => {
+    setOption(event.target.value);
+    props.onCategorySelect(props.title, event.target.value);
+  };
+
+  const handleMenuElements = menuElements.map((element: MenuElement) => ({
+    title: element.title,
+  }));
+
+  const handleMouseEnter = () => {
+    setDropdown(true);
+  };
+
+  const handleMouseLeave = () => {
+    setDropdown(false);
+  };
 
   return (
     <>
-      <MenuCategoriesButtons>
-        {menuElements.map((item) => {
-          if (item.title === "Branding") {
-            return (
-              <MenuButton key={item.id} onMouseEnter={() => setDropdown(true)} onMouseLeave={() => setDropdown(false)}>
-                {item.title}
-                {dropdown && <DropDownList />}
-              </MenuButton>
-            );
-          }
-          return <MenuButton key={item.id}>{item.title}</MenuButton>;
-        })}
+      <MenuCategoriesButtons onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        {handleMenuElements.map((element) => (
+          <MenuButton key={element.title} title={element.title}>
+            {element.title}
+          </MenuButton>
+        ))}
+        {dropdown && <DropDownList />}
       </MenuCategoriesButtons>
     </>
   );

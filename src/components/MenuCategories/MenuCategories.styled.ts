@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MenuCategoriesButtons = styled.ul`
+export const MenuCategoriesButtons = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -9,7 +9,7 @@ export const MenuCategoriesButtons = styled.ul`
   padding: 45px;
 `;
 
-export const MenuButton = styled.li`
+export const MenuButton = styled.button`
   width: fit-content;
   height: 40px;
   padding: 20px 40px;
