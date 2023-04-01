@@ -16,7 +16,7 @@ const Contact = () => {
         </IconField>
         <IconField>
           <Icon src={MailIcon} />
-          <p>contact@findadesigner.pl</p>
+          <p>kontakt@findadesigner.pl</p>
         </IconField>
         <IconField>
           <Icon src={PinIcon} />
