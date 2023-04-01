@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ButtonBranding = styled.button`
+export const CategoriesButton = styled.button`
   width: fit-content;
   height: 40px;
   padding: 20px 40px;

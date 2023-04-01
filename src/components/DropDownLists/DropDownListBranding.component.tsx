@@ -1,4 +1,4 @@
-import { DetailsList, ListElement } from "../DropDownLists.styled";
+import { DetailsList, ListElement } from "./DropDownLists.styled";
 
 export function DropDownListBranding() {
   return (

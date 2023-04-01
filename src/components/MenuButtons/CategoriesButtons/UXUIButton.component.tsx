@@ -1,8 +1,8 @@
-import { ButtonBranding } from "./BrandingButton.styled";
-import { DropDownListBranding } from "../DropDownLists/Branding/DropDownListBranding.component";
+import { CategoriesButton } from "./CategoriesButton.styled";
+import { DropDownListUXUI } from "../../DropDownLists/DropDownListUXUI.component";
 import { useState, useEffect, useRef } from "react";
 
-export const BrandingButton = () => {
+export const UXUIButton = () => {
   const [dropdown, setDropdown] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -25,8 +25,8 @@ export const BrandingButton = () => {
 
   return (
     <div>
-      <ButtonBranding onClick={handleClick}>Branding</ButtonBranding>
-      {dropdown && <DropDownListBranding ref={dropdownRef} />}
+      <CategoriesButton onClick={handleClick}>UX/UI</CategoriesButton>
+      {dropdown && <DropDownListUXUI ref={dropdownRef} />}
     </div>
   );
 };
