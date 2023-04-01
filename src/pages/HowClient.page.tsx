@@ -1,10 +1,15 @@
 import { MenuCategories } from "../components/MenuCategories/MenuCategories.component";
+import HowItWorksDescription from "../components/HowItWorksDescription/HowItWorksDescription.component";
+import Plans from "../components/Plans/Plans.component";
+import { FAQ } from "../components/FAQ/FAQ.component";
 
 const HowClient = () => {
   return (
     <>
-      <h1>How it works - for Client!</h1>
+      <HowItWorksDescription />
       <MenuCategories />
+      <Plans />
+      <FAQ />
     </>
   );
 };

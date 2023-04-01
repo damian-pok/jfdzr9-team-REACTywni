@@ -2,6 +2,7 @@ import React from "react";
 
 //import libraries:
 import { createBrowserRouter, Route, RouterProvider, createRoutesFromElements, Navigate } from "react-router-dom";
+import AuthRequired from "./components/AuthRequired/AuthRequired.component";
 
 //import components:
 import Layout from "./components/Layout/Layout";
@@ -29,17 +30,19 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<LinkContainer />} />
         <Route path="homepage" element={<Homepage />} />
-        <Route path="admin" element={<AdminPanel />} />
         <Route path="howclient" element={<HowClient />} />
         <Route path="howfreelancer" element={<HowFreelancer />} />
-        <Route path="login" element={<Login />} />
-        <Route path="profile" element={<ProfileForm />} />
-        <Route path="client" element={<ProfileClient />} />
-        <Route path="freelancer" element={<ProfileFreelancer />} />
-        <Route path="register" element={<Register />} />
         <Route path="search" element={<Search />} />
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="statute" element={<Statute />} />
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
+        <Route path="profile" element={<ProfileForm />} />
+        <Route element={<AuthRequired />}>
+          <Route path="client" element={<ProfileClient />} />
+          <Route path="freelancer" element={<ProfileFreelancer />} />
+          <Route path="admin" element={<AdminPanel />} />
+        </Route>
         <Route path="not-found" element={<NotFound />} />
         <Route path="*" element={<Navigate to="not-found" replace={true} />} />
       </Route>,
