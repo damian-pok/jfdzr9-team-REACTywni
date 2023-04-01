@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const LogoField = styled.div`
-  width: calc(250px * 14);
+  width: 1440px;
   display: flex;
   flex-direction: row;
   justify-content: center;
