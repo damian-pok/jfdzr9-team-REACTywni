@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const MenuField = styled.div`
+  width: 1440px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -10,6 +11,7 @@ export const MenuField = styled.div`
   height: 2.5rem;
   background-color: var(--color-white);
   border-bottom: 1px solid var(--light-grey-color);
+  color: var(--white-color);
 `;
 
 export const ButtonMenuField = styled.div`

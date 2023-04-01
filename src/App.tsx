@@ -12,7 +12,7 @@ import AdminPanel from "./pages/AdminPanel.page";
 import Homepage from "./pages/Homepage.page";
 import HowClient from "./pages/HowClient.page";
 import HowFreelancer from "./pages/HowFreelancer.page";
-import LinkContainer from "./pages/LinkContainer.page";
+//import LinkContainer from "./pages/LinkContainer.page";
 import Login from "./pages/Login.page";
 import NotFound from "./pages/NotFound.page";
 import PrivacyPolicy from "./pages/PrivacyPolicy.page";
@@ -30,7 +30,7 @@ function App() {
       <Route path="/" element={<Layout />}>
         {/* <Route index element={<LinkContainer />} /> */}
         <Route index element={<Homepage />} />
-        {/* <Route path="homepage" element={<Homepage />} /> */}
+        <Route path="homepage" element={<Homepage />} />
         <Route path="howclient" element={<HowClient />} />
         <Route path="howfreelancer" element={<HowFreelancer />} />
         <Route path="search" element={<Search />} />

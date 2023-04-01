@@ -5,12 +5,18 @@ import { FirebaseError } from "@firebase/util";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 //import styles
-import { RegisterFormStyled, RegisterFormWrapper } from "../components/RegisterForm/RegisterForm.styled";
+import {
+  ButtonRegister,
+  HeadlineTitle,
+  RegisterFormStyled,
+  RegisterFormWrapper,
+} from "../components/RegisterForm/RegisterForm.styled";
 
 //firebase config files
 import { firebaseErrors } from "../firebase/firebase.errors";
 import { auth } from "../firebase/firebase.config";
-import { PrimaryButton } from "../components/UI/Buttons/Buttons.styled";
+import { ButtonBlack, PrimaryButton } from "../components/UI/Buttons/Buttons.styled";
+import { InputLoginSign } from "../components/UI/Input/Input.styled";
 
 //types and interfaces
 export interface IForm {
@@ -44,19 +50,19 @@ const Register = () => {
 
   return (
     <RegisterFormWrapper>
-      <h1>Rejestracja!</h1>
       <RegisterFormStyled onSubmit={handleSubmit(onSubmit)}>
+        <HeadlineTitle>Zarejestruj się!</HeadlineTitle>
         <Controller
           name="email"
           control={control}
-          render={({ field }) => <input placeholder="Type email" type={"email"} {...field} />}
+          render={({ field }) => <InputLoginSign placeholder="Podaj email" type={"email"} {...field} />}
         />
         <Controller
           name="password"
           control={control}
-          render={({ field }) => <input placeholder="Type password" type={"password"} {...field} />}
+          render={({ field }) => <InputLoginSign placeholder="Podaj hasło" type={"password"} {...field} />}
         />
-        <PrimaryButton type="submit">Zarejestruj!</PrimaryButton>
+        <ButtonRegister type="submit">Zarejestruj!</ButtonRegister>
         {error}
       </RegisterFormStyled>
     </RegisterFormWrapper>

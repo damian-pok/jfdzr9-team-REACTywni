@@ -4,11 +4,8 @@ import SingleCounterWidget from "./../SingleCounterWidget/SingleCounterWidget.co
 const Counter = () => {
   return (
     <CounterField>
-      <h2>The numbers speak for themselves</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliquat enim ad minim.
-      </p>
+      <h2>Find a Designer w liczbach</h2>
+      <p>Liczby nie kłamią! Prezentujemy kluczowe dane dotyczące projektów, zadań i działań użytkowników.</p>
       <SingleCounterWidget />
     </CounterField>
   );

@@ -3,7 +3,7 @@ import { SinglePlanWidgetField } from "./SinglePlanWidget.styled";
 import { PlanContentArea } from "./SinglePlanWidget.styled";
 import DeflautImageCounter from "./../../assets/deflaut-image-counter.png";
 
-export const SinglePlanWidget = () => {
+export const SinglePlanWidgetFreelancer = () => {
   return (
     <>
       <h1>Pierwsze kroki:</h1>
@@ -12,13 +12,13 @@ export const SinglePlanWidget = () => {
           <img src={DeflautImageCounter} alt="Ikonka licznika" />
           <PlanContentArea>
             <h3>Krok 1</h3>
-            <p>Zarejestruj się.</p>
+            <p>Zarejestruj się</p>
           </PlanContentArea>
         </SinglePlanWidgetField>
         <SinglePlanWidgetField>
           <img src={DeflautImageCounter} alt="Ikonka licznika" />
           <PlanContentArea>
-            <h3>Krok 1</h3>
+            <h3>Krok 2</h3>
             <p>Wypełnij profil.</p>
           </PlanContentArea>
         </SinglePlanWidgetField>
@@ -26,14 +26,14 @@ export const SinglePlanWidget = () => {
           <img src={DeflautImageCounter} alt="Ikonka licznika" />
           <PlanContentArea>
             <h3>Krok 3</h3>
-            <p>Znajdź Grafika i zleć zadanie!</p>
+            <p>Pochwal się swoimi projektami</p>
           </PlanContentArea>
         </SinglePlanWidgetField>
         <SinglePlanWidgetField>
           <img src={DeflautImageCounter} alt="Ikonka licznika" />
           <PlanContentArea>
             <h3>Krok 4</h3>
-            <p>Ciesz się efektami współpracy! :D</p>
+            <p>Otrzymuj zlecenia i zarabiaj z nami!</p>
           </PlanContentArea>
         </SinglePlanWidgetField>
       </PlanWidgetArea>
@@ -41,4 +41,4 @@ export const SinglePlanWidget = () => {
   );
 };
 
-export default SinglePlanWidget;
+export default SinglePlanWidgetFreelancer;
