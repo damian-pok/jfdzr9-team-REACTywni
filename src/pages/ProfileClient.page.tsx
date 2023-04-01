@@ -2,6 +2,13 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../context/auth.context";
 import { getClient } from "../firebase/getClient";
+import example from "../assets/example.jpg";
+import {
+  ProfileClientFrame,
+  ProfileClientFrameData,
+  ProfileClientFrameKey,
+  ProfileClientFrameLogo,
+} from "../components/ProfileClientFrame/ProfileClientFrame.styled";
 
 const ProfileClient = () => {
   const [userData, setUserData] = useState<any>();
@@ -25,15 +32,32 @@ const ProfileClient = () => {
 
   return (
     <>
-      <h1>Profil klienta!</h1>
       {userData && (
         <>
-          <p>nazwa: {userData.company}</p>
-          <p>email: {userData.email}</p>
-          <p>nip: {userData.nip}</p>
-          <p>kraj: {userData.country}</p>
-          <p>miasto: {userData.city}</p>
-          <p>adres: {userData.street}</p>
+          <h1>Profil: {userData.company}!</h1>
+          <ProfileClientFrame>
+            <ProfileClientFrameLogo src={example} alt="logo" width="300" />
+            <ProfileClientFrameData>
+              <p>
+                <ProfileClientFrameKey>Nazwa:</ProfileClientFrameKey> {userData.company}
+              </p>
+              <p>
+                <ProfileClientFrameKey>e-mail:</ProfileClientFrameKey> {userData.email}
+              </p>
+              <p>
+                <ProfileClientFrameKey>NIP:</ProfileClientFrameKey> {userData.nip}
+              </p>
+              <p>
+                <ProfileClientFrameKey>Kraj:</ProfileClientFrameKey> {userData.country}
+              </p>
+              <p>
+                <ProfileClientFrameKey>Miasto:</ProfileClientFrameKey> {userData.city}
+              </p>
+              <p>
+                <ProfileClientFrameKey>Adres:</ProfileClientFrameKey> {userData.street}
+              </p>
+            </ProfileClientFrameData>
+          </ProfileClientFrame>
         </>
       )}
     </>
