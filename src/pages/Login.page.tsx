@@ -1,7 +1,7 @@
 //libraries
 import { useEffect, useState } from "react";
 import { useForm, Controller, SubmitHandler } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { firebaseErrors } from "../firebase/firebase.errors";
 import { FirebaseError } from "@firebase/util";

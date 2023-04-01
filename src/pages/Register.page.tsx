@@ -44,17 +44,17 @@ const Register = () => {
 
   return (
     <RegisterFormWrapper>
-      <h1>Rejestracja!</h1>
+      <h1>Zarejestruj się!</h1>
       <RegisterFormStyled onSubmit={handleSubmit(onSubmit)}>
         <Controller
           name="email"
           control={control}
-          render={({ field }) => <input placeholder="Type email" type={"email"} {...field} />}
+          render={({ field }) => <input placeholder="Podaj email" type={"email"} {...field} />}
         />
         <Controller
           name="password"
           control={control}
-          render={({ field }) => <input placeholder="Type password" type={"password"} {...field} />}
+          render={({ field }) => <input placeholder="Podaj hasło" type={"password"} {...field} />}
         />
         <PrimaryButton type="submit">Zarejestruj!</PrimaryButton>
         {error}

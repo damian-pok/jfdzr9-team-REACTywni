@@ -1,7 +1,7 @@
 import { FAQArea } from "./FAQ.styled";
 import { SingleQuestion } from "../SingleQuestion/SingleQuestion.component";
 
-export const FAQ = () => {
+export const FAQFreelancer = () => {
   return (
     <FAQArea>
       <h2>Najczęściej zadawane pytania</h2>
@@ -10,10 +10,10 @@ export const FAQ = () => {
         answear="Nic. Współpraca z nami jest darmowa. Utrzymujemy się z reklam i umów sponsorskich."
       />
       <SingleQuestion question="Nie mogę się zarejestrować?" answear="Skontaktuj się z naszą infolinią." />
-      <SingleQuestion question="Nie mogę znaleźć kompetentnego grafika!" answear="Źle szukasz! Spróbuj ponownie." />
+      <SingleQuestion question="Nie dostaję adnych zleceń?" answear="Uzupełnij profil i swoje portfolio." />
       <SingleQuestion
-        question="Jak długo muszę czekać na wykonanie projektu?"
-        answear="Wszystko zależy od ustaleń z grafikiem."
+        question="Ile mam czasu na wykonanie projektu?"
+        answear="Wszystko zależy od ustaleń z klientem."
       />
     </FAQArea>
   );

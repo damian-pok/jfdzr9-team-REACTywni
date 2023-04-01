@@ -32,7 +32,7 @@ const ProfileForm = () => {
     <>
       <ProfileInputWrapperSecondary>
         <ProfileInputWrapper>
-          <h1>Profile Form!</h1>
+          <h1>Uzupełnij profil!</h1>
           <ProfileInput>
             <ChoiceRadioGroup>
               <Controller
@@ -41,7 +41,7 @@ const ProfileForm = () => {
                 render={() => (
                   <ChoiceRadio>
                     <input name={"role"} type={"radio"} value={"client"} onChange={radioHandler} />{" "}
-                    <label htmlFor="Freelancer">Client</label>
+                    <label htmlFor="Client">Klient</label>
                   </ChoiceRadio>
                 )}
               />
