@@ -12,6 +12,7 @@ import { auth } from "../../firebase/firebase.config";
 
 //context
 import { useAuth } from "../../context/auth.context";
+import { PrimaryButton } from "../UI/Buttons/Buttons.styled";
 
 //types
 export interface IProfileInputClient {
@@ -79,7 +80,7 @@ export const ProfileInputClient = () => {
           control={control}
           render={({ field }) => <input placeholder="Ulica i numer" type={"text"} {...field} />}
         />
-        <button type="submit">Send</button>
+        <PrimaryButton type="submit">Wyślij</PrimaryButton>
       </ProfileInputClientStyled>
     </>
   );

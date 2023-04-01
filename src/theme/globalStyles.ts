@@ -37,7 +37,6 @@ ${normalize}
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 
   //global font style:
-  max-width: 1440px;
   color: var(--black);
   line-height: 1.8;
 }
@@ -48,16 +47,18 @@ ${normalize}
 }
 
 html{
-    width: auto;
+    scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--very-light-color);
   display: flex;
+  justify-content: center;
+  min-width: 840px;
 }
 
 .root{
-    min-width: 100vh;
+    width: 1440px;
 }
 
 
