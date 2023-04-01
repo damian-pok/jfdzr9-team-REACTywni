@@ -3,7 +3,12 @@ import { QuestionArea, QuestionButton, QuestionField, QuestionDiv } from "./Sing
 import { Answer } from "../Answer/Answer.component";
 import { FaMinus, FaPlus } from "react-icons/fa";
 
-export const SingleQuestion = () => {
+interface ISingleQuestion {
+  question: string;
+  answear: string;
+}
+
+export const SingleQuestion = ({ question, answear }: ISingleQuestion) => {
   const [showAnswer, setShowAnswer] = useState(false);
 
   const handleButtonClick = () => {
@@ -13,11 +18,11 @@ export const SingleQuestion = () => {
   return (
     <QuestionArea>
       <QuestionDiv>
-        <QuestionButton onClick={handleButtonClick}>{showAnswer ? <FaMinus /> : <FaPlus />}</QuestionButton>
-        <div style={{ display: "flex", flexDirection: "column", paddingLeft: "1rem" }}>
-          <QuestionField>How does it work?</QuestionField>
-          {showAnswer && <Answer />}
-        </div>
+        <QuestionField>
+          <QuestionButton onClick={handleButtonClick}>{showAnswer ? <FaMinus /> : <FaPlus />}</QuestionButton>
+          {question}
+        </QuestionField>
+        {showAnswer && <Answer answear={answear} />}
       </QuestionDiv>
     </QuestionArea>
   );

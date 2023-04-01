@@ -24,7 +24,4 @@ export const QuestionButton = styled.button`
   padding: 0.4rem;
 `;
 
-export const QuestionDiv = styled.div`
-  display: flex;
-  flex-direction: row;
-`;
+export const QuestionDiv = styled.div``;

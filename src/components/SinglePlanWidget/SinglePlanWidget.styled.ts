@@ -5,9 +5,9 @@ export const PlanWidgetArea = styled.div`
   display: grid;
   grid-template-columns: auto auto auto auto;
   justify-content: center;
-  align-items: center;
+  //align-items: center;
   gap: 4rem;
-  padding-top: 6rem;
+  padding-top: 4rem;
   padding-bottom: 6rem;
   text-align: left;
 `;
@@ -19,6 +19,11 @@ export const SinglePlanWidgetField = styled.div`
   justify-content: center;
   align-items: center;
   gap: 5rem;
+  border: solid 1px black;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: var(--lime-yellow);
+  min-height: 300px;
 `;
 
 export const PlanContentArea = styled.div`

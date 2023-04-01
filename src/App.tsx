@@ -30,7 +30,7 @@ function App() {
       <Route path="/" element={<Layout />}>
         {/* <Route index element={<LinkContainer />} /> */}
         <Route index element={<Homepage />} />
-        {/* <Route path="homepage" element={<Homepage />} /> */}
+        <Route path="homepage" element={<Homepage />} />
         <Route path="howclient" element={<HowClient />} />
         <Route path="howfreelancer" element={<HowFreelancer />} />
         <Route path="search" element={<Search />} />
