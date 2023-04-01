@@ -14,7 +14,7 @@ export const MenuButton = styled.button`
   height: 40px;
   padding: 20px 40px;
   font-weight: bold;
-  color: var(--dark-grey-color);
+  color: var(--black);
   background-color: var(--white-color);
   border: none;
   border-radius: 5px;
@@ -22,7 +22,7 @@ export const MenuButton = styled.button`
   justify-content: center;
   align-items: center;
   :hover {
-    color: var(--white-color);
-    background-color: var(--blue-grey-color);
+    color: var(--black);
+    background-color: var(--lime-yellow);
   }
 `;

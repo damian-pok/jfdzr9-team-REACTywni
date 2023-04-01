@@ -40,7 +40,7 @@ const SingleCounterWidget = () => {
           <ImageIcon src={ordersIcon} alt="Ikonka licznika" />
           <ContentArea>
             <NumberStyles>3456</NumberStyles>
-            <p>Liczba freelancerów</p>
+            <p>Liczba zakończonych zleceń</p>
           </ContentArea>
         </SingleCounterWidgetField>
       </CounterWidgetArea>

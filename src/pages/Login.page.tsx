@@ -1,7 +1,7 @@
 //libraries
 import { useEffect, useState } from "react";
 import { useForm, Controller, SubmitHandler } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { firebaseErrors } from "../firebase/firebase.errors";
 import { FirebaseError } from "@firebase/util";
@@ -11,8 +11,15 @@ import { auth } from "../firebase/firebase.config";
 
 //interfaces and types
 import { IForm } from "./Register.page";
-import { RegisterFormStyled, RegisterFormWrapper } from "../components/RegisterForm/RegisterForm.styled";
-import { PrimaryButton } from "../components/UI/Buttons/Buttons.styled";
+import {
+  HeadlineTitle,
+  LoginField,
+  LoginLink,
+  RegisterFormStyled,
+  RegisterFormWrapper,
+} from "../components/RegisterForm/RegisterForm.styled";
+import { ButtonBlack } from "../components/UI/Buttons/Buttons.styled";
+import { InputLoginSign } from "../components/UI/Input/Input.styled";
 type FirebaseErrorsKeys = keyof typeof firebaseErrors;
 
 const Login = () => {
@@ -38,22 +45,26 @@ const Login = () => {
   return (
     <>
       <RegisterFormWrapper>
-        <h1>Zaloguj się!</h1>
         <RegisterFormStyled onSubmit={handleSubmit(onSubmit)}>
+          <HeadlineTitle>Zaloguj się!</HeadlineTitle>
+
           <Controller
             name="email"
             control={control}
-            render={({ field }) => <input placeholder="Podaj email" type={"email"} {...field} />}
+            render={({ field }) => <InputLoginSign placeholder="Wpisz swój adres email" type={"email"} {...field} />}
           />
           <Controller
             name="password"
             control={control}
-            render={({ field }) => <input placeholder="Podaj hasło" type={"password"} {...field} />}
+            render={({ field }) => <InputLoginSign placeholder="Wpisz swoje hasło" type={"password"} {...field} />}
           />
-          <PrimaryButton type="submit">Zaloguj!</PrimaryButton>
-          <p>Nie masz konta?</p>
-          <Link to={"/register"}>Zarejestruj się</Link>
-          {error}
+          <ButtonBlack type="submit">Zaloguj!</ButtonBlack>
+
+          <LoginField>
+            <h4>Dont have an account?</h4>
+            <LoginLink to={"/register"}>Zarejestruj się</LoginLink>
+            {error}
+          </LoginField>
         </RegisterFormStyled>
       </RegisterFormWrapper>
     </>
