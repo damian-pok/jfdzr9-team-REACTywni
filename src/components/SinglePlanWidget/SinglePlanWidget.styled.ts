@@ -9,6 +9,7 @@ export const PlanWidgetArea = styled.div`
   gap: 4rem;
   padding-top: 6rem;
   text-align: left;
+  margin-bottom: 4rem;
 `;
 
 export const SinglePlanWidgetField = styled.div`

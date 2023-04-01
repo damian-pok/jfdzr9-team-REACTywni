@@ -15,12 +15,18 @@ type DropElement = {
   title: string;
 };
 
-export const DropDownList = () => {
+export const DropDownListBranding = () => {
   const [dropdown, setDropdown] = useState(false);
 
   const handleDropdownBranding = dropDownBranding.map((element: DropElement) => ({
     title: element.title,
   }));
+
+  return (
+    <DetailsList>
+      <ListElement>{element.title}</ListElement>
+    </DetailsList>
+  );
 
   const handleDropdownDigital = dropDownDigital.map((element: DropElement) => ({
     title: element.title,
