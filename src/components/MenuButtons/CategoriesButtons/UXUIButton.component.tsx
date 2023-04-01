@@ -3,7 +3,7 @@ import { DropDownListUXUI } from "../../DropDownLists/DropDownListUXUI.component
 import { useState } from "react";
 
 export const UXUIButton = () => {
-  const [dropdown, setDropdown] = useState("");
+  const [dropdown, setDropdown] = useState<boolean>(false);
 
   const handleMouseEnter = () => {
     setDropdown(true);

@@ -3,7 +3,7 @@ import { DropDownListDruk } from "../../DropDownLists/DropDownListDruk.component
 import { useState } from "react";
 
 export const DrukButton = () => {
-  const [dropdown, setDropdown] = useState("");
+  const [dropdown, setDropdown] = useState<boolean>(false);
 
   const handleMouseEnter = () => {
     setDropdown(true);

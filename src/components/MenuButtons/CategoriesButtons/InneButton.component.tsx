@@ -3,7 +3,7 @@ import { DropDownListInne } from "../../DropDownLists/DropDownListInne.component
 import { useState } from "react";
 
 export const InneButton = () => {
-  const [dropdown, setDropdown] = useState("");
+  const [dropdown, setDropdown] = useState<boolean>(false);
 
   const handleMouseEnter = () => {
     setDropdown(true);

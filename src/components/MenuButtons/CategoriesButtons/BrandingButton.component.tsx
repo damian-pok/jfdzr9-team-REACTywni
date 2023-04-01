@@ -3,7 +3,7 @@ import { DropDownListBranding } from "../../DropDownLists/DropDownListBranding.c
 import { useState } from "react";
 
 export const BrandingButton = () => {
-  const [dropdown, setDropdown] = useState("");
+  const [dropdown, setDropdown] = useState<boolean>(false);
 
   const handleMouseEnter = () => {
     setDropdown(true);
