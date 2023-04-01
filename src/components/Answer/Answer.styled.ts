@@ -7,6 +7,5 @@ export const AnswerArea = styled.div`
   gap: 1.7rem;
   align-self: flex-start;
   align-items: center;
-  padding: 2rem;
-  margin-left: 3.7rem;
+  padding-top: 2rem;
 `;

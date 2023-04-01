@@ -1,7 +1,5 @@
 import { useState } from "react";
-import { QuestionArea } from "./SingleQuestion.styled";
-import { QuestionField } from "./SingleQuestion.styled";
-import { QuestionButton } from "./SingleQuestion.styled";
+import { QuestionArea, QuestionButton, QuestionField, QuestionDiv } from "./SingleQuestion.styled";
 import { Answer } from "../Answer/Answer.component";
 import { FaMinus, FaPlus } from "react-icons/fa";
 
@@ -14,9 +12,13 @@ export const SingleQuestion = () => {
 
   return (
     <QuestionArea>
-      <QuestionButton onClick={handleButtonClick}>{showAnswer ? <FaMinus /> : <FaPlus />}</QuestionButton>
-      {showAnswer && <Answer />}
-      <QuestionField>How does it work?</QuestionField>
+      <QuestionDiv>
+        <QuestionButton onClick={handleButtonClick}>{showAnswer ? <FaMinus /> : <FaPlus />}</QuestionButton>
+        <div style={{ display: "flex", flexDirection: "column", paddingLeft: "1rem" }}>
+          <QuestionField>How does it work?</QuestionField>
+          {showAnswer && <Answer />}
+        </div>
+      </QuestionDiv>
     </QuestionArea>
   );
 };

@@ -6,7 +6,6 @@ export const FAQ = () => {
     <FAQArea>
       <h2>Frequently Asked Questions</h2>
       <SingleQuestion />
-
       <SingleQuestion />
       <SingleQuestion />
       <SingleQuestion />
