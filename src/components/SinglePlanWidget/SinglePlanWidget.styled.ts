@@ -8,6 +8,7 @@ export const PlanWidgetArea = styled.div`
   align-items: center;
   gap: 4rem;
   padding-top: 6rem;
+  padding-bottom: 6rem;
   text-align: left;
 `;
 
