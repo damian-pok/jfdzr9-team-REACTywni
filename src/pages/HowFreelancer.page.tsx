@@ -1,5 +1,7 @@
+import { HowFreelancerDescription } from "../components/HowFreelancerDescription/HowFreelancerDescription.component";
+
 const HowFreelancer = () => {
-  return <h1>How it works - for Freelancer!</h1>;
+  return <HowFreelancerDescription />;
 };
 
 export default HowFreelancer;
