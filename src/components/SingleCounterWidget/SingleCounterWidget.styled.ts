@@ -30,3 +30,8 @@ export const NumberStyles = styled.h4`
   font-size: 2.5rem;
   font-weight: bold;
 `;
+
+export const ImageIcon = styled.img`
+  height: 5rem;
+  width: auto;
+`;

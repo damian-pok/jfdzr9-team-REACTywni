@@ -17,9 +17,9 @@ export const NavigationBox = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 2rem;
   border-radius: 1rem;
-  border: 1px solid var(--light-grey-color);
-  background-color: var(--very-light-grey-color);
+  border: 2px solid var(--black);
+  background-color: var(--lime-yellow);
 `;
