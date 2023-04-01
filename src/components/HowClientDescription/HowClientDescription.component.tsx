@@ -1,9 +1,4 @@
-import {
-  HowClientDescriptionAreaItem,
-  HowClientListArea,
-  SearchPageDescription,
-  SearchPageDescriptionWrapper,
-} from "./HowClientDescription.styled";
+import { SearchPageDescription, SearchPageDescriptionWrapper } from "./HowClientDescription.styled";
 
 const HowClientDescription = () => {
   return (
@@ -20,15 +15,6 @@ const HowClientDescription = () => {
           graficzne, masz szansę na zrealizowanie swoich pomysłów z wykorzystaniem najlepszych narzędzi i doświadczenia
           specjalistów z całego świata, co pozwala na osiągnięcie najlepszych efektów.
         </p>
-
-        <HowClientListArea>
-          <h1>Pierwsze kroki:</h1>
-          <HowClientDescriptionAreaItem>Zarejestruj się</HowClientDescriptionAreaItem>
-          <HowClientDescriptionAreaItem>Wypełnij profil</HowClientDescriptionAreaItem>
-          <HowClientDescriptionAreaItem>Znajdź Grafika!</HowClientDescriptionAreaItem>
-          <HowClientDescriptionAreaItem>Zleć zadanie</HowClientDescriptionAreaItem>
-          <HowClientDescriptionAreaItem>Ciesz się efektami współpracy! :D</HowClientDescriptionAreaItem>
-        </HowClientListArea>
       </SearchPageDescription>
     </SearchPageDescriptionWrapper>
   );

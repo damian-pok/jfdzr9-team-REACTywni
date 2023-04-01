@@ -23,11 +23,12 @@ export const SinglePlanWidgetField = styled.div`
   padding: 20px;
   border-radius: 15px;
   background-color: var(--lime-yellow);
-  min-height: 300px;
+  min-width: 300px;
 `;
 
 export const PlanContentArea = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  margin-bottom: 50px;
 `;

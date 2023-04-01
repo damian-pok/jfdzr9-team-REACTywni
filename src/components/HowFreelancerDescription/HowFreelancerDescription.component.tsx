@@ -1,9 +1,4 @@
-import {
-  HowFreelancerDescriptionArea,
-  HowFreelancerDescriptionAreaItem,
-  HowFreelancerDescriptionAreaList,
-  HowFreelancerDescriptionAreaWrapper,
-} from "./HowFreelancerDescription.styled";
+import { HowFreelancerDescriptionArea, HowFreelancerDescriptionAreaWrapper } from "./HowFreelancerDescription.styled";
 import SinglePlanWidgetFreelancer from "../SinglePlanWidget/SinglePlanWidgetFreelancer.component";
 
 export const HowFreelancerDescription = () => {
@@ -18,15 +13,6 @@ export const HowFreelancerDescription = () => {
           pracodawców oraz oczekiwaniach wobec kandydatów. Korzystając z naszego portalu, masz szansę na znalezienie
           idealnej pracy dla siebie, a także na rozwój swojej kariery w dziedzinie grafiki.
         </p>
-
-        <HowFreelancerDescriptionAreaList>
-          <h1>Pierwsze kroki:</h1>
-          <HowFreelancerDescriptionAreaItem>Zarejestruj się</HowFreelancerDescriptionAreaItem>
-          <HowFreelancerDescriptionAreaItem>Wypełnij profil</HowFreelancerDescriptionAreaItem>
-          <HowFreelancerDescriptionAreaItem>Pochwal się swoimi projektami</HowFreelancerDescriptionAreaItem>
-          <HowFreelancerDescriptionAreaItem>Otrzymuj zlecenia!</HowFreelancerDescriptionAreaItem>
-          <HowFreelancerDescriptionAreaItem>Zarabiaj z nami $ :D $</HowFreelancerDescriptionAreaItem>
-        </HowFreelancerDescriptionAreaList>
       </HowFreelancerDescriptionArea>
       <SinglePlanWidgetFreelancer />
     </HowFreelancerDescriptionAreaWrapper>
