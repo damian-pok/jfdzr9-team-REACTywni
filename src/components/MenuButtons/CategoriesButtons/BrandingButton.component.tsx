@@ -10,7 +10,7 @@ export const BrandingButton: React.FC = () => {
     setDropdown(!dropdown);
   };
 
-  const handleDocumentClick = (event: MouseEvent): void => {
+  const handleDocumentClick = (event: MouseEvent<Document, MouseEvent>): void => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
       setDropdown(false);
     }
