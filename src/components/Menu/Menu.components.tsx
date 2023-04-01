@@ -6,7 +6,6 @@ import { getAuth, signOut } from "firebase/auth";
 
 const Menu = () => {
   const user = useUser();
-  console.log("Menu ", user);
   const auth = getAuth();
   const logOut = () => {
     signOut(auth).then().catch();
@@ -20,9 +19,14 @@ const Menu = () => {
       </Link>
       <ButtonMenuField>
         {user ? (
-          <Link to={`/homepage`}>
-            <SecondaryButton onClick={logOut}>Wyloguj się</SecondaryButton>
-          </Link>
+          <>
+            <Link to={`/client`}>
+              <SecondaryButton>Mój Profil</SecondaryButton>
+            </Link>
+            <Link to={`/homepage`}>
+              <SecondaryButton onClick={logOut}>Wyloguj się</SecondaryButton>
+            </Link>
+          </>
         ) : (
           <Link to={`/login`}>
             <SecondaryButton>Zaloguj się</SecondaryButton>

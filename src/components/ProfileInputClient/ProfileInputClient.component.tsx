@@ -7,9 +7,15 @@ import { ProfileInputClientStyled } from "./ProfileInputClient.styled";
 import { addClient } from "../../firebase/addClient";
 import { useNavigate } from "react-router-dom";
 
+//firebase
+import { auth } from "../../firebase/firebase.config";
+
+//context
+import { useAuth } from "../../context/auth.context";
+
 //types
 export interface IProfileInputClient {
-  uid: string;
+  uid?: string;
   company: string;
   email: string;
   nip: number;
@@ -30,9 +36,14 @@ export const ProfileInputClient = () => {
     }
   }, [success]);
 
+  const { loading } = useAuth();
+  if (loading) return <div>Loading...</div>;
+
   const onSubmit = handleSubmit((data) => {
+    auth.currentUser != null ? (data.uid = String(auth.currentUser.uid)) : "error";
     addClient(data).then(() => {
       setSuccess(true);
+      console.log("Data", data);
     });
   });
 
