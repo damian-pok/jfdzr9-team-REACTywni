@@ -48,3 +48,22 @@ export const LoginLink = styled(Link)`
     background-color: var(--black);
   }
 `;
+
+export const ButtonRegister = styled.button`
+  width: fit-content;
+  height: 40px;
+  padding: 20px 40px;
+  color: var(--white-color);
+  background-color: var(--black);
+  font-weight: bold;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  cursor: pointer;
+  :hover {
+    color: var(--black);
+    background-color: var(--lime-yellow);
+  }
+`;
