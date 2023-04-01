@@ -1,11 +1,11 @@
 import { HowFreelancerDescription } from "../components/HowFreelancerDescription/HowFreelancerDescription.component";
-import { FAQ } from "../components/FAQ/FAQ.component";
+import { FAQFreelancer } from "../components/FAQ/FAQFreelancer.component";
 
 const HowFreelancer = () => {
   return (
     <>
       <HowFreelancerDescription />
-      <FAQ />
+      <FAQFreelancer />
     </>
   );
 };
