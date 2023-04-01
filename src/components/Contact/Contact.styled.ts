@@ -7,7 +7,7 @@ export const SectionContactField = styled.div`
   align-items: center;
   justify-items: center;
   gap: 0.5rem;
-  padding: 3rem;
+  padding: 3rem 2.5rem;
   background-color: var(--lime-yellow);
 `;
 

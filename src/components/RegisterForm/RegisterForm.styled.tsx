@@ -8,6 +8,6 @@ export const RegisterFormStyled = styled.form`
   justify-content: space-between;
   align-items: center;
   background-color: lightyellow;
-  border-radius: 5px;
+  border-radius: 1rem;
   padding: 4rem;
 `;
