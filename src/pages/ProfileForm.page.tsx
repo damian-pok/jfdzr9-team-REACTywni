@@ -2,7 +2,13 @@
 import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 //import styles
-import { ChoiceRadio, ChoiceRadioGroup, ProfileInput } from "../components/ProfileInput/ProfileInput.styled";
+import {
+  ChoiceRadio,
+  ChoiceRadioGroup,
+  ProfileInput,
+  ProfileInputWrapper,
+  ProfileInputWrapperSecondary,
+} from "../components/ProfileInput/ProfileInput.styled";
 
 //firebase config files
 import { ProfileInputClient } from "../components/ProfileInputClient/ProfileInputClient.component";
@@ -24,33 +30,37 @@ const ProfileForm = () => {
 
   return (
     <>
-      <h1>Profile Form!</h1>
-      <ProfileInput>
-        <ChoiceRadioGroup>
-          <Controller
-            name="client"
-            control={control}
-            render={() => (
-              <ChoiceRadio>
-                <input name={"role"} type={"radio"} value={"client"} onChange={radioHandler} />{" "}
-                <label htmlFor="Freelancer">Client</label>
-              </ChoiceRadio>
-            )}
-          />
-          <Controller
-            name="freelancer"
-            control={control}
-            render={() => (
-              <ChoiceRadio>
-                <input name={"role"} type={"radio"} value={"freelancer"} onChange={radioHandler} />{" "}
-                <label htmlFor="Freelancer">Freelancer</label>
-              </ChoiceRadio>
-            )}
-          />
-        </ChoiceRadioGroup>
-      </ProfileInput>
-      {role === "client" && <ProfileInputClient />}
-      {role === "freelancer" && <ProfileInputFreelancer />}
+      <ProfileInputWrapperSecondary>
+        <ProfileInputWrapper>
+          <h1>Profile Form!</h1>
+          <ProfileInput>
+            <ChoiceRadioGroup>
+              <Controller
+                name="client"
+                control={control}
+                render={() => (
+                  <ChoiceRadio>
+                    <input name={"role"} type={"radio"} value={"client"} onChange={radioHandler} />{" "}
+                    <label htmlFor="Freelancer">Client</label>
+                  </ChoiceRadio>
+                )}
+              />
+              <Controller
+                name="freelancer"
+                control={control}
+                render={() => (
+                  <ChoiceRadio>
+                    <input name={"role"} type={"radio"} value={"freelancer"} onChange={radioHandler} />{" "}
+                    <label htmlFor="Freelancer">Freelancer</label>
+                  </ChoiceRadio>
+                )}
+              />
+            </ChoiceRadioGroup>
+          </ProfileInput>
+          {role === "client" && <ProfileInputClient />}
+          {role === "freelancer" && <ProfileInputFreelancer />}
+        </ProfileInputWrapper>
+      </ProfileInputWrapperSecondary>
     </>
   );
 };

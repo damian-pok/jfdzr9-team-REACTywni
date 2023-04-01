@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/auth.context";
 import { addFreelancer } from "../../firebase/addFreelancer";
 import { auth } from "../../firebase/firebase.config";
+import { PrimaryButton } from "../UI/Buttons/Buttons.styled";
 import { AboutMeStyled, ProfileInputFreelancerStyled } from "./ProfileInputFreelancer.styled";
 
 //types
@@ -92,7 +93,7 @@ export const ProfileInputFreelancer = () => {
           render={({ field }) => <input placeholder="Galeria" type={"text"} {...field} />}
         />
 
-        <button type="submit">Send</button>
+        <PrimaryButton type="submit">Wyślij</PrimaryButton>
       </ProfileInputFreelancerStyled>
     </>
   );
