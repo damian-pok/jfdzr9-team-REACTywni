@@ -2,7 +2,9 @@
 import { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/auth.context";
 import { addFreelancer } from "../../firebase/addFreelancer";
+import { auth } from "../../firebase/firebase.config";
 import { AboutMeStyled, ProfileInputFreelancerStyled } from "./ProfileInputFreelancer.styled";
 
 //types
@@ -31,7 +33,11 @@ export const ProfileInputFreelancer = () => {
     }
   }, [success]);
 
+  const { loading } = useAuth();
+  if (loading) return <div>Loading...</div>;
+
   const onSubmit = handleSubmit((data) => {
+    auth.currentUser != null ? (data.uid = String(auth.currentUser.uid)) : "error";
     addFreelancer(data).then(() => {
       setSuccess(true);
     });

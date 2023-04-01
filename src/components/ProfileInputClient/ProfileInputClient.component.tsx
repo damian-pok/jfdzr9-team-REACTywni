@@ -43,7 +43,6 @@ export const ProfileInputClient = () => {
     auth.currentUser != null ? (data.uid = String(auth.currentUser.uid)) : "error";
     addClient(data).then(() => {
       setSuccess(true);
-      console.log("Data", data);
     });
   });
 
