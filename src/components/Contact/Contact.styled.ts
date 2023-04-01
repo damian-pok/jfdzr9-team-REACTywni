@@ -6,29 +6,36 @@ export const SectionContactField = styled.div`
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  gap: 2rem;
+  gap: 0.5rem;
   padding: 3rem;
 `;
 
 export const ContactField = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
   justify-items: center;
   gap: 2rem;
 `;
 
 export const ContactInformationField = styled.div`
-  width: 40%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 1rem;
+  padding-top: 2rem;
+  gap: 3rem;
 `;
 
 export const IconField = styled.div`
   display: flex;
-  flex-direction: row;
-  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+`;
+
+export const Icon = styled.img`
+  width: 1.5rem;
+  height: auto;
 `;
