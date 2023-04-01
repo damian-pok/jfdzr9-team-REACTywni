@@ -1,17 +1,17 @@
 import { CategoriesButton } from "./CategoriesButton.styled";
 import { DropDownListIlustracje } from "../../DropDownLists/DropDownListIlustracje.component";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, MouseEvent } from "react";
 
-export const IlustracjeButton = () => {
-  const [dropdown, setDropdown] = useState(false);
-  const dropdownRef = useRef(null);
+export const IlustracjeButton: React.FC = () => {
+  const [dropdown, setDropdown] = useState<boolean>(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const handleClick = () => {
+  const handleClick = (): void => {
     setDropdown(!dropdown);
   };
 
-  const handleDocumentClick = (event) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+  const handleDocumentClick = (event: MouseEvent): void => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
       setDropdown(false);
     }
   };
