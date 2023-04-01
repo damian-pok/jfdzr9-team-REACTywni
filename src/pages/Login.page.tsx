@@ -38,20 +38,20 @@ const Login = () => {
   return (
     <>
       <RegisterFormWrapper>
-        <h1>Log in!</h1>
+        <h1>Zaloguj się!</h1>
         <RegisterFormStyled onSubmit={handleSubmit(onSubmit)}>
           <Controller
             name="email"
             control={control}
-            render={({ field }) => <input placeholder="Type email" type={"email"} {...field} />}
+            render={({ field }) => <input placeholder="Podaj email" type={"email"} {...field} />}
           />
           <Controller
             name="password"
             control={control}
-            render={({ field }) => <input placeholder="Type password" type={"password"} {...field} />}
+            render={({ field }) => <input placeholder="Podaj hasło" type={"password"} {...field} />}
           />
           <PrimaryButton type="submit">Zaloguj!</PrimaryButton>
-          <p>Dont have an account?</p>
+          <p>Nie masz konta?</p>
           <Link to={"/register"}>Zarejestruj się</Link>
           {error}
         </RegisterFormStyled>
