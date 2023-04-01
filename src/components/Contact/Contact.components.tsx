@@ -1,8 +1,8 @@
 import { SectionContactField, Icon, ContactInformationField, IconField } from "./Contact.styled";
 //icon import
-import PhoneIcon from "./../../assets/phone-icon.png";
-import MailIcon from "./../../assets/mail-icon.png";
-import PinIcon from "./../../assets/pin-icon.png";
+import PhoneIcon from "./../../assets/icons/phone-icon.svg";
+import MailIcon from "./../../assets/icons/mail-icon.svg";
+import PinIcon from "./../../assets/icons/pin-icon.svg";
 
 const Contact = () => {
   return (
@@ -12,7 +12,7 @@ const Contact = () => {
       <ContactInformationField>
         <IconField>
           <Icon src={PhoneIcon} />
-          <p>+48 321 456 789 </p>
+          <p>(+48) 321 456 789 </p>
         </IconField>
         <IconField>
           <Icon src={MailIcon} />
