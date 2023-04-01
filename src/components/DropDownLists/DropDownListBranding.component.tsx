@@ -6,6 +6,7 @@ export function DropDownListBranding() {
       <ListElement>logo</ListElement>
       <ListElement>księga znaków</ListElement>
       <ListElement>identyfikacja wizualna</ListElement>
+      <ListElement>inne</ListElement>
     </DetailsList>
   );
 }

@@ -1,32 +1,22 @@
 import { CategoriesButton } from "./CategoriesButton.styled";
 import { DropDownListDruk } from "../../DropDownLists/DropDownListDruk.component";
-import { useState, useEffect, useRef, MouseEvent } from "react";
+import { useState } from "react";
 
-export const DrukButton: React.FC = () => {
-  const [dropdown, setDropdown] = useState<boolean>(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+export const DrukButton = () => {
+  const [dropdown, setDropdown] = useState("");
 
-  const handleClick = (): void => {
-    setDropdown(!dropdown);
+  const handleMouseEnter = () => {
+    setDropdown(true);
   };
 
-  const handleDocumentClick = (event: MouseEvent): void => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-      setDropdown(false);
-    }
+  const handleMouseLeave = () => {
+    setDropdown(false);
   };
-
-  useEffect(() => {
-    document.addEventListener("click", handleDocumentClick);
-    return () => {
-      document.removeEventListener("click", handleDocumentClick);
-    };
-  }, []);
 
   return (
-    <div>
-      <CategoriesButton onClick={handleClick}>Druk</CategoriesButton>
-      {dropdown && <DropDownListDruk ref={dropdownRef} />}
+    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <CategoriesButton>Druk</CategoriesButton>
+      {dropdown && <DropDownListDruk />}
     </div>
   );
 };

@@ -3,9 +3,13 @@ import { DetailsList, ListElement } from "./DropDownLists.styled";
 export function DropDownListDruk() {
   return (
     <DetailsList>
-      <ListElement>opcja1</ListElement>
-      <ListElement>opcja2</ListElement>
-      <ListElement>opcja3</ListElement>
+      <ListElement>wizytówki</ListElement>
+      <ListElement>plakaty</ListElement>
+      <ListElement>rollupy</ListElement>
+      <ListElement>citylighty</ListElement>
+      <ListElement>katalogi</ListElement>
+      <ListElement>etykiety</ListElement>
+      <ListElement>inne</ListElement>
     </DetailsList>
   );
 }
