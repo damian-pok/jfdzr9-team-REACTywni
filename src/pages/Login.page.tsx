@@ -53,7 +53,6 @@ const Login = () => {
         <Link to={"/register"}>Zarejestruj się</Link>
         {error}
       </RegisterFormStyled>
-      ;
     </>
   );
 };
