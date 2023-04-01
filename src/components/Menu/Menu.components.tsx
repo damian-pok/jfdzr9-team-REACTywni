@@ -6,6 +6,7 @@ import { getAuth, signOut } from "firebase/auth";
 
 const Menu = () => {
   const user = useUser();
+  console.log("Menu ", user);
   const auth = getAuth();
   const logOut = () => {
     signOut(auth).then().catch();
