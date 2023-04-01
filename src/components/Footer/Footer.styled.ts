@@ -24,6 +24,6 @@ export const LinkFooter = styled(Link)`
   color: var(--dark-grey-color);
   text-decoration: none;
   :hover {
-    color: var(--light-grey-color);
+    color: var(--lime-yellow);
   }
 `;

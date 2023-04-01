@@ -8,3 +8,7 @@ export const PartnersField = styled.div`
   align-items: center;
   padding: 4rem;
 `;
+
+export const ParagraphStyle = styled.p`
+  text-align: center;
+`;
