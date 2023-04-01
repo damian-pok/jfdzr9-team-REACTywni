@@ -11,11 +11,14 @@ ${normalize}
   --light-blue-grey-color: #a3bfcf;
   --light-grey-color: #C2D1D9;
   --very-light-grey-color: #F5F9FC;
-  --white-color: #fff;
+  
   
   //global color styles - light mode:
     // Here will be defined colors for light mode
-
+    --lime-yellow: #E1F465;
+    --dark-lime-yellow: #bacc46;
+    --black: #040403;
+    --white-color: #fff;
 
   //global color styles - dark mode:
     // Here will be defined colors for dark mode
@@ -35,8 +38,7 @@ ${normalize}
 
   //global font style:
   max-width: 1440px;
-  padding: 2rem;
-  color: var(--dark-grey-color);
+  color: var(--black);
   line-height: 1.8;
 }
 

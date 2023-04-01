@@ -19,3 +19,10 @@ export const ButtonMenuField = styled.div`
   align-items: center;
   gap: 1.5rem;
 `;
+
+export const Logo = styled.img`
+  height: 2.5rem;
+  :hover {
+    opacity: 0.5;
+  }
+`;
