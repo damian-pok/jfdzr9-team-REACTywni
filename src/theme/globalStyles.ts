@@ -35,7 +35,6 @@ ${normalize}
 
   //global font style:
   max-width: 1440px;
-  padding: 2rem;
   color: var(--dark-grey-color);
   line-height: 1.8;
 }
