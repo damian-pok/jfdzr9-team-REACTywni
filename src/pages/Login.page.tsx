@@ -11,7 +11,8 @@ import { auth } from "../firebase/firebase.config";
 
 //interfaces and types
 import { IForm } from "./Register.page";
-import { RegisterFormStyled } from "../components/RegisterForm/RegisterForm.styled";
+import { RegisterFormStyled, RegisterFormWrapper } from "../components/RegisterForm/RegisterForm.styled";
+import { PrimaryButton } from "../components/UI/Buttons/Buttons.styled";
 type FirebaseErrorsKeys = keyof typeof firebaseErrors;
 
 const Login = () => {
@@ -36,23 +37,25 @@ const Login = () => {
 
   return (
     <>
-      <h1>Log in!</h1>
-      <RegisterFormStyled onSubmit={handleSubmit(onSubmit)}>
-        <Controller
-          name="email"
-          control={control}
-          render={({ field }) => <input placeholder="Type email" type={"email"} {...field} />}
-        />
-        <Controller
-          name="password"
-          control={control}
-          render={({ field }) => <input placeholder="Type password" type={"password"} {...field} />}
-        />
-        <button type="submit">Zaloguj!</button>
-        Dont have an account?
-        <Link to={"/register"}>Zarejestruj się</Link>
-        {error}
-      </RegisterFormStyled>
+      <RegisterFormWrapper>
+        <h1>Log in!</h1>
+        <RegisterFormStyled onSubmit={handleSubmit(onSubmit)}>
+          <Controller
+            name="email"
+            control={control}
+            render={({ field }) => <input placeholder="Type email" type={"email"} {...field} />}
+          />
+          <Controller
+            name="password"
+            control={control}
+            render={({ field }) => <input placeholder="Type password" type={"password"} {...field} />}
+          />
+          <PrimaryButton type="submit">Zaloguj!</PrimaryButton>
+          <p>Dont have an account?</p>
+          <Link to={"/register"}>Zarejestruj się</Link>
+          {error}
+        </RegisterFormStyled>
+      </RegisterFormWrapper>
     </>
   );
 };

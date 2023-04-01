@@ -5,11 +5,12 @@ import { FirebaseError } from "@firebase/util";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 //import styles
-import { RegisterFormStyled } from "../components/RegisterForm/RegisterForm.styled";
+import { RegisterFormStyled, RegisterFormWrapper } from "../components/RegisterForm/RegisterForm.styled";
 
 //firebase config files
 import { firebaseErrors } from "../firebase/firebase.errors";
 import { auth } from "../firebase/firebase.config";
+import { PrimaryButton } from "../components/UI/Buttons/Buttons.styled";
 
 //types and interfaces
 export interface IForm {
@@ -42,7 +43,7 @@ const Register = () => {
   }, [user]);
 
   return (
-    <>
+    <RegisterFormWrapper>
       <h1>Rejestracja!</h1>
       <RegisterFormStyled onSubmit={handleSubmit(onSubmit)}>
         <Controller
@@ -55,10 +56,10 @@ const Register = () => {
           control={control}
           render={({ field }) => <input placeholder="Type password" type={"password"} {...field} />}
         />
-        <button type="submit">Zarejestruj!</button>
+        <PrimaryButton type="submit">Zarejestruj!</PrimaryButton>
         {error}
       </RegisterFormStyled>
-    </>
+    </RegisterFormWrapper>
   );
 };
 

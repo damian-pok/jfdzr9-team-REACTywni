@@ -8,6 +8,7 @@ import {
   ProfileClientFrameData,
   ProfileClientFrameKey,
   ProfileClientFrameLogo,
+  ProfileClientFrameWrapper,
 } from "../components/ProfileClientFrame/ProfileClientFrame.styled";
 import { getFreelancer } from "../firebase/getFreelancer";
 
@@ -74,39 +75,41 @@ const ProfileClient = () => {
       )}
       {freelancer && userData && (
         <>
-          <h1>Profil: {userData.firstName}!</h1>
-          <ProfileClientFrame>
-            <ProfileClientFrameLogo src={example} alt="logo" width="300" />
-            <ProfileClientFrameData>
-              <p>
-                <ProfileClientFrameKey>Imię:</ProfileClientFrameKey> {userData.firstName}
-              </p>
-              <p>
-                <ProfileClientFrameKey>Nazwisko:</ProfileClientFrameKey> {userData.secondName}
-              </p>
-              <p>
-                <ProfileClientFrameKey>O mnie:</ProfileClientFrameKey> {userData.aboutMe}
-              </p>
-              <p>
-                <ProfileClientFrameKey>e-mail:</ProfileClientFrameKey> {userData.email}
-              </p>
-              <p>
-                <ProfileClientFrameKey>Kraj:</ProfileClientFrameKey> {userData.country}
-              </p>
-              <p>
-                <ProfileClientFrameKey>Miasto:</ProfileClientFrameKey> {userData.city}
-              </p>
-              <p>
-                <ProfileClientFrameKey>Doświadczenie:</ProfileClientFrameKey> {userData.experience}
-              </p>
-              <p>
-                <ProfileClientFrameKey>Usługi:</ProfileClientFrameKey> {userData.services}
-              </p>
-              <p>
-                <ProfileClientFrameKey>Galeria:</ProfileClientFrameKey> {userData.gallery}
-              </p>
-            </ProfileClientFrameData>
-          </ProfileClientFrame>
+          <ProfileClientFrameWrapper>
+            <h1>Profil: {userData.firstName}!</h1>
+            <ProfileClientFrame>
+              <ProfileClientFrameLogo src={example} alt="logo" width="300" />
+              <ProfileClientFrameData>
+                <p>
+                  <ProfileClientFrameKey>Imię:</ProfileClientFrameKey> {userData.firstName}
+                </p>
+                <p>
+                  <ProfileClientFrameKey>Nazwisko:</ProfileClientFrameKey> {userData.secondName}
+                </p>
+                <p>
+                  <ProfileClientFrameKey>O mnie:</ProfileClientFrameKey> {userData.aboutMe}
+                </p>
+                <p>
+                  <ProfileClientFrameKey>e-mail:</ProfileClientFrameKey> {userData.email}
+                </p>
+                <p>
+                  <ProfileClientFrameKey>Kraj:</ProfileClientFrameKey> {userData.country}
+                </p>
+                <p>
+                  <ProfileClientFrameKey>Miasto:</ProfileClientFrameKey> {userData.city}
+                </p>
+                <p>
+                  <ProfileClientFrameKey>Doświadczenie:</ProfileClientFrameKey> {userData.experience}
+                </p>
+                <p>
+                  <ProfileClientFrameKey>Usługi:</ProfileClientFrameKey> {userData.services}
+                </p>
+                <p>
+                  <ProfileClientFrameKey>Galeria:</ProfileClientFrameKey> {userData.gallery}
+                </p>
+              </ProfileClientFrameData>
+            </ProfileClientFrame>
+          </ProfileClientFrameWrapper>
         </>
       )}
     </>

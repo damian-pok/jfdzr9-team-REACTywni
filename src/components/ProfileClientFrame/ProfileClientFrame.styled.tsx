@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ProfileClientFrame = styled.div`
+  width: 800px;
   padding: 30px;
   border: solid 1px black;
   border-radius: 15px;
@@ -22,4 +23,11 @@ export const ProfileClientFrameData = styled.div`
 export const ProfileClientFrameKey = styled.span`
   font-weight: bold;
   padding-right: 20px;
+`;
+
+export const ProfileClientFrameWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
 `;
