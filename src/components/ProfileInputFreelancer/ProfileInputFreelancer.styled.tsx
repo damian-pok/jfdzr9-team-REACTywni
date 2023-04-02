@@ -10,3 +10,16 @@ export const ProfileInputFreelancerStyled = styled.form`
 export const AboutMeStyled = styled.input`
   min-height: 5rem;
 `;
+
+export const CategoryPair = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+  justify-content: space-between;
+`;
+
+export const CategoryGroup = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+`;
