@@ -1,15 +1,12 @@
-import { MenuButton } from "./MenuCategories.styled";
+import { MenuButtons } from "../MenuButtons/MenuButtons.component";
 import { MenuCategoriesButtons } from "./MenuCategories.styled";
 
 export const MenuCategories = () => {
   return (
-    <MenuCategoriesButtons>
-      <MenuButton>Branding</MenuButton>
-      <MenuButton>Druk</MenuButton>
-      <MenuButton>Digital</MenuButton>
-      <MenuButton>UX/UI</MenuButton>
-      <MenuButton>Ilustracje</MenuButton>
-      <MenuButton>Inne</MenuButton>
-    </MenuCategoriesButtons>
+    <>
+      <MenuCategoriesButtons>
+        <MenuButtons />
+      </MenuCategoriesButtons>
+    </>
   );
 };
