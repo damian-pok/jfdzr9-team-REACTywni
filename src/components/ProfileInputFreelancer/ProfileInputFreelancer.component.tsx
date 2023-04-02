@@ -89,10 +89,16 @@ export const ProfileInputFreelancer = () => {
   if (loading) return <div>Loading...</div>;
 
   const onSubmit = handleSubmit((data) => {
+    data.print = data.print || false;
+
     auth.currentUser != null ? (data.uid = String(auth.currentUser.uid)) : "error";
-    addFreelancer(data).then(() => {
-      setSuccess(true);
-    });
+    addFreelancer(data)
+      .then(() => {
+        setSuccess(true);
+      })
+      .catch((error) => {
+        console.error("Error adding freelancer: ", error);
+      });
   });
 
   return (
@@ -173,6 +179,7 @@ export const ProfileInputFreelancer = () => {
                   type={"checkbox"}
                   checked={isPrintChecked}
                   {...field}
+                  value={field.value || ""}
                   onChange={(e) => {
                     handleChangePrint(e);
                     field.onChange(e);
