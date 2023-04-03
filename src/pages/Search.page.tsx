@@ -1,5 +1,7 @@
+import { Searchbar } from "../components/Searchbar/Searchbar.component";
+
 const Search = () => {
-  return <h1>Znajdź grafika</h1>;
+  return <Searchbar />;
 };
 
 export default Search;
