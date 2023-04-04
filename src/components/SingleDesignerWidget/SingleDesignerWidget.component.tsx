@@ -1,15 +1,24 @@
-import { DesignerWidget, DesignerPhoto, DesignerTags, DesignerContent, TagButton } from "./SingleDesignerWidget.styled";
+import {
+  DesignerWidget,
+  DesignerPhoto,
+  DesignerTags,
+  DesignerContent,
+  Tag,
+  PhotoContainer,
+} from "./SingleDesignerWidget.styled";
 import designer from "../../../public/designer.jpg";
 
 export const SingleDesignerWidget = () => {
   return (
     <DesignerWidget>
-      <DesignerPhoto src={designer} />
-      <DesignerTags>
-        <TagButton>branding</TagButton>
-        <TagButton>UX/UI</TagButton>
-        <TagButton>inne</TagButton>
-      </DesignerTags>
+      <PhotoContainer>
+        <DesignerPhoto src={designer} />
+        <DesignerTags>
+          <Tag>branding</Tag>
+          <Tag>UX/UI</Tag>
+          <Tag>inne</Tag>
+        </DesignerTags>
+      </PhotoContainer>
       <DesignerContent>
         <h3>Anna Karenina</h3>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus a incidunt id ab, sint porro nihil quaerat ex
