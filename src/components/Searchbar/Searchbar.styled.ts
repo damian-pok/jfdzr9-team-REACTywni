@@ -9,7 +9,7 @@ export const SearchWrapper = styled.div`
 `;
 
 export const SearchField = styled.input`
-  background-color: var(--very-light-grey-color);
+  background-color: #f3f3f6;
   border: none;
   border-radius: 5px;
   min-width: 40rem;
