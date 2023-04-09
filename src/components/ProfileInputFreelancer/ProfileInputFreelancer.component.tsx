@@ -89,7 +89,7 @@ export const ProfileInputFreelancer = () => {
   if (loading) return <div>Loading...</div>;
 
   const onSubmit = handleSubmit((data) => {
-    data.print = data.print || false;
+    data.print = data.print ?? "";
 
     auth.currentUser != null ? (data.uid = String(auth.currentUser.uid)) : "error";
     addFreelancer(data)
