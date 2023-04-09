@@ -5,8 +5,6 @@ export const DesignerNav = () => {
   return (
     <DesignersWrapper>
       <SingleDesignerWidget />
-      <SingleDesignerWidget />
-      <SingleDesignerWidget />
     </DesignersWrapper>
   );
 };

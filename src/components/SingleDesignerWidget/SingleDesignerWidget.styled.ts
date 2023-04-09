@@ -1,26 +1,26 @@
 import styled from "styled-components";
 
 export const DesignerWidget = styled.div`
-  height: 300px;
   display: grid;
   grid-template-columns: 1fr 5fr;
   grid-template-rows: 2fr 1fr;
   gap: 1.8rem;
-  border-radius: 5px;
+  border-radius: 15px;
   background-color: var(--lime-yellow);
-  padding: 3.5rem;
+  padding: 3.5rem 3.5rem 0rem 3.5rem;
 `;
 
 export const DesignerPhoto = styled.img`
-  height: auto;
-  width: 179px;
+  height: 205px;
+  width: 205px;
   border-radius: 5px;
+  object-fit: cover;
 `;
 
 export const DesignerTags = styled.div`
   display: flex;
   gap: 0.7rem;
-  height: auto;
+  height: 80px;
   width: fit-content;
   grid-column: 1 / span 2;
 `;
