@@ -4,6 +4,7 @@ import { SingleDesignerWidget } from "../SingleDesignerWidget/SingleDesignerWidg
 export const DesignersNav = () => {
   return (
     <DesignersWrapper>
+      <h2>Znajdź designera</h2>
       <SingleDesignerWidget />
     </DesignersWrapper>
   );
