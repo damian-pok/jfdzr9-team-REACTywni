@@ -5,6 +5,7 @@ import designer3 from "../../../public/designer3.jpg";
 export const SingleDesignerWidget = () => {
   return (
     <>
+      <h1>Znajdź designera</h1>
       <DesignerWidget>
         <DesignerPhoto src={designer} />
         <DesignerContent>
