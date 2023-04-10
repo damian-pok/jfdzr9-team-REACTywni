@@ -1,10 +1,10 @@
-import { SearchWrapper, SearchField, SearchLabel } from "./Search.styled";
+import { SearchWrapper } from "./Search.styled";
+import { SearchEngine } from "../SearchEngine/SearchEngine.component";
 
-export const Searchbar = () => {
+export const Search = () => {
   return (
     <SearchWrapper>
-      <SearchLabel>Wpisz czego potrzebujesz</SearchLabel>
-      <SearchField placeholder="ulotka, plakat, broszura..." />
+      <SearchEngine />
     </SearchWrapper>
   );
 };

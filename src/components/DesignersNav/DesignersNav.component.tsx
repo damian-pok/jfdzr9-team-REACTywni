@@ -1,11 +1,9 @@
-import { DesignersWrapper } from "./DesignerNav.styled";
+import { DesignersWrapper } from "./DesignersNav.styled";
 import { SingleDesignerWidget } from "../SingleDesignerWidget/SingleDesignerWidget.component";
-import { Searchbar } from "../Search/Search.component";
 
-export const DesignerNav = () => {
+export const DesignersNav = () => {
   return (
     <DesignersWrapper>
-      <Searchbar />
       <SingleDesignerWidget />
     </DesignersWrapper>
   );

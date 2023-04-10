@@ -1,12 +1,11 @@
-import { Searchbar } from "../components/Search/Search.component";
-import { DesignerNav } from "../components/DesignerNav/DesignerNav.component";
+import { Search } from "../components/Search/Search.component";
 
-const Search = () => {
+const SearchPage = () => {
   return (
     <>
-      <DesignerNav />
+      <Search />
     </>
   );
 };
 
-export default Search;
+export default SearchPage;
