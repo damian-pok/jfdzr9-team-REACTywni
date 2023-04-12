@@ -3,16 +3,17 @@ import styled from "styled-components";
 export const DesignerWidget = styled.div`
   display: grid;
   grid-template-columns: 1fr 5fr;
-  grid-template-rows: 2fr 1fr;
+  /* grid-template-rows: 2fr 1fr; */
   gap: 1.8rem;
   border-radius: 15px;
   background-color: var(--lime-yellow);
-  padding: 3.5rem 3.5rem 0rem 3.5rem;
+  padding: 20px 50px 34px 20px;
+  height: 259px;
 `;
 
 export const DesignerPhoto = styled.img`
-  height: 205px;
-  width: 205px;
+  height: 160px;
+  width: 160px;
   border-radius: 5px;
   object-fit: cover;
 `;
@@ -35,10 +36,8 @@ export const Tag = styled.p`
 `;
 
 export const DesignerContent = styled.p`
-  height: auto;
-  border-radius: 5px;
+  height: fit-content;
   padding: 1.7rem;
   display: flex;
   flex-direction: column;
-  background-color: var(--white-color);
 `;

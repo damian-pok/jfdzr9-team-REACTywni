@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const SearchWrapper = styled.section`
-  margin-top: 56px;
-  margin-bottom: 63px;
+  margin: 56px auto 63px auto;
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: auto;
