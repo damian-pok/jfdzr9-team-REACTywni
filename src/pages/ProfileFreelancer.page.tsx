@@ -1,5 +1,7 @@
-const ProfileFreelancer = () => {
-  return <h1>Profil Freelancera!</h1>;
-};
+import React from "react";
+
+function ProfileFreelancer() {
+  return <div></div>;
+}
 
 export default ProfileFreelancer;
