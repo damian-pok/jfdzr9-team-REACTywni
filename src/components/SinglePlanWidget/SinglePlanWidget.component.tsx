@@ -1,39 +1,42 @@
-import { PlanWidgetArea } from "./SinglePlanWidget.styled";
-import { SinglePlanWidgetField } from "./SinglePlanWidget.styled";
-import { PlanContentArea } from "./SinglePlanWidget.styled";
-import DeflautImageCounter from "./../../assets/deflaut-image-counter.png";
+import { PlanWidgetArea, Image, SinglePlanWidgetField, PlanContentArea } from "./SinglePlanWidget.styled";
+import task from "./../../assets/task.svg";
+import addUser from "./../../assets/addUser.svg";
+import register from "./../../assets/register.svg";
+import findGraphic from "./../../assets/findGraphic.svg";
+import certificate from "./../../assets/certificate.svg";
 
 export const SinglePlanWidget = () => {
   return (
     <>
-      <h1>Pierwsze kroki:</h1>
       <PlanWidgetArea>
         <SinglePlanWidgetField>
-          <img src={DeflautImageCounter} alt="Ikonka licznika" />
+          <Image src={register} alt="Zarejestruj się" />
           <PlanContentArea>
-            <h3>Krok 1</h3>
-            <p>Zarejestruj się.</p>
+            <h3>Zarejestruj się</h3>
           </PlanContentArea>
         </SinglePlanWidgetField>
         <SinglePlanWidgetField>
-          <img src={DeflautImageCounter} alt="Ikonka licznika" />
+          <Image src={addUser} alt="Wypełnij profil" />
           <PlanContentArea>
-            <h3>Krok 1</h3>
-            <p>Wypełnij profil.</p>
+            <h3>Wypełnij profil</h3>
           </PlanContentArea>
         </SinglePlanWidgetField>
         <SinglePlanWidgetField>
-          <img src={DeflautImageCounter} alt="Ikonka licznika" />
+          <Image src={findGraphic} alt="Znajdź grafika" />
           <PlanContentArea>
-            <h3>Krok 3</h3>
-            <p>Znajdź Grafika i zleć zadanie!</p>
+            <h3>Znajdź grafika</h3>
           </PlanContentArea>
         </SinglePlanWidgetField>
         <SinglePlanWidgetField>
-          <img src={DeflautImageCounter} alt="Ikonka licznika" />
+          <Image src={task} alt="task" />
           <PlanContentArea>
-            <h3>Krok 4</h3>
-            <p>Ciesz się efektami współpracy! :D</p>
+            <h3>Zleć zadanie</h3>
+          </PlanContentArea>
+        </SinglePlanWidgetField>
+        <SinglePlanWidgetField>
+          <Image src={certificate} alt="Efekt współpracy" />
+          <PlanContentArea>
+            <h3>Ciesz się efektami współpracy!</h3>
           </PlanContentArea>
         </SinglePlanWidgetField>
       </PlanWidgetArea>
