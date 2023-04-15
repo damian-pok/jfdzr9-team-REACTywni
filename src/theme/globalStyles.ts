@@ -23,6 +23,11 @@ ${normalize}
     --primary-green: #1AD079;
     --primary-dark-navy: #07133B;
     --secondary-very-light-grey: #F8F9FB;
+    --secondary-light-grey: #F3F3F6;
+    --secoundary-grey: #C2D1D9;
+    //Hover Color
+    --additional-dark-green: #17b66a;
+    --additional-navy: #091849;
 
   //global color styles - dark mode:
     // Here will be defined colors for dark mode
@@ -38,11 +43,13 @@ ${normalize}
   --Default-Signatures-size: 0.75rem;
 
    //import font style:
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
 
   //global font style:
-  color: var(--black);
+  color: var(--primary-dark-navy);
   line-height: 1.8;
+  background-color: var(--secondary-very-light-grey);
+  scroll-behavior: smooth;
 }
 
 *{
@@ -55,6 +62,7 @@ html{
 }
 
 body {
+  margin: 2rem;
   background-color: var(--very-light-color);
   display: flex;
   justify-content: center;
