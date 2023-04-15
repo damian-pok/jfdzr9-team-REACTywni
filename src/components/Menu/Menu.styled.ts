@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const MenuField = styled.div`
-  width: 81rem;
+  max-width: 78.25rem;
   height: fit-content;
   color: var(--primary-dark-navy);
   border-radius: 1rem;
@@ -10,12 +10,13 @@ export const MenuField = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   padding: 1.5rem 2.5rem;
+  align-items: center;
 `;
 
 export const LogosAndPrimaryButtonsField = styled.div`
-  width: 100%;
+  box-sizing: border-box;
+  width: 78.25rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

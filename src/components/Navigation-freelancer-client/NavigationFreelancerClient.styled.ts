@@ -1,18 +1,13 @@
 import styled from "styled-components";
 
 export const ComponentsField = styled.div`
-  width: 81rem;
+  max-width: 1332px;
   height: fit-content;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  justify-self: center;
-  justify-items: center;
-  align-items: center;
-  align-self: center;
-  align-content: center;
   gap: 1.5rem;
   padding-top: 3.75rem;
+  justify-content: center;
 `;
 
 export const NavigationBox = styled.div`
@@ -23,7 +18,7 @@ export const NavigationBox = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1.5rem;
-  padding: 4rem;
+  padding: 3rem;
   border-radius: 1rem;
   background-color: var(--secondary-light-grey);
 `;
