@@ -1,7 +1,7 @@
-import React from "react";
+import Freelancer from "../components/FreelancerProfile/FreelancerProfile.component";
 
 function ProfileFreelancer() {
-  return <div></div>;
+  return <Freelancer />;
 }
 
 export default ProfileFreelancer;
