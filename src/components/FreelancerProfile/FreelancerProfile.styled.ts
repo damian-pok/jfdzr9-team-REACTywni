@@ -13,3 +13,7 @@ export const EditionButton = styled.button`
   color: white;
   border-radius: 5px;
 `;
+
+export const CloseButton = styled.button`
+  border: none;
+`;
