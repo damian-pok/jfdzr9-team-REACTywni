@@ -20,6 +20,10 @@ ${normalize}
     --black: #040403;
     --white-color: #fff;
 
+    --primary-green: #1AD079;
+    --primary-dark-navy: #07133B;
+    --secondary-very-light-grey: #F8F9FB;
+
   //global color styles - dark mode:
     // Here will be defined colors for dark mode
 
