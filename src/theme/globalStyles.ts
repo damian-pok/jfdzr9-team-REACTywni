@@ -62,6 +62,7 @@ html{
 }
 
 body {
+  width: 1440px;
   margin: 2rem;
   background-color: var(--very-light-color);
   display: flex;
@@ -70,7 +71,7 @@ body {
 }
 
 .root{
-    width: 1440px;
+    
 }
 
 
@@ -89,12 +90,6 @@ a {
 input {
   min-height: var(--Default-Headline-3-size);
 }
-
-p, h1, h2, h3, h4, h5, h5 {
-  margin: 0px;
-  padding: 0px;
-}
-
 `;
 
 export default GlobalStyle;

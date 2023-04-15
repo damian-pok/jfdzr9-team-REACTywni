@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const SectionContactField = styled.div`
-  width: 1440px;
+  max-width: 1332px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-items: center;
   gap: 0.5rem;
-  padding: 3rem 2.5rem;
+  //padding: 3rem 2.5rem;
   background-color: var(--lime-yellow);
 `;
 

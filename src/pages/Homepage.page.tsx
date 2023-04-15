@@ -9,9 +9,7 @@ const Homepage = () => {
       <NavigationFreelancerClient />
       <Counter />
       <BusinessPartners />
-      <div id="contact">
-        <Contact />
-      </div>
+      <Contact />
     </>
   );
 };

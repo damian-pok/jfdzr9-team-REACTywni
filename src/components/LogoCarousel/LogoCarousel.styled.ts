@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const LogoField = styled.div`
-  width: 1440px;
+  max-width: 1332px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-self: center;
   gap: 5rem;
-  padding: 4rem;
+  padding: 4rem 0;
   overflow: hidden;
   position: relative;
 `;
