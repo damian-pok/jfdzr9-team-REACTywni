@@ -25,6 +25,7 @@ ${normalize}
     --secondary-very-light-grey: #F8F9FB;
     --secondary-light-grey: #F3F3F6;
     --secoundary-grey: #C2D1D9;
+    --secoundary-white: #fff;
     //Hover Color
     --additional-dark-green: #17b66a;
     --additional-navy: #091849;
