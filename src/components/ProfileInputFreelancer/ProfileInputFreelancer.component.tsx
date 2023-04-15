@@ -23,7 +23,7 @@ export interface IProfileInputFreelancer {
   city: string;
   experience: number;
   aboutMe: string;
-  services: string;
+  //services: string;
   gallery: string;
   branding: string;
   print: string;
@@ -31,6 +31,7 @@ export interface IProfileInputFreelancer {
   ux: string;
   ilustrations: string;
   other: string;
+  tags: string;
 }
 
 export const ProfileInputFreelancer = () => {
@@ -89,7 +90,13 @@ export const ProfileInputFreelancer = () => {
   if (loading) return <div>Loading...</div>;
 
   const onSubmit = handleSubmit((data) => {
-    data.print = data.print ?? "";
+    data.branding = data.branding ?? null;
+    data.print = data.print ?? null;
+    data.digital = data.digital ?? null;
+    data.ux = data.ux ?? null;
+    data.ilustrations = data.ilustrations ?? null;
+    data.other = data.other ?? null;
+    //data.print = data.print !== null && data.print !== undefined ? data.print.toString() : "false";
 
     auth.currentUser != null ? (data.uid = String(auth.currentUser.uid)) : "error";
     addFreelancer(data)
@@ -140,15 +147,21 @@ export const ProfileInputFreelancer = () => {
           render={({ field }) => <AboutMeStyled placeholder="O mnie..." type={"text"} {...field} />}
         />
         <Controller
+          name="tags"
+          control={control}
+          render={({ field }) => <AboutMeStyled placeholder="Tagi..." type={"text"} {...field} />}
+        />
+        {/* <Controller
           name="services"
           control={control}
           render={({ field }) => <input placeholder="Usługi" type={"text"} {...field} />}
-        />
+        /> */}
         <Controller
           name="gallery"
           control={control}
           render={({ field }) => <input placeholder="Galeria" type={"text"} {...field} />}
         />
+        <h2>Usługi</h2>
         <CategoryGroup>
           <Controller
             name="branding"

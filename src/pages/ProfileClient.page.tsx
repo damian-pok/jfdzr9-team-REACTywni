@@ -102,6 +102,9 @@ const ProfileClient = () => {
                   <ProfileClientFrameKey>Doświadczenie:</ProfileClientFrameKey> {userData.experience}
                 </p>
                 <p>
+                  <ProfileClientFrameKey>Tagi:</ProfileClientFrameKey> {userData.tags}
+                </p>
+                <p>
                   <ProfileClientFrameKey>Usługi:</ProfileClientFrameKey>
                   {userData.branding ? <button>Branding</button> : null}
                   {userData.print ? <button>Druk</button> : null}
