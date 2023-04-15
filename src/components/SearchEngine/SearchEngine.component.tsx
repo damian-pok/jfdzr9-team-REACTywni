@@ -1,3 +1,4 @@
+import { PrimaryButton } from "../UI/Buttons/Buttons.styled";
 import {
   SearchEngineWrapper,
   SearchField,
@@ -13,6 +14,7 @@ export const SearchEngine = () => {
     <SearchEngineWrapper>
       <SearchLabel>Wpisz czego potrzebujesz</SearchLabel>
       <SearchField placeholder="ulotka, plakat, broszura..." />
+      <PrimaryButton>Znajdź</PrimaryButton>
       <CategoryLabel>Wybierz kategorię</CategoryLabel>
       <CheckboxList>
         <CheckboxLabel>

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SearchEngineWrapper = styled.div`
   width: fit-content;
-  height: 390px;
+  height: fit-content;
   background: #f3f3f6;
   border-radius: 15px;
   display: flex;
