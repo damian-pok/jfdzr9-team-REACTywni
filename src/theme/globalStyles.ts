@@ -79,16 +79,22 @@ h1 {
 }
 
 a {
-  color: var(--dark-grey-color);
+  color: var(--primary-green);
   text-decoration: none;
   :hover{
-    color: var(--light-grey-color);
+    color: var(--additional-dark-green);
   }
 }
 
 input {
   min-height: var(--Default-Headline-3-size);
 }
+
+p, h1, h2, h3, h4, h5, h5 {
+  margin: 0px;
+  padding: 0px;
+}
+
 `;
 
 export default GlobalStyle;
