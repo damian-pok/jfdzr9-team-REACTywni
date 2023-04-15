@@ -1,10 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-interface AnchorProps {
-  id: string;
-}
-
 export const MenuField = styled.div`
   width: 81rem;
   height: fit-content;
