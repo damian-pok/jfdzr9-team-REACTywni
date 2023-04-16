@@ -1,20 +1,30 @@
 import styled from "styled-components";
 
 export const SearchPageDescription = styled.div`
+  max-width: var(--Default-Body-width);
   height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 4rem;
-  width: 800px;
+`;
+
+export const HeaderStyles = styled.h2`
+  font-size: var(--Default-Headline-2-size);
+  padding-bottom: 1.5rem;
+`;
+
+export const ParagraphStyles = styled.p`
+  font-size: var(--Default-Body-size);
+  padding-bottom: 2rem;
 `;
 
 export const SearchPageDescriptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 3.75rem;
 `;
 
 export const HowClientListArea = styled.ol`

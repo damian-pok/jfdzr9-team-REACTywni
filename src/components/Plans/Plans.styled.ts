@@ -7,5 +7,10 @@ export const PlansArea = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 4rem;
+  padding-top: 3.75rem;
+`;
+
+export const HeaderStyles = styled.h2`
+  font-size: var(--Default-Headline-2-size);
+  padding-bottom: 1.5rem;
 `;

@@ -1,8 +1,7 @@
-import { Headlines3, PlanWidgetArea, ImagesIcons } from "./SinglePlanWidget.styled";
-import { SinglePlanWidgetField } from "./SinglePlanWidget.styled";
+import { PlanWidgetArea } from "./SinglePlanWidget.styled";
 import { PlanContentArea } from "./SinglePlanWidget.styled";
 import { HeaderStyles } from "../HowFreelancerDescription/HowFreelancerDescription.styled";
-
+import { SingleStepContainer, IconStep, TileStep } from "../UI/SingleStep/SingleStep.styled";
 //Imports icons
 import RegisterIcon from "./../../assets/icons/register-icon.svg";
 import ProfileIcon from "./../../assets/icons/profil-icon.svg";
@@ -15,36 +14,36 @@ export const SinglePlanWidgetFreelancer = () => {
     <>
       <HeaderStyles>Jak to działa?</HeaderStyles>
       <PlanWidgetArea>
-        <SinglePlanWidgetField>
-          <ImagesIcons src={RegisterIcon} alt="Ikonka licznika" />
+        <SingleStepContainer>
+          <IconStep src={RegisterIcon} alt="Ikonka licznika" />
           <PlanContentArea>
-            <Headlines3>Zarejestruj się</Headlines3>
+            <TileStep>Zarejestruj się</TileStep>
           </PlanContentArea>
-        </SinglePlanWidgetField>
-        <SinglePlanWidgetField>
-          <ImagesIcons src={ProfileIcon} alt="Ikonka licznika" />
+        </SingleStepContainer>
+        <SingleStepContainer>
+          <IconStep src={ProfileIcon} alt="Ikonka licznika" />
           <PlanContentArea>
-            <Headlines3>Wypełnij profil</Headlines3>
+            <TileStep>Wypełnij profil</TileStep>
           </PlanContentArea>
-        </SinglePlanWidgetField>
-        <SinglePlanWidgetField>
-          <ImagesIcons src={ProjectsIcon} alt="Ikonka licznika" />
+        </SingleStepContainer>
+        <SingleStepContainer>
+          <IconStep src={ProjectsIcon} alt="Ikonka licznika" />
           <PlanContentArea>
-            <Headlines3>Pochwal się projektami</Headlines3>
+            <TileStep>Pochwal się projektami</TileStep>
           </PlanContentArea>
-        </SinglePlanWidgetField>
-        <SinglePlanWidgetField>
-          <ImagesIcons src={OrdersIcon} alt="Ikonka licznika" />
+        </SingleStepContainer>
+        <SingleStepContainer>
+          <IconStep src={OrdersIcon} alt="Ikonka licznika" />
           <PlanContentArea>
-            <Headlines3>Otrzymuj zlecenia!</Headlines3>
+            <TileStep>Otrzymuj zlecenia!</TileStep>
           </PlanContentArea>
-        </SinglePlanWidgetField>
-        <SinglePlanWidgetField>
-          <ImagesIcons src={MoneyIcon} alt="Ikonka licznika" />
+        </SingleStepContainer>
+        <SingleStepContainer>
+          <IconStep src={MoneyIcon} alt="Ikonka licznika" />
           <PlanContentArea>
-            <Headlines3>Zarabiaj z nami $</Headlines3>
+            <TileStep>Zarabiaj z nami $</TileStep>
           </PlanContentArea>
-        </SinglePlanWidgetField>
+        </SingleStepContainer>
       </PlanWidgetArea>
     </>
   );

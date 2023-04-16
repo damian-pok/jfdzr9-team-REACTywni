@@ -1,11 +1,18 @@
-import { SearchPageDescription, SearchPageDescriptionWrapper } from "./HowClientDescription.styled";
+import { Link } from "react-router-dom";
+import { PrimaryNavyButton } from "../UI/Buttons/Buttons.styled";
+import {
+  SearchPageDescription,
+  SearchPageDescriptionWrapper,
+  HeaderStyles,
+  ParagraphStyles,
+} from "./HowClientDescription.styled";
 
 const HowClientDescription = () => {
   return (
     <SearchPageDescriptionWrapper>
       <SearchPageDescription>
-        <h1>Znajdź designera</h1>
-        <p>
+        <HeaderStyles>Znajdź designera</HeaderStyles>
+        <ParagraphStyles>
           Jeśli potrzebujesz profesjonalnych usług grafika, warto skorzystać z naszego portalu. Dzięki temu masz szansę
           na znalezienie doświadczonego specjalisty, który pomoże Ci w realizacji projektów graficznych. Nasz portal
           oferuje szeroki wybór grafików o różnym doświadczeniu i specjalizacji, co pozwoli Ci na znalezienie osoby
@@ -14,7 +21,10 @@ const HowClientDescription = () => {
           wybierasz najlepszego specjalistę do swojego projektu. Korzystając z naszego portalu oferującego usługi
           graficzne, masz szansę na zrealizowanie swoich pomysłów z wykorzystaniem najlepszych narzędzi i doświadczenia
           specjalistów z całego świata, co pozwala na osiągnięcie najlepszych efektów.
-        </p>
+        </ParagraphStyles>
+        <Link to={`/search`}>
+          <PrimaryNavyButton>Przejdź do wyszukiwarki</PrimaryNavyButton>
+        </Link>
       </SearchPageDescription>
     </SearchPageDescriptionWrapper>
   );

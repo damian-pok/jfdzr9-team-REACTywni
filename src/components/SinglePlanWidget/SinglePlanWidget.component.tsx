@@ -1,44 +1,46 @@
-import { PlanWidgetArea, Image, SinglePlanWidgetField, PlanContentArea } from "./SinglePlanWidget.styled";
-import task from "./../../assets/task.svg";
-import addUser from "./../../assets/addUser.svg";
-import register from "./../../assets/register.svg";
-import findGraphic from "./../../assets/findGraphic.svg";
-import certificate from "./../../assets/certificate.svg";
+import { PlanWidgetArea, PlanContentArea } from "./SinglePlanWidget.styled";
+import { SingleStepContainer, IconStep, TileStep } from "../UI/SingleStep/SingleStep.styled";
+//Imports icons
+import RegisterIcon from "./../../assets/icons/register-icon.svg";
+import ProfilIcon from "./../../assets/icons/profil-icon.svg";
+import DesignerIcon from "./../../assets/icons/designer-icon.svg";
+import IssueOrderIcon from "./../../assets/icons/issue-an-order-icon.svg";
+import CompleteOrderIcon from "./../../assets/icons/complete-orders-icon.svg";
 
 export const SinglePlanWidget = () => {
   return (
     <>
       <PlanWidgetArea>
-        <SinglePlanWidgetField>
-          <Image src={register} alt="Zarejestruj się" />
+        <SingleStepContainer>
+          <IconStep src={RegisterIcon} alt="Ikonka licznika" />
           <PlanContentArea>
-            <h3>Zarejestruj się</h3>
+            <TileStep>Zarejestruj się</TileStep>
           </PlanContentArea>
-        </SinglePlanWidgetField>
-        <SinglePlanWidgetField>
-          <Image src={addUser} alt="Wypełnij profil" />
+        </SingleStepContainer>
+        <SingleStepContainer>
+          <IconStep src={ProfilIcon} alt="Ikonka licznika" />
           <PlanContentArea>
-            <h3>Wypełnij profil</h3>
+            <TileStep>Wypełnij profil</TileStep>
           </PlanContentArea>
-        </SinglePlanWidgetField>
-        <SinglePlanWidgetField>
-          <Image src={findGraphic} alt="Znajdź grafika" />
+        </SingleStepContainer>
+        <SingleStepContainer>
+          <IconStep src={DesignerIcon} alt="Ikonka licznika" />
           <PlanContentArea>
-            <h3>Znajdź grafika</h3>
+            <TileStep>Znajdź Grafika!</TileStep>
           </PlanContentArea>
-        </SinglePlanWidgetField>
-        <SinglePlanWidgetField>
-          <Image src={task} alt="task" />
+        </SingleStepContainer>
+        <SingleStepContainer>
+          <IconStep src={IssueOrderIcon} alt="Ikonka licznika" />
           <PlanContentArea>
-            <h3>Zleć zadanie</h3>
+            <TileStep>Zleć zadanie</TileStep>
           </PlanContentArea>
-        </SinglePlanWidgetField>
-        <SinglePlanWidgetField>
-          <Image src={certificate} alt="Efekt współpracy" />
+        </SingleStepContainer>
+        <SingleStepContainer>
+          <IconStep src={CompleteOrderIcon} alt="Ikonka licznika" />
           <PlanContentArea>
-            <h3>Ciesz się efektami współpracy!</h3>
+            <TileStep>Ciesz się efektami współpracy!</TileStep>
           </PlanContentArea>
-        </SinglePlanWidgetField>
+        </SingleStepContainer>
       </PlanWidgetArea>
     </>
   );
