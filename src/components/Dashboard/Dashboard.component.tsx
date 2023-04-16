@@ -9,8 +9,8 @@ export interface IFreelancers {
 export const Dashboard = ({ freelancers }: IFreelancers) => {
   return (
     <>
-      <p>Freelancerzy</p>
       <FreelancersGrid>
+        <h1>Graficy</h1>
         {freelancers.map((freelancer) => (
           <SingleFreelancer key={freelancer.uid} freelancerData={freelancer}></SingleFreelancer>
         ))}

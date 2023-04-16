@@ -23,7 +23,6 @@ export interface IProfileInputFreelancer {
   city: string;
   experience: number;
   aboutMe: string;
-  //services: string;
   gallery: string;
   branding: string;
   print: string;
@@ -151,11 +150,6 @@ export const ProfileInputFreelancer = () => {
           control={control}
           render={({ field }) => <AboutMeStyled placeholder="Tagi..." type={"text"} {...field} />}
         />
-        {/* <Controller
-          name="services"
-          control={control}
-          render={({ field }) => <input placeholder="Usługi" type={"text"} {...field} />}
-        /> */}
         <Controller
           name="gallery"
           control={control}

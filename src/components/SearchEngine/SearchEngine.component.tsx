@@ -1,20 +1,24 @@
-import { PrimaryButton } from "../UI/Buttons/Buttons.styled";
+import { Dispatch, SetStateAction } from "react";
 import {
   SearchEngineWrapper,
-  SearchField,
   SearchLabel,
   CategoryLabel,
   CheckboxList,
   CheckboxLabel,
   Input,
 } from "./SearchEngine.styled";
+import { SearchBar } from "../SearchBar/SearchBar.component";
 
-export const SearchEngine = () => {
+interface SearchBarProps {
+  query: string;
+  setQuery: Dispatch<SetStateAction<string>>;
+}
+
+export const SearchEngine = ({ query, setQuery }: SearchBarProps) => {
   return (
     <SearchEngineWrapper>
       <SearchLabel>Wpisz czego potrzebujesz</SearchLabel>
-      <SearchField placeholder="ulotka, plakat, broszura..." />
-      <PrimaryButton>Znajdź</PrimaryButton>
+      <SearchBar query={query} setQuery={setQuery} />
       <CategoryLabel>Wybierz kategorię</CategoryLabel>
       <CheckboxList>
         <CheckboxLabel>

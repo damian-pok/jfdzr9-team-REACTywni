@@ -7,7 +7,7 @@ import {
   DesignerWidget,
   Tag,
   TagsWrapper,
-} from "../SingleDesignerWidget/SingleDesignerWidget.styled";
+} from "../SingleFreelancer/SingleFreelancer.styled";
 import example from "../../assets/example.jpg";
 import { DesignerServices } from "../DesignerServices/DesignerServices.component";
 
@@ -39,7 +39,7 @@ export const SingleFreelancer = ({ freelancerData }: IFreelacerData) => {
           </DesignerTags>
 
           <DesignerTagsSecond>
-            {freelancerData.services && <DesignerServices services={freelancerData.services}></DesignerServices>}
+            {freelancerData.tags && <DesignerServices services={freelancerData.tags}></DesignerServices>}
           </DesignerTagsSecond>
         </TagsWrapper>
       </DesignerWidget>

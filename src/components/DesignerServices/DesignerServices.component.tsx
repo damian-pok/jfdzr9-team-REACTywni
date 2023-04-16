@@ -1,4 +1,4 @@
-import { TagSecond } from "../SingleDesignerWidget/SingleDesignerWidget.styled";
+import { TagSecond } from "../SingleFreelancer/SingleFreelancer.styled";
 
 interface IServices {
   services: string;
