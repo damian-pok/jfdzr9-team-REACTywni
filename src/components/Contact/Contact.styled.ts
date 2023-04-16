@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SectionContactField = styled.div`
-  max-width: 1332px;
+  max-width: var(--Default-Body-width);
   display: flex;
   flex-direction: column;
   align-items: center;

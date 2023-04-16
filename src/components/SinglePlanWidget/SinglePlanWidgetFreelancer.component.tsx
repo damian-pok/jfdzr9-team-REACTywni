@@ -1,39 +1,48 @@
-import { PlanWidgetArea } from "./SinglePlanWidget.styled";
+import { Headlines3, PlanWidgetArea, ImagesIcons } from "./SinglePlanWidget.styled";
 import { SinglePlanWidgetField } from "./SinglePlanWidget.styled";
 import { PlanContentArea } from "./SinglePlanWidget.styled";
-import DeflautImageCounter from "./../../assets/deflaut-image-counter.png";
+import { HeaderStyles } from "../HowFreelancerDescription/HowFreelancerDescription.styled";
+
+//Imports icons
+import RegisterIcon from "./../../assets/icons/register-icon.svg";
+import ProfileIcon from "./../../assets/icons/profil-icon.svg";
+import ProjectsIcon from "./../../assets/icons/projects-icon.svg";
+import MoneyIcon from "./../../assets/icons/money-icon.svg";
+import OrdersIcon from "./../../assets/icons/orders-graphics-icon.svg";
 
 export const SinglePlanWidgetFreelancer = () => {
   return (
     <>
-      <h1>Pierwsze kroki:</h1>
+      <HeaderStyles>Jak to działa?</HeaderStyles>
       <PlanWidgetArea>
         <SinglePlanWidgetField>
-          <img src={DeflautImageCounter} alt="Ikonka licznika" />
+          <ImagesIcons src={RegisterIcon} alt="Ikonka licznika" />
           <PlanContentArea>
-            <h3>Krok 1</h3>
-            <p>Zarejestruj się</p>
+            <Headlines3>Zarejestruj się</Headlines3>
           </PlanContentArea>
         </SinglePlanWidgetField>
         <SinglePlanWidgetField>
-          <img src={DeflautImageCounter} alt="Ikonka licznika" />
+          <ImagesIcons src={ProfileIcon} alt="Ikonka licznika" />
           <PlanContentArea>
-            <h3>Krok 2</h3>
-            <p>Wypełnij profil.</p>
+            <Headlines3>Wypełnij profil</Headlines3>
           </PlanContentArea>
         </SinglePlanWidgetField>
         <SinglePlanWidgetField>
-          <img src={DeflautImageCounter} alt="Ikonka licznika" />
+          <ImagesIcons src={ProjectsIcon} alt="Ikonka licznika" />
           <PlanContentArea>
-            <h3>Krok 3</h3>
-            <p>Pochwal się swoimi projektami</p>
+            <Headlines3>Pochwal się projektami</Headlines3>
           </PlanContentArea>
         </SinglePlanWidgetField>
         <SinglePlanWidgetField>
-          <img src={DeflautImageCounter} alt="Ikonka licznika" />
+          <ImagesIcons src={OrdersIcon} alt="Ikonka licznika" />
           <PlanContentArea>
-            <h3>Krok 4</h3>
-            <p>Otrzymuj zlecenia i zarabiaj z nami!</p>
+            <Headlines3>Otrzymuj zlecenia!</Headlines3>
+          </PlanContentArea>
+        </SinglePlanWidgetField>
+        <SinglePlanWidgetField>
+          <ImagesIcons src={MoneyIcon} alt="Ikonka licznika" />
+          <PlanContentArea>
+            <Headlines3>Zarabiaj z nami $</Headlines3>
           </PlanContentArea>
         </SinglePlanWidgetField>
       </PlanWidgetArea>

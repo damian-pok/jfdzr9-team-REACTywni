@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ComponentsField = styled.div`
-  max-width: 1332px;
+  max-width: var(--Default-Body-width);
   height: fit-content;
   display: flex;
   flex-direction: row;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const MenuField = styled.div`
-  max-width: 78.25rem;
+  max-width: var(--Default-Body-width);
   height: fit-content;
   color: var(--primary-dark-navy);
   border-radius: 1rem;

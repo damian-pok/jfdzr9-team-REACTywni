@@ -42,6 +42,7 @@ ${normalize}
   --Default-Headline-3-size: 1.5rem;
   --Default-Body-size: 1rem;
   --Default-Signatures-size: 0.75rem;
+  --Default-Body-width: 83.25rem;
 
    //import font style:
   font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
