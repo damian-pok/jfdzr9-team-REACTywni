@@ -95,7 +95,6 @@ export const ProfileInputFreelancer = () => {
     data.ux = data.ux ?? null;
     data.ilustrations = data.ilustrations ?? null;
     data.other = data.other ?? null;
-    //data.print = data.print !== null && data.print !== undefined ? data.print.toString() : "false";
 
     auth.currentUser != null ? (data.uid = String(auth.currentUser.uid)) : "error";
     addFreelancer(data)
