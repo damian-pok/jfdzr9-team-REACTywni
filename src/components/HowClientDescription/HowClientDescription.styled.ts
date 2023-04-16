@@ -24,7 +24,7 @@ export const SearchPageDescriptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 3.75rem;
+  padding-top: var(--Default-Distanse-beetween-sections);
 `;
 
 export const HowClientListArea = styled.ol`

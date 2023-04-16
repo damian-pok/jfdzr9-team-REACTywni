@@ -7,7 +7,7 @@ export const SectionContactField = styled.div`
   align-items: center;
   justify-items: center;
   gap: 0.5rem;
-  padding: 3.75rem 0;
+  padding: var(--Default-Distanse-beetween-sections) 0;
 `;
 
 export const ContactField = styled.div`

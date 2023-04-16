@@ -8,7 +8,7 @@ export const HowFreelancerDescriptionArea = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 3.75rem;
+  padding-top: var(--Default-Distanse-beetween-sections);
 `;
 
 export const HeaderStyles = styled.h2`
@@ -18,7 +18,7 @@ export const HeaderStyles = styled.h2`
 
 export const ParagraphStyles = styled.p`
   font-size: var(--Default-Body-size);
-  padding-bottom: 3.75rem;
+  padding-bottom: var(--Default-Distanse-beetween-sections);
 `;
 
 export const HowFreelancerDescriptionAreaWrapper = styled.div`
@@ -36,5 +36,4 @@ export const HowFreelancerDescriptionAreaList = styled.ol`
 
 export const HowFreelancerDescriptionAreaItem = styled.li`
   font-size: var(--Default-Headline-3-size);
-  //font-weight: bold;
 `;

@@ -7,7 +7,7 @@ export const PartnersField = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 3.75rem;
+  padding-top: var(--Default-Distanse-beetween-sections);
 `;
 
 export const ParagraphStyle = styled.p`

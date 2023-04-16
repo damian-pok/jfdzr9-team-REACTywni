@@ -6,7 +6,7 @@ export const ComponentsField = styled.div`
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
-  padding-top: 3.75rem;
+  padding-top: var(--Default-Distanse-beetween-sections);
   justify-content: center;
 `;
 

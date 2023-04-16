@@ -43,6 +43,7 @@ ${normalize}
   --Default-Body-size: 1rem;
   --Default-Signatures-size: 0.75rem;
   --Default-Body-width: 83.25rem;
+  --Default-Distanse-beetween-sections: 5.62rem;
 
    //import font style:
   font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;

@@ -7,6 +7,6 @@ export const CounterField = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 3.75rem;
+  padding-top: var(--Default-Distanse-beetween-sections);
   align-items: center;
 `;

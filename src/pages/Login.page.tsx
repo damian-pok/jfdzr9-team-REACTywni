@@ -1,26 +1,30 @@
 //libraries
 import { useEffect, useState } from "react";
 import { useForm, Controller, SubmitHandler } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { firebaseErrors } from "../firebase/firebase.errors";
 import { FirebaseError } from "@firebase/util";
 import { auth } from "../firebase/firebase.config";
-
-//components
-
 //interfaces and types
 import { IForm } from "./Register.page";
 import {
-  HeadlineTitle,
+  FormContainer,
   LoginField,
   LoginLink,
-  RegisterFormStyled,
   RegisterFormWrapper,
+  SiteContainer,
+  ImageStyle,
+  HeaderStyles,
+  FormField,
+  LabelStyle,
+  AnotherContainer,
 } from "../components/RegisterForm/RegisterForm.styled";
-import { ButtonBlack } from "../components/UI/Buttons/Buttons.styled";
-import { InputLoginSign } from "../components/UI/Input/Input.styled";
+import { PrimaryGreenButton, PrimaryNavyButton } from "../components/UI/Buttons/Buttons.styled";
+import { InputForm } from "../components/UI/Input/Input.styled";
 type FirebaseErrorsKeys = keyof typeof firebaseErrors;
+//import illustration
+import LoginIllustration from "./../assets/illustrations/login-illustration.svg";
 
 const Login = () => {
   const [user, setUser] = useState("");
@@ -44,29 +48,34 @@ const Login = () => {
 
   return (
     <>
-      <RegisterFormWrapper>
-        <RegisterFormStyled onSubmit={handleSubmit(onSubmit)}>
-          <HeadlineTitle>Zaloguj się!</HeadlineTitle>
-
-          <Controller
-            name="email"
-            control={control}
-            render={({ field }) => <InputLoginSign placeholder="Wpisz swój adres email" type={"email"} {...field} />}
-          />
-          <Controller
-            name="password"
-            control={control}
-            render={({ field }) => <InputLoginSign placeholder="Wpisz swoje hasło" type={"password"} {...field} />}
-          />
-          <ButtonBlack type="submit">Zaloguj!</ButtonBlack>
-
-          <LoginField>
-            <h4>Dont have an account?</h4>
-            <LoginLink to={"/register"}>Zarejestruj się</LoginLink>
+      <SiteContainer>
+        <HeaderStyles>Logowanie</HeaderStyles>
+        <FormContainer>
+          <ImageStyle src={LoginIllustration} />
+          <FormField onSubmit={handleSubmit(onSubmit)}>
+            <LabelStyle>Adres email</LabelStyle>
+            <Controller
+              name="email"
+              control={control}
+              render={({ field }) => <InputForm placeholder="Wpisz swój adres email" type={"email"} {...field} />}
+            />
+            <LabelStyle>Hasło</LabelStyle>
+            <Controller
+              name="password"
+              control={control}
+              render={({ field }) => <InputForm placeholder="Wpisz swoje hasło" type={"password"} {...field} />}
+            />
+            <PrimaryNavyButton type="submit">Zaloguj!</PrimaryNavyButton>
             {error}
-          </LoginField>
-        </RegisterFormStyled>
-      </RegisterFormWrapper>
+          </FormField>
+        </FormContainer>
+        <AnotherContainer>
+          <h4>Nie masz jeszcze konta?</h4>
+          <Link to={"/register"}>
+            <PrimaryGreenButton>Zarejestruj się</PrimaryGreenButton>
+          </Link>
+        </AnotherContainer>
+      </SiteContainer>
     </>
   );
 };

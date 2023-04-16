@@ -1,6 +1,71 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+//General Styles
+export const SiteContainer = styled.div`
+  max-width: var(--Default-Body-width);
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--Default-Distanse-beetween-sections) 0;
+`;
+
+export const FormContainer = styled.div`
+  width: 47.5rem;
+  height: fit-content;
+  background-color: var(--secondary-light-grey);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 4rem 0;
+  border-radius: 1rem;
+  padding-top: var(--Default-Distanse-beetween-sections);
+`;
+
+export const HeaderStyles = styled.h2`
+  font-size: var(--Default-Headline-2-size);
+  padding-bottom: 1.5rem;
+`;
+
+export const ImageStyle = styled.img`
+  width: 16.25rem;
+`;
+
+export const FormField = styled.form`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  border-radius: 1rem;
+`;
+
+export const LabelStyle = styled.label`
+  font-size: var(--Default-Body-size);
+  font-weight: bold;
+  line-height: 0.5rem;
+`;
+
+export const AnotherContainer = styled.div`
+  width: 47.5rem;
+  height: 6rem;
+  background-color: var(--secondary-light-grey);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1.5rem;
+  gap: 3rem;
+`;
+
+//Login components
+
+//Register components
+
 export const RegisterFormStyled = styled.form`
   width: 500px;
   display: flex;
