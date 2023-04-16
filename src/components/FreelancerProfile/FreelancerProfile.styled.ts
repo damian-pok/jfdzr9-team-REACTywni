@@ -15,5 +15,9 @@ export const EditionButton = styled.button`
 `;
 
 export const CloseButton = styled.button`
-  border: none;
+  border: 1px solid;
+  background: none;
+  height: 150px;
+  width: 300px;
+  display: block;
 `;
