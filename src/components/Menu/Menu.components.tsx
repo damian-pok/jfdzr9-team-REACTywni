@@ -21,6 +21,9 @@ const Menu = () => {
       <ButtonMenuField>
         {user ? (
           <>
+            <Link to={`/search`}>
+              <SecondaryButton>Szukaj</SecondaryButton>
+            </Link>
             <Link to={`/client`}>
               <SecondaryButton>Mój Profil</SecondaryButton>
             </Link>
