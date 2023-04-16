@@ -18,9 +18,26 @@ export const fetchFirebaseData = (callback: CallbackFn<FirebaseResponse>) => {
   const [lastDoc, setLastDoc] = useState<QueryDocumentSnapshot | undefined>(undefined);
   const [isEmpty, setIsEmpty] = useState(false);
 
+  // const getFreelancers = () => {
+  //   const actorsCollection = collection(db, "freelancer") as CollectionReference<IProfileInputFreelancer>;
+  //   getDocs(actorsCollection).then((querySnapshot) => {
+  //     const actors = querySnapshot.docs.map((doc) => {
+  //       return {
+  //         id: doc.id,
+  //         ...doc.data(),
+  //       };
+  //     });
+  //     actors && setData(actors);
+  //     console.log("Freelancers", actors);
+  //   });
+  // };
+
+  // useEffect(() => getFreelancers, []);
+
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
+
       callback(lastDoc)
         .then((response) => {
           setData((prevData) => [...prevData, ...response.freelancers]);
@@ -36,8 +53,6 @@ export const fetchFirebaseData = (callback: CallbackFn<FirebaseResponse>) => {
     };
     fetchData();
   }, [loadMore]);
-
-  console.log("Fetch ", data);
 
   return {
     data,

@@ -6,10 +6,10 @@ import {
   DesignerTagsSecond,
   DesignerWidget,
   Tag,
-  TagSecond,
   TagsWrapper,
 } from "../SingleDesignerWidget/SingleDesignerWidget.styled";
 import example from "../../assets/example.jpg";
+import { DesignerServices } from "../DesignerServices/DesignerServices.component";
 
 interface IFreelacerData {
   freelancerData: IProfileInputFreelancer;
@@ -39,10 +39,7 @@ export const SingleFreelancer = ({ freelancerData }: IFreelacerData) => {
           </DesignerTags>
 
           <DesignerTagsSecond>
-            <TagSecond>ulotki</TagSecond>
-            <TagSecond>plakaty</TagSecond>
-            <TagSecond>photoshop</TagSecond>
-            <TagSecond>figma</TagSecond>
+            {freelancerData.services && <DesignerServices services={freelancerData.services}></DesignerServices>}
           </DesignerTagsSecond>
         </TagsWrapper>
       </DesignerWidget>

@@ -147,7 +147,7 @@ export const ProfileInputFreelancer = () => {
         <Controller
           name="services"
           control={control}
-          render={({ field }) => <input placeholder="Usługi" type={"text"} {...field} />}
+          render={({ field }) => <input placeholder="Usługi/tagi" type={"text"} {...field} />}
         />
         <Controller
           name="gallery"
@@ -155,6 +155,7 @@ export const ProfileInputFreelancer = () => {
           render={({ field }) => <input placeholder="Galeria" type={"text"} {...field} />}
         />
         <CategoryGroup>
+          <p>Kategorie</p>
           <Controller
             name="branding"
             control={control}
