@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 export const FreelancerWrapper = styled.div`
-  height: 300px;
-  width: 300px;
-  background-color: blanchedalmond;
+  height: 900px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem;
 `;
 
 export const EditionButton = styled.button`
@@ -16,8 +18,10 @@ export const EditionButton = styled.button`
 
 export const CloseButton = styled.button`
   border: 1px solid;
+  border-radius: 5px;
   background: none;
-  height: 150px;
-  width: 300px;
-  display: block;
+  height: fit-content;
+  padding: 0.3rem;
+  display: flex;
+  font-size: 18px;
 `;
