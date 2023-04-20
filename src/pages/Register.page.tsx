@@ -3,20 +3,28 @@ import { useForm, Controller, SubmitHandler } from "react-hook-form";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { FirebaseError } from "@firebase/util";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 //import styles
 import {
-  ButtonRegister,
-  HeadlineTitle,
-  RegisterFormStyled,
-  RegisterFormWrapper,
+  AnotherContainer,
+  ImageStyle,
+  RegisterLabelStyle,
+  SiteContainer,
+  FormContainer,
+  RegisterNavyButton,
 } from "../components/RegisterForm/RegisterForm.styled";
 
 //firebase config files
 import { firebaseErrors } from "../firebase/firebase.errors";
 import { auth } from "../firebase/firebase.config";
-import { ButtonBlack, PrimaryButton } from "../components/UI/Buttons/Buttons.styled";
-import { InputLoginSign } from "../components/UI/Input/Input.styled";
+import { PrimaryNavyButton, PrimaryGreenButton } from "../components/UI/Buttons/Buttons.styled";
+import { InputForm } from "../components/UI/Input/Input.styled";
+import { HeaderStyles } from "../components/Plans/Plans.styled";
+import { FormField } from "../components/Contact/Contact.styled";
+
+//image
+import RegisterIllustration from "./../assets/illustrations/register-illustration.svg";
 
 //types and interfaces
 export interface IForm {
@@ -49,23 +57,36 @@ const Register = () => {
   }, [user]);
 
   return (
-    <RegisterFormWrapper>
-      <RegisterFormStyled onSubmit={handleSubmit(onSubmit)}>
-        <HeadlineTitle>Zarejestruj się!</HeadlineTitle>
-        <Controller
-          name="email"
-          control={control}
-          render={({ field }) => <InputLoginSign placeholder="Podaj email" type={"email"} {...field} />}
-        />
-        <Controller
-          name="password"
-          control={control}
-          render={({ field }) => <InputLoginSign placeholder="Podaj hasło" type={"password"} {...field} />}
-        />
-        <ButtonRegister type="submit">Zarejestruj!</ButtonRegister>
-        {error}
-      </RegisterFormStyled>
-    </RegisterFormWrapper>
+    <>
+      <SiteContainer>
+        <HeaderStyles>Logowanie</HeaderStyles>
+        <FormContainer>
+          <ImageStyle src={RegisterIllustration} />
+          <FormField onSubmit={handleSubmit(onSubmit)}>
+            <RegisterLabelStyle>Adres email</RegisterLabelStyle>
+            <Controller
+              name="email"
+              control={control}
+              render={({ field }) => <InputForm placeholder="Podaj email" type={"email"} {...field} />}
+            />
+            <RegisterLabelStyle>Hasło</RegisterLabelStyle>
+            <Controller
+              name="password"
+              control={control}
+              render={({ field }) => <InputForm placeholder="Podaj hasło" type={"password"} {...field} />}
+            />
+            <RegisterNavyButton type="submit">Zaloguj!</RegisterNavyButton>
+            {error}
+          </FormField>
+        </FormContainer>
+        <AnotherContainer>
+          <h4>Masz już konto? Zaloguj się!</h4>
+          <Link to={"/login"}>
+            <PrimaryGreenButton>Zaloguj się</PrimaryGreenButton>
+          </Link>
+        </AnotherContainer>
+      </SiteContainer>
+    </>
   );
 };
 

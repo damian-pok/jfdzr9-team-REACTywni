@@ -10,15 +10,12 @@ import { auth } from "../firebase/firebase.config";
 import { IForm } from "./Register.page";
 import {
   FormContainer,
-  LoginField,
-  LoginLink,
-  RegisterFormWrapper,
   SiteContainer,
   ImageStyle,
   HeaderStyles,
   FormField,
-  LabelStyle,
   AnotherContainer,
+  LabelStyle,
 } from "../components/RegisterForm/RegisterForm.styled";
 import { PrimaryGreenButton, PrimaryNavyButton } from "../components/UI/Buttons/Buttons.styled";
 import { InputForm } from "../components/UI/Input/Input.styled";
