@@ -1,6 +1,6 @@
+import { InputForm } from "../UI/Input/Input.styled";
 import {
   SearchEngineWrapper,
-  SearchField,
   SearchLabel,
   CategoryLabel,
   CheckboxList,
@@ -12,7 +12,7 @@ export const SearchEngine = () => {
   return (
     <SearchEngineWrapper>
       <SearchLabel>Wpisz czego potrzebujesz</SearchLabel>
-      <SearchField placeholder="ulotka, plakat, broszura..." />
+      <InputForm placeholder="ulotka, plakat, broszura..." />
       <CategoryLabel>Wybierz kategorię</CategoryLabel>
       <CheckboxList>
         <CheckboxLabel>
