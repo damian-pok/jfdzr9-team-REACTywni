@@ -7,21 +7,28 @@ import {
   DesignerTagsSecond,
   TagSecond,
   TagsWrapper,
+  DesignerName,
+  InfoContainer,
+  DesignerDescription,
 } from "./SingleDesignerWidget.styled";
-import designer from "../../../public/designer.jpg";
-import designer3 from "../../../public/designer3.jpg";
+import designer from "./../../assets/photos/designer.jpg";
+import designer3 from "./../../assets/photos/designer3.jpg";
 
 export const SingleDesignerWidget = () => {
   return (
     <>
       <DesignerWidget>
         <DesignerPhoto src={designer} />
-        <DesignerContent>
-          <h3>Julia Popławska</h3>
-          Cześć, jestem Julka! Projektowanie graficzne to moja pasja i sposób na wyrażanie siebie. W zawodzie grafika
-          pracuję już od kilku lat, moją specjalnością jest projektowanie identyfikacji wizualnej oraz interfejsów
-          użytkownika.
-        </DesignerContent>
+        <InfoContainer>
+          <DesignerContent>
+            <DesignerName>Julia Popławska</DesignerName>
+            <DesignerDescription>
+              Cześć, jestem Julka! Projektowanie graficzne to moja pasja i sposób na wyrażanie siebie. W zawodzie
+              grafika pracuję już od kilku lat, moją specjalnością jest projektowanie identyfikacji wizualnej oraz
+              interfejsów użytkownika.
+            </DesignerDescription>
+          </DesignerContent>
+        </InfoContainer>
         <TagsWrapper>
           <DesignerTags>
             <Tag>branding</Tag>

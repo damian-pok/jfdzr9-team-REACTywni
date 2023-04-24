@@ -1,10 +1,10 @@
-import { DesignersWrapper } from "./DesignersNav.styled";
+import { DesignersWrapper, HeadlineTitle } from "./DesignersNav.styled";
 import { SingleDesignerWidget } from "../SingleDesignerWidget/SingleDesignerWidget.component";
 
 export const DesignersNav = () => {
   return (
     <DesignersWrapper>
-      <h2>Znajdź designera</h2>
+      <HeadlineTitle>Znajdź designera</HeadlineTitle>
       <SingleDesignerWidget />
     </DesignersWrapper>
   );
