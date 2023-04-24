@@ -1,9 +1,18 @@
-import { Link } from "react-router-dom";
-import { PrimaryButton, SecondaryButton } from "../UI/Buttons/Buttons.styled";
-import { MenuField, ButtonMenuField, Logo } from "./Menu.styled";
+import { HashLink as Link } from "react-router-hash-link";
+import { PrimaryGreenButton, PrimaryNavyButton } from "../UI/Buttons/Buttons.styled";
+import {
+  MenuField,
+  ButtonMenuField,
+  Logo,
+  LogosAndPrimaryButtonsField,
+  SecoundMenuField,
+  LinkMenu,
+  MainLinkMenu,
+} from "./Menu.styled";
 import { useUser } from "../../context/auth.context";
 import { getAuth, signOut } from "firebase/auth";
 import LogoFindADesigner from "./../../assets/logos/find-a-designer-logo.svg";
+import ToggleSwitch from "./../UI/Toggle/Toggle.components";
 
 const Menu = () => {
   const user = useUser();
@@ -12,38 +21,46 @@ const Menu = () => {
     signOut(auth).then().catch();
     //skonsultowac powyszy zapis
   };
-
   return (
     <MenuField>
-      <Link to={`/`}>
-        <Logo src={LogoFindADesigner} />
-      </Link>
-      <ButtonMenuField>
-        {user ? (
-          <>
-            <Link to={`/search`}>
-              <SecondaryButton>Szukaj</SecondaryButton>
+      <LogosAndPrimaryButtonsField>
+        <Link to={`/`}>
+          <Logo src={LogoFindADesigner} />
+        </Link>
+        <ButtonMenuField>
+          {user ? (
+            <>
+              <Link to={`/search`}>
+                <PrimaryNavyButton>Szukaj</PrimaryNavyButton>
+              </Link>
+              <Link to={`/client`}>
+                <PrimaryNavyButton>Mój Profil</PrimaryNavyButton>
+              </Link>
+              <Link to={`/homepage`}>
+                <PrimaryNavyButton onClick={logOut}>Wyloguj się</PrimaryNavyButton>
+              </Link>
+            </>
+          ) : (
+            <Link to={`/login`}>
+              <PrimaryNavyButton>Zaloguj się</PrimaryNavyButton>
             </Link>
-            <Link to={`/client`}>
-              <SecondaryButton>Mój Profil</SecondaryButton>
+          )}
+          {user ? (
+            <></>
+          ) : (
+            <Link to={`/register`}>
+              <PrimaryGreenButton>Zarejestruj się</PrimaryGreenButton>
             </Link>
-            <Link to={`/homepage`}>
-              <SecondaryButton onClick={logOut}>Wyloguj się</SecondaryButton>
-            </Link>
-          </>
-        ) : (
-          <Link to={`/login`}>
-            <SecondaryButton>Zaloguj się</SecondaryButton>
-          </Link>
-        )}
-        {user ? (
-          <></>
-        ) : (
-          <Link to={`/register`}>
-            <PrimaryButton>Zarejestruj się</PrimaryButton>
-          </Link>
-        )}
-      </ButtonMenuField>
+          )}
+        </ButtonMenuField>
+      </LogosAndPrimaryButtonsField>
+      <SecoundMenuField>
+        <MainLinkMenu to={`/howfreelancer`}>Dla freelancerów</MainLinkMenu>
+        <MainLinkMenu to={`/howclient`}>Dla klientów</MainLinkMenu>
+        <LinkMenu to={`/search`}>Wyszukiwarka</LinkMenu>
+        <LinkMenu to={`/#contact`}>Kontakt</LinkMenu>
+        <ToggleSwitch />
+      </SecoundMenuField>
     </MenuField>
   );
 };

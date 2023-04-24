@@ -1,29 +1,35 @@
 import styled from "styled-components";
 
 export const PlanWidgetArea = styled.div`
+  max-width: var(--Default-Body-width);
   height: fit-content;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   justify-content: center;
   gap: 2.5rem;
-  padding-top: 4rem;
-  padding-bottom: 6rem;
-  text-align: left;
-  margin-bottom: 4rem;
+  padding-bottom: 3.75rem;
+`;
+
+export const Headlines3 = styled.h3`
+  font-size: var(--Default-Body-size);
+  padding-top: 1rem;
+  text-align: center;
+`;
+
+export const ImagesIcons = styled.img`
+  width: 6.25rem;
+  height: auto;
 `;
 
 export const SinglePlanWidgetField = styled.div`
-  height: fit-content;
+  width: 15rem;
+  height: 15rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
-  border: solid 1px black;
-  padding: 2rem;
-  border-radius: 15px;
-  background-color: var(--lime-yellow);
-  min-width: 295px;
+  border-radius: 1rem;
+  background-color: var(--secondary-light-grey);
 `;
 
 export const PlanContentArea = styled.div`

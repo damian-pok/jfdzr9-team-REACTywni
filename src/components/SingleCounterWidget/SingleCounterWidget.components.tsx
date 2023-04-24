@@ -4,12 +4,13 @@ import {
   ContentArea,
   NumberStyles,
   ImageIcon,
+  ParagraphStyle,
 } from "./../SingleCounterWidget/SingleCounterWidget.styled";
 //import icons
-import freelancerIcon from "./../../assets/illustrations/Freelancer-Icon.svg";
-import clientIcon from "./../../assets/illustrations/client-icon.svg";
-import completedOrdersIcon from "./../../assets/illustrations/completed-orders-icon.svg";
-import ordersIcon from "./../../assets/illustrations/orders-icon.svg";
+import freelancerIcon from "./../../assets/icons/freelancer-icon.svg";
+import clientIcon from "./../../assets/icons/client-icon.svg";
+import completedOrdersIcon from "./../../assets/icons/completed-orders-icon.svg";
+import ordersIcon from "./../../assets/icons/orders-icon.svg";
 
 const SingleCounterWidget = () => {
   return (
@@ -19,28 +20,28 @@ const SingleCounterWidget = () => {
           <ImageIcon src={freelancerIcon} alt="Ikonka licznika" />
           <ContentArea>
             <NumberStyles>234</NumberStyles>
-            <p>Liczba freelancerów</p>
+            <ParagraphStyle>Liczba freelancerów</ParagraphStyle>
           </ContentArea>
         </SingleCounterWidgetField>
         <SingleCounterWidgetField>
           <ImageIcon src={clientIcon} alt="Ikonka licznika" />
           <ContentArea>
             <NumberStyles>453</NumberStyles>
-            <p>Liczba zleceniodawców</p>
+            <ParagraphStyle>Liczba zleceniodawców</ParagraphStyle>
           </ContentArea>
         </SingleCounterWidgetField>
         <SingleCounterWidgetField>
           <ImageIcon src={completedOrdersIcon} alt="Ikonka licznika" />
           <ContentArea>
             <NumberStyles>5432</NumberStyles>
-            <p>Liczba wystawionych zleceń</p>
+            <ParagraphStyle>Liczba wystawionych zleceń</ParagraphStyle>
           </ContentArea>
         </SingleCounterWidgetField>
         <SingleCounterWidgetField>
           <ImageIcon src={ordersIcon} alt="Ikonka licznika" />
           <ContentArea>
             <NumberStyles>3456</NumberStyles>
-            <p>Liczba zakończonych zleceń</p>
+            <ParagraphStyle>Liczba zakończonych zleceń</ParagraphStyle>
           </ContentArea>
         </SingleCounterWidgetField>
       </CounterWidgetArea>
