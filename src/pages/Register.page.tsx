@@ -4,6 +4,10 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { FirebaseError } from "@firebase/util";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { PrimaryGreenButton } from "../components/UI/Buttons/Buttons.styled";
+import { InputForm } from "../components/UI/Input/Input.styled";
+import { HeaderStyles } from "../components/Plans/Plans.styled";
+import { FormField } from "../components/Contact/Contact.styled";
 
 //import styles
 import {
@@ -18,10 +22,6 @@ import {
 //firebase config files
 import { firebaseErrors } from "../firebase/firebase.errors";
 import { auth } from "../firebase/firebase.config";
-import { PrimaryNavyButton, PrimaryGreenButton } from "../components/UI/Buttons/Buttons.styled";
-import { InputForm } from "../components/UI/Input/Input.styled";
-import { HeaderStyles } from "../components/Plans/Plans.styled";
-import { FormField } from "../components/Contact/Contact.styled";
 
 //image
 import RegisterIllustration from "./../assets/illustrations/register-illustration.svg";
@@ -59,7 +59,7 @@ const Register = () => {
   return (
     <>
       <SiteContainer>
-        <HeaderStyles>Logowanie</HeaderStyles>
+        <HeaderStyles>Zarejestruj się!</HeaderStyles>
         <FormContainer>
           <ImageStyle src={RegisterIllustration} />
           <FormField onSubmit={handleSubmit(onSubmit)}>
@@ -75,7 +75,7 @@ const Register = () => {
               control={control}
               render={({ field }) => <InputForm placeholder="Podaj hasło" type={"password"} {...field} />}
             />
-            <RegisterNavyButton type="submit">Zaloguj!</RegisterNavyButton>
+            <RegisterNavyButton type="submit">Rejestracja</RegisterNavyButton>
             {error}
           </FormField>
         </FormContainer>
