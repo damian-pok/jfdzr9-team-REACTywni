@@ -1,7 +1,7 @@
 import { FooterField, FooterNavField, LinkFooter, LogoField, LogoFooter } from "./Footer.styled";
 import { Link } from "react-router-dom";
 //import logo
-import LogoSign from "./../../assets/logos/find-a-designer-white-logo-sign.svg";
+import LogoSign from "./../../assets/logos/find-a-designer-logo-sign-white.svg";
 
 const Footer = () => {
   return (

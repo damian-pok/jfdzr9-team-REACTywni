@@ -1,41 +1,49 @@
 import { PlanWidgetArea } from "./SinglePlanWidget.styled";
-import { SinglePlanWidgetField } from "./SinglePlanWidget.styled";
 import { PlanContentArea } from "./SinglePlanWidget.styled";
-import DeflautImageCounter from "./../../assets/deflaut-image-counter.png";
+import { HeaderStyles } from "../HowFreelancerDescription/HowFreelancerDescription.styled";
+import { SingleStepContainer, IconStep, TileStep } from "../UI/SingleStep/SingleStep.styled";
+//Imports icons
+import RegisterIcon from "./../../assets/icons/register-icon.svg";
+import ProfileIcon from "./../../assets/icons/profil-icon.svg";
+import ProjectsIcon from "./../../assets/icons/projects-icon.svg";
+import MoneyIcon from "./../../assets/icons/money-icon.svg";
+import OrdersIcon from "./../../assets/icons/orders-graphics-icon.svg";
 
 export const SinglePlanWidgetFreelancer = () => {
   return (
     <>
-      <h1>Pierwsze kroki:</h1>
+      <HeaderStyles>Jak to działa?</HeaderStyles>
       <PlanWidgetArea>
-        <SinglePlanWidgetField>
-          <img src={DeflautImageCounter} alt="Ikonka licznika" />
+        <SingleStepContainer>
+          <IconStep src={RegisterIcon} alt="Ikonka licznika" />
           <PlanContentArea>
-            <h3>Krok 1</h3>
-            <p>Zarejestruj się</p>
+            <TileStep>Zarejestruj się</TileStep>
           </PlanContentArea>
-        </SinglePlanWidgetField>
-        <SinglePlanWidgetField>
-          <img src={DeflautImageCounter} alt="Ikonka licznika" />
+        </SingleStepContainer>
+        <SingleStepContainer>
+          <IconStep src={ProfileIcon} alt="Ikonka licznika" />
           <PlanContentArea>
-            <h3>Krok 2</h3>
-            <p>Wypełnij profil.</p>
+            <TileStep>Wypełnij profil</TileStep>
           </PlanContentArea>
-        </SinglePlanWidgetField>
-        <SinglePlanWidgetField>
-          <img src={DeflautImageCounter} alt="Ikonka licznika" />
+        </SingleStepContainer>
+        <SingleStepContainer>
+          <IconStep src={ProjectsIcon} alt="Ikonka licznika" />
           <PlanContentArea>
-            <h3>Krok 3</h3>
-            <p>Pochwal się swoimi projektami</p>
+            <TileStep>Pochwal się projektami</TileStep>
           </PlanContentArea>
-        </SinglePlanWidgetField>
-        <SinglePlanWidgetField>
-          <img src={DeflautImageCounter} alt="Ikonka licznika" />
+        </SingleStepContainer>
+        <SingleStepContainer>
+          <IconStep src={OrdersIcon} alt="Ikonka licznika" />
           <PlanContentArea>
-            <h3>Krok 4</h3>
-            <p>Otrzymuj zlecenia i zarabiaj z nami!</p>
+            <TileStep>Otrzymuj zlecenia!</TileStep>
           </PlanContentArea>
-        </SinglePlanWidgetField>
+        </SingleStepContainer>
+        <SingleStepContainer>
+          <IconStep src={MoneyIcon} alt="Ikonka licznika" />
+          <PlanContentArea>
+            <TileStep>Zarabiaj z nami $</TileStep>
+          </PlanContentArea>
+        </SingleStepContainer>
       </PlanWidgetArea>
     </>
   );
