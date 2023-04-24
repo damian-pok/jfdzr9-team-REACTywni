@@ -63,7 +63,7 @@ export const SearchEngine = ({ query, setQuery, categories, setCategories }: Sea
               setCategories((previousState) => ({ ...previousState, ilustrations: !previousState.ilustrations }))
             }
           />
-          UX/UI
+          Ilustracje
         </CheckboxLabel>
         <CheckboxLabel>
           <Input
