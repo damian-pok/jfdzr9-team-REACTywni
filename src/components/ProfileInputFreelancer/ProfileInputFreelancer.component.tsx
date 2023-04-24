@@ -14,6 +14,14 @@ import {
 } from "./ProfileInputFreelancer.styled";
 
 //types
+
+export interface IJob {
+  id: string;
+  author: string;
+  content: string;
+  date: string;
+  status: string;
+}
 export interface IProfileInputFreelancer {
   uid: string;
   firstName: string;
@@ -31,6 +39,7 @@ export interface IProfileInputFreelancer {
   ilustrations: string;
   other: string;
   tags: string;
+  jobs: IJob[];
 }
 
 export const ProfileInputFreelancer = () => {
