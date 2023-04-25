@@ -3,7 +3,7 @@ import { CloseButton, FreelancerWrapper } from "./FreelancerProfile.styled";
 import { EditionButton } from "./FreelancerProfile.styled";
 import { EditionFormFreelancer } from "../EditionFormFreelancer/EditionFormFreelancer.component";
 import { GrClose } from "react-icons/gr";
-import { ProfileInputFreelancer } from "../ProfileInputFreelancer/ProfileInputFreelancer.component";
+import { ProfileEditionInputFreelancer } from "../ProfileEditionInputFreelancer/ProfileEditionInputFreelancer.component";
 
 const Freelancer = () => {
   const [showForm, setShowForm] = useState(false);
@@ -22,7 +22,7 @@ const Freelancer = () => {
       <EditionButton onClick={openForm}>Edytuj profil</EditionButton>
       {showForm && (
         <EditionFormFreelancer open={showForm}>
-          <ProfileInputFreelancer />
+          <ProfileEditionInputFreelancer />
           <CloseButton onClick={closeForm}>
             <GrClose />
           </CloseButton>
