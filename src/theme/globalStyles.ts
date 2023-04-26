@@ -1,6 +1,7 @@
 //import libraries:
 import { createGlobalStyle } from "styled-components";
 import { normalize } from "styled-normalize";
+import { Theme } from "./theme";
 
 const GlobalStyle = createGlobalStyle`
 ${normalize}
@@ -15,23 +16,42 @@ ${normalize}
   
   //global color styles - light mode:
     // Here will be defined colors for light mode
-    --lime-yellow: #E1F465;
+    --lime-yellow: ${({ theme }: { theme: Theme }) => theme.limeYellow};
+    --dark-lime-yellow: ${({ theme }) => theme.darkLimeYellow};
+    --black: ${({ theme }) => theme.darkBlack};
+    --white-color: ${({ theme }) => theme.whiteColor};
+
+    --primary-green: ${({ theme }) => theme.primaryGreen};
+    --primary-dark-navy: ${({ theme }) => theme.primaryDarkNavy};
+    --secondary-very-light-grey: ${({ theme }) => theme.secondaryVeryLightGrey};
+    --secondary-light-grey: ${({ theme }) => theme.secondaryLightGrey};
+    --secondary-grey: ${({ theme }) => theme.secondaryGrey};
+    --secondary-white: ${({ theme }) => theme.secondaryWhite};
+    //Hover Color
+    --additional-dark-green: ${({ theme }) => theme.additionalDarkGreen};
+    --additional-navy: ${({ theme }) => theme.additionalNavy};
+
+
+
+    /* --lime-yellow: #e1f465;
     --dark-lime-yellow: #bacc46;
-    --black: #040403;
+    --black: #000000;
     --white-color: #fff;
 
-    --primary-green: #1AD079;
-    --primary-dark-navy: #07133B;
-    --secondary-very-light-grey: #F8F9FB;
-    --secondary-light-grey: #F3F3F6;
-    --secoundary-grey: #C2D1D9;
-    --secoundary-white: #fff;
+    --primary-green: #1ad079;
+    --primary-dark-navy: #07133b;
+    --secondary-very-light-grey: #f8f9fb;
+    --secondaryLightGrey: #f3f3f6;
+    --secoundaryGrey: #c2d1d9;
+    --secoundaryWhite: #eee;
     //Hover Color
-    --additional-dark-green: #17b66a;
-    --additional-navy: #091849;
+    --additionalDarkGreen: #17b66a;
+    --additionalNavy: #091849; */
+
+
 
   //global color styles - dark mode:
-    // Here will be defined colors for dark mode
+
 
   //light/dark mode colors:
     // Here will be place for light/dark mode

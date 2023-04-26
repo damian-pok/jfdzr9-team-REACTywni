@@ -55,6 +55,7 @@ const SearchPage = () => {
       <SearchWrapper>
         <SearchEngine query={query} setQuery={setQuery} categories={categories} setCategories={setCategories} />
         {filteredData.length > 0 && <Dashboard freelancers={filteredData} />}
+        {filteredData.length == 0 && <p>Brak grafików spełniających Twoje oczekiwania!</p>}
       </SearchWrapper>
     </>
   );

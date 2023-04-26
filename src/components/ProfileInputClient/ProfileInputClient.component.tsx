@@ -15,6 +15,10 @@ import { useAuth } from "../../context/auth.context";
 import { PrimaryButton } from "../UI/Buttons/Buttons.styled";
 
 //types
+
+export interface IJob {
+  job: string[];
+}
 export interface IProfileInputClient {
   uid?: string;
   company: string;
@@ -23,6 +27,7 @@ export interface IProfileInputClient {
   country: string;
   city: string;
   street: string;
+  jobs: IJob[];
 }
 
 export const ProfileInputClient = () => {
@@ -42,6 +47,7 @@ export const ProfileInputClient = () => {
 
   const onSubmit = handleSubmit((data) => {
     auth.currentUser != null ? (data.uid = String(auth.currentUser.uid)) : "error";
+    auth.currentUser != null ? (data.jobs = []) : "error";
     addClient(data).then(() => {
       setSuccess(true);
     });

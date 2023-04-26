@@ -33,7 +33,7 @@ export const ImageStyle = styled.img`
   width: 16.25rem;
 `;
 
-export const FormField = styled.form`
+export const FormFieldRegister = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
