@@ -36,5 +36,4 @@ export const HowClientListArea = styled.ol`
 
 export const HowClientDescriptionAreaItem = styled.li`
   font-size: var(--Default-Headline-3-size);
-  //font-weight: bold;
 `;

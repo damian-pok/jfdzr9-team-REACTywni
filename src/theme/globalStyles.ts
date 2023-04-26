@@ -40,6 +40,7 @@ ${normalize}
   --Default-Headline-1-size: 2.5rem;
   --Default-Headline-2-size: 2rem;
   --Default-Headline-3-size: 1.5rem;
+  --Default-Headline-4-size: 1.2rem;
   --Default-Body-size: 1rem;
   --Default-Signatures-size: 0.75rem;
   --Default-Body-width: 83.25rem;

@@ -9,8 +9,23 @@ import {
   ProfileClientFrameKey,
   ProfileClientFrameLogo,
   ProfileClientFrameWrapper,
+  ProfileClientContainer,
+  ProfileClientLogo,
+  ProfileClientTitle,
+  ProfileClientParagraph,
+  ProfileInformationContainer,
+  ProfileClientCover,
+  ProfileClientAbout,
+  ProfileClientCategories,
+  ProfileClientTitleCategories,
+  CategoriesBox,
+  CategoriesButtonBox,
+  ProfileClientGalery,
+  TagBox,
 } from "../components/ProfileClientFrame/ProfileClientFrame.styled";
+//import images
 import { getFreelancer } from "../firebase/getFreelancer";
+import cover from "../assets/images/Cover.png";
 
 const ProfileClient = () => {
   const [userData, setUserData] = useState<any>();
@@ -47,78 +62,82 @@ const ProfileClient = () => {
     <>
       {!freelancer && userData && (
         <>
-          <h1>Profil: {userData.company}!</h1>
-          <ProfileClientFrame>
-            <ProfileClientFrameLogo src={example} alt="logo" width="300" />
-            <ProfileClientFrameData>
-              <p>
-                <ProfileClientFrameKey>Nazwa:</ProfileClientFrameKey> {userData.company}
-              </p>
-              <p>
-                <ProfileClientFrameKey>e-mail:</ProfileClientFrameKey> {userData.email}
-              </p>
-              <p>
-                <ProfileClientFrameKey>NIP:</ProfileClientFrameKey> {userData.nip}
-              </p>
-              <p>
-                <ProfileClientFrameKey>Kraj:</ProfileClientFrameKey> {userData.country}
-              </p>
-              <p>
-                <ProfileClientFrameKey>Miasto:</ProfileClientFrameKey> {userData.city}
-              </p>
-              <p>
-                <ProfileClientFrameKey>Adres:</ProfileClientFrameKey> {userData.street}
-              </p>
-            </ProfileClientFrameData>
-          </ProfileClientFrame>
+          <>
+            <ProfileClientCover src={cover} />
+            <ProfileClientContainer>
+              <ProfileClientLogo src={example} alt="logo" />
+              <ProfileInformationContainer>
+                <ProfileClientTitle>{userData.company}</ProfileClientTitle>
+                <ProfileClientParagraph>Nazwa: {userData.company}</ProfileClientParagraph>
+                <ProfileClientParagraph>e-mail: {userData.email}</ProfileClientParagraph>
+                <ProfileClientParagraph>NIP:: {userData.nip}</ProfileClientParagraph>
+                <ProfileClientParagraph>Kraj: {userData.country}</ProfileClientParagraph>
+                <ProfileClientParagraph>Miasto: {userData.city}</ProfileClientParagraph>
+                <ProfileClientParagraph>Adres: {userData.street}</ProfileClientParagraph>
+              </ProfileInformationContainer>
+            </ProfileClientContainer>
+            <ProfileClientAbout>
+              <ProfileClientTitle>O mnie</ProfileClientTitle>
+              <ProfileClientParagraph>{userData.aboutMe}</ProfileClientParagraph>
+            </ProfileClientAbout>
+            <ProfileClientCategories>
+              <ProfileClientTitle>Usługi</ProfileClientTitle>
+              <ProfileClientTitleCategories>Kategorie</ProfileClientTitleCategories>
+              <CategoriesButtonBox>
+                {userData.branding ? <CategoriesBox>branding</CategoriesBox> : null}
+                {userData.print ? <CategoriesBox>druk</CategoriesBox> : null}
+                {userData.digital ? <CategoriesBox>digital</CategoriesBox> : null}
+                {userData.ux ? <CategoriesBox>UX/UI</CategoriesBox> : null}
+                {userData.ilustrations ? <CategoriesBox>ilustracje</CategoriesBox> : null}
+                {userData.other ? <CategoriesBox>inne</CategoriesBox> : null}
+              </CategoriesButtonBox>
+              <ProfileClientTitleCategories>Umiejętności</ProfileClientTitleCategories>
+              <ProfileClientParagraph>
+                <TagBox>{userData.tags}</TagBox>
+              </ProfileClientParagraph>
+            </ProfileClientCategories>
+            <ProfileClientGalery>
+              <ProfileClientTitle>Galeria</ProfileClientTitle>
+              <ProfileClientParagraph>Soon</ProfileClientParagraph>
+            </ProfileClientGalery>
+          </>
         </>
       )}
       {freelancer && userData && (
         <>
-          <ProfileClientFrameWrapper>
-            <h1>Profil: {userData.firstName}!</h1>
-            <ProfileClientFrame>
-              <ProfileClientFrameLogo src={example} alt="logo" width="300" />
-              <ProfileClientFrameData>
-                <p>
-                  <ProfileClientFrameKey>Imię:</ProfileClientFrameKey> {userData.firstName}
-                </p>
-                <p>
-                  <ProfileClientFrameKey>Nazwisko:</ProfileClientFrameKey> {userData.secondName}
-                </p>
-                <p>
-                  <ProfileClientFrameKey>O mnie:</ProfileClientFrameKey> {userData.aboutMe}
-                </p>
-                <p>
-                  <ProfileClientFrameKey>e-mail:</ProfileClientFrameKey> {userData.email}
-                </p>
-                <p>
-                  <ProfileClientFrameKey>Kraj:</ProfileClientFrameKey> {userData.country}
-                </p>
-                <p>
-                  <ProfileClientFrameKey>Miasto:</ProfileClientFrameKey> {userData.city}
-                </p>
-                <p>
-                  <ProfileClientFrameKey>Doświadczenie:</ProfileClientFrameKey> {userData.experience}
-                </p>
-                <p>
-                  <ProfileClientFrameKey>Tagi:</ProfileClientFrameKey> {userData.tags}
-                </p>
-                <p>
-                  <ProfileClientFrameKey>Usługi:</ProfileClientFrameKey>
-                  {userData.branding ? <button>Branding</button> : null}
-                  {userData.print ? <button>Druk</button> : null}
-                  {userData.digital ? <button>Digital</button> : null}
-                  {userData.ux ? <button>UX/UI</button> : null}
-                  {userData.ilustrations ? <button>Ilustracje</button> : null}
-                  {userData.other ? <button>Inne</button> : null}
-                </p>
-                <p>
-                  <ProfileClientFrameKey>Galeria:</ProfileClientFrameKey> {userData.gallery}
-                </p>
-              </ProfileClientFrameData>
-            </ProfileClientFrame>
-          </ProfileClientFrameWrapper>
+          <ProfileClientCover src={cover} />
+          <ProfileClientContainer>
+            <ProfileClientLogo src={example} alt="logo" />
+            <ProfileInformationContainer>
+              <ProfileClientTitle>{userData.firstName}</ProfileClientTitle>
+              <ProfileClientParagraph>Imię: {userData.firstName}</ProfileClientParagraph>
+              <ProfileClientParagraph>Nazwisko: {userData.secondName}</ProfileClientParagraph>
+              <ProfileClientParagraph>e-mail: {userData.email}</ProfileClientParagraph>
+              <ProfileClientParagraph>Kraj: {userData.country}</ProfileClientParagraph>
+              <ProfileClientParagraph>Miasto: {userData.city}</ProfileClientParagraph>
+              <ProfileClientParagraph>Doświadczenie: {userData.experience}</ProfileClientParagraph>
+            </ProfileInformationContainer>
+          </ProfileClientContainer>
+          <ProfileClientAbout>
+            <ProfileClientTitle>O mnie</ProfileClientTitle>
+            <ProfileClientParagraph>{userData.aboutMe}</ProfileClientParagraph>
+          </ProfileClientAbout>
+          <ProfileClientCategories>
+            <ProfileClientTitle>Usługi</ProfileClientTitle>
+            <ProfileClientTitleCategories>Kategorie</ProfileClientTitleCategories>
+            <CategoriesButtonBox>
+              {userData.branding ? <CategoriesBox>branding</CategoriesBox> : null}
+              {userData.print ? <CategoriesBox>druk</CategoriesBox> : null}
+              {userData.digital ? <CategoriesBox>digital</CategoriesBox> : null}
+              {userData.ux ? <CategoriesBox>UX/UI</CategoriesBox> : null}
+              {userData.ilustrations ? <CategoriesBox>ilustracje</CategoriesBox> : null}
+              {userData.other ? <CategoriesBox>inne</CategoriesBox> : null}
+            </CategoriesButtonBox>
+            <ProfileClientTitleCategories>Umiejętności</ProfileClientTitleCategories>
+            <ProfileClientParagraph>
+              <TagBox>{userData.tags}</TagBox>
+            </ProfileClientParagraph>
+          </ProfileClientCategories>
         </>
       )}
     </>
