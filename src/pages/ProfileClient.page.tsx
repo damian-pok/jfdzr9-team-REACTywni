@@ -4,11 +4,6 @@ import { useUser } from "../context/auth.context";
 import { getClient } from "../firebase/getClient";
 import example from "../assets/example.jpg";
 import {
-  ProfileClientFrame,
-  ProfileClientFrameData,
-  ProfileClientFrameKey,
-  ProfileClientFrameLogo,
-  ProfileClientFrameWrapper,
   ProfileClientContainer,
   ProfileClientLogo,
   ProfileClientTitle,
