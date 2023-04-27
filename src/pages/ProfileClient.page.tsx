@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../context/auth.context";
 import { getClient } from "../firebase/getClient";
-import example from "../assets/example.jpg";
+import profileAvatar from "../assets/illustrations/Profile-avatar.svg";
 import {
   ProfileClientContainer,
   ProfileClientLogo,
@@ -17,6 +17,7 @@ import {
   CategoriesButtonBox,
   ProfileClientGalery,
   TagBox,
+  ProfileClientCategoriesLast,
 } from "../components/ProfileClientFrame/ProfileClientFrame.styled";
 //import images
 import { getFreelancer } from "../firebase/getFreelancer";
@@ -60,7 +61,7 @@ const ProfileClient = () => {
           <>
             <ProfileClientCover src={cover} />
             <ProfileClientContainer>
-              <ProfileClientLogo src={example} alt="logo" />
+              <ProfileClientLogo src={profileAvatar} alt="logo" />
               <ProfileInformationContainer>
                 <ProfileClientTitle>{userData.company}</ProfileClientTitle>
                 <ProfileClientParagraph>Nazwa: {userData.company}</ProfileClientParagraph>
@@ -102,7 +103,7 @@ const ProfileClient = () => {
         <>
           <ProfileClientCover src={cover} />
           <ProfileClientContainer>
-            <ProfileClientLogo src={example} alt="logo" />
+            <ProfileClientLogo src={profileAvatar} alt="logo" />
             <ProfileInformationContainer>
               <ProfileClientTitle>{userData.firstName}</ProfileClientTitle>
               <ProfileClientParagraph>Imię: {userData.firstName}</ProfileClientParagraph>
@@ -117,7 +118,7 @@ const ProfileClient = () => {
             <ProfileClientTitle>O mnie</ProfileClientTitle>
             <ProfileClientParagraph>{userData.aboutMe}</ProfileClientParagraph>
           </ProfileClientAbout>
-          <ProfileClientCategories>
+          <ProfileClientCategoriesLast>
             <ProfileClientTitle>Usługi</ProfileClientTitle>
             <ProfileClientTitleCategories>Kategorie</ProfileClientTitleCategories>
             <CategoriesButtonBox>
@@ -132,7 +133,7 @@ const ProfileClient = () => {
             <ProfileClientParagraph>
               <TagBox>{userData.tags}</TagBox>
             </ProfileClientParagraph>
-          </ProfileClientCategories>
+          </ProfileClientCategoriesLast>
         </>
       )}
     </>

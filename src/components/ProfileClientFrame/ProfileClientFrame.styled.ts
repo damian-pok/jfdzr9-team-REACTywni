@@ -107,6 +107,20 @@ export const ProfileClientCategories = styled.div`
   margin-top: 1rem;
 `;
 
+export const ProfileClientCategoriesLast = styled.div`
+  max-width: var(--Default-Body-width);
+  height: fit-content;
+  background-color: var(--secondary-light-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: var(--Default-Distanse-beetween-sections);
+`;
+
 export const CategoriesBox = styled.button`
   background-color: var(--primary-green);
   color: var(--primary-dark-navy);
