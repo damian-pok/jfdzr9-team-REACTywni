@@ -1,6 +1,7 @@
 //import libraries:
 import { createGlobalStyle } from "styled-components";
 import { normalize } from "styled-normalize";
+import { Theme } from "./theme";
 
 const GlobalStyle = createGlobalStyle`
 ${normalize}
@@ -15,11 +16,6 @@ ${normalize}
   
   //global color styles - light mode:
     // Here will be defined colors for light mode
-    --lime-yellow: #E1F465;
-    --dark-lime-yellow: #bacc46;
-    --black: #040403;
-    --white-color: #fff;
-
     --primary-green: #1AD079;
     --primary-dark-navy: #07133B;
     --secondary-very-light-grey: #F8F9FB;
@@ -32,9 +28,15 @@ ${normalize}
 
   //global color styles - dark mode:
     // Here will be defined colors for dark mode
+    --primary-very-dark-navy: #141419;
+    --primary-very-dark-grey: #191a21;
+   
+    //Hover Color
+    --additional-dark-green: #17b66a;
+    --additional-navy: #091849;
 
   //light/dark mode colors:
-    // Here will be place for light/dark mode
+   --background-app: ${({ theme }: { theme: Theme }) => theme.backgroundBody};
 
   //global font sizes:
   --Default-Headline-1-size: 2.5rem;
