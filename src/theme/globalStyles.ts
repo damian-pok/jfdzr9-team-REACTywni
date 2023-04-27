@@ -1,7 +1,6 @@
 //import libraries:
 import { createGlobalStyle } from "styled-components";
 import { normalize } from "styled-normalize";
-import { Theme } from "./theme";
 
 const GlobalStyle = createGlobalStyle`
 ${normalize}
@@ -36,7 +35,7 @@ ${normalize}
     --additional-navy: #091849;
 
   //light/dark mode colors:
-   --background-app: ${({ theme }: { theme: Theme }) => theme.backgroundBody};
+
 
   //global font sizes:
   --Default-Headline-1-size: 2.5rem;
