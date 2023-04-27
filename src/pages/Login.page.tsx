@@ -13,7 +13,7 @@ import {
   SiteContainer,
   ImageStyle,
   HeaderStyles,
-  FormField,
+  FormFieldRegister,
   AnotherContainer,
   LabelStyle,
 } from "../components/RegisterForm/RegisterForm.styled";
@@ -49,7 +49,7 @@ const Login = () => {
         <HeaderStyles>Logowanie</HeaderStyles>
         <FormContainer>
           <ImageStyle src={LoginIllustration} />
-          <FormField onSubmit={handleSubmit(onSubmit)}>
+          <FormFieldRegister onSubmit={handleSubmit(onSubmit)}>
             <LabelStyle>Adres email</LabelStyle>
             <Controller
               name="email"
@@ -64,7 +64,7 @@ const Login = () => {
             />
             <PrimaryNavyButton type="submit">Zaloguj!</PrimaryNavyButton>
             {error}
-          </FormField>
+          </FormFieldRegister>
         </FormContainer>
         <AnotherContainer>
           <h4>Nie masz jeszcze konta?</h4>

@@ -106,6 +106,7 @@ export const ProfileInputFreelancer = () => {
     data.other = data.other ?? null;
 
     auth.currentUser != null ? (data.uid = String(auth.currentUser.uid)) : "error";
+    auth.currentUser != null ? (data.jobs = []) : "error";
     addFreelancer(data)
       .then(() => {
         setSuccess(true);
@@ -165,7 +166,6 @@ export const ProfileInputFreelancer = () => {
         />
         <h2>Usługi</h2>
         <CategoryGroup>
-          <p>Kategorie</p>
           <Controller
             name="branding"
             control={control}

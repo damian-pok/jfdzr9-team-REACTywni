@@ -8,7 +8,11 @@ interface SearchBarProps {
 
 export const SearchBar = ({ query, setQuery }: SearchBarProps) => {
   return (
-    <SearchBarForm>
+    <SearchBarForm
+      onSubmit={(event) => {
+        event.preventDefault();
+      }}
+    >
       <SearchInput
         role="search"
         placeholder="Szukaj po tagach..."

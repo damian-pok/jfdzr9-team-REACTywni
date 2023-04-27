@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 //import libraries:
 import { createBrowserRouter, Route, RouterProvider, createRoutesFromElements, Navigate } from "react-router-dom";
@@ -23,8 +23,12 @@ import Register from "./pages/Register.page";
 import Search from "./pages/Search.page";
 import Statute from "./pages/Statute.page";
 import GlobalStyle from "./theme/globalStyles";
+import { ThemeProvider } from "styled-components";
+import { NightModeContext } from "./context/darkTheme.context";
 
 function App() {
+  const { theme } = useContext(NightModeContext);
+
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Layout />}>
@@ -52,8 +56,10 @@ function App() {
 
   return (
     <>
-      <GlobalStyle />
-      <RouterProvider router={router} />
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <RouterProvider router={router} />
+      </ThemeProvider>
     </>
   );
 }
