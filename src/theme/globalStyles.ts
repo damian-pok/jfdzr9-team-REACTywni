@@ -64,14 +64,14 @@ ${normalize}
 
 html{
     scroll-behavior: smooth;
+    display: flex;
+    justify-content: center;
 }
 
 body {
   width: 1440px;
   margin: 2rem;
   background-color: var(--very-light-color);
-  display: flex;
-  justify-content: center;
   min-width: 840px;
 }
 
