@@ -22,6 +22,10 @@ export interface IJob {
   date: string;
   status: string;
 }
+
+export interface IJobs {
+  jobs: IJob[];
+}
 export interface IProfileInputFreelancer {
   uid: string;
   firstName: string;
@@ -39,7 +43,7 @@ export interface IProfileInputFreelancer {
   ilustrations: string;
   other: string;
   tags: string;
-  jobs: IJob[];
+  jobs: IJobs;
 }
 
 export const ProfileInputFreelancer = () => {
