@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { PrimaryGreenButton } from "../components/UI/Buttons/Buttons.styled";
 import { InputForm } from "../components/UI/Input/Input.styled";
 import { HeaderStyles } from "../components/Plans/Plans.styled";
-import { FormField } from "../components/Contact/Contact.styled";
+import { FormFieldRegister } from "../components/RegisterForm/RegisterForm.styled";
 
 //import styles
 import {
@@ -62,7 +62,7 @@ const Register = () => {
         <HeaderStyles>Zarejestruj się!</HeaderStyles>
         <FormContainer>
           <ImageStyle src={RegisterIllustration} />
-          <FormField onSubmit={handleSubmit(onSubmit)}>
+          <FormFieldRegister onSubmit={handleSubmit(onSubmit)}>
             <RegisterLabelStyle>Adres email</RegisterLabelStyle>
             <Controller
               name="email"
@@ -77,7 +77,7 @@ const Register = () => {
             />
             <RegisterNavyButton type="submit">Rejestracja</RegisterNavyButton>
             {error}
-          </FormField>
+          </FormFieldRegister>
         </FormContainer>
         <AnotherContainer>
           <h4>Masz już konto? Zaloguj się!</h4>

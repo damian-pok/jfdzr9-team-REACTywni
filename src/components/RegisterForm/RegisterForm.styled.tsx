@@ -14,7 +14,7 @@ export const SiteContainer = styled.div`
 export const FormContainer = styled.div`
   width: 47.5rem;
   height: fit-content;
-  background-color: var(--secondary-light-grey);
+  background-color: var(--cardgroundcolor);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -33,7 +33,7 @@ export const ImageStyle = styled.img`
   width: 16.25rem;
 `;
 
-export const FormField = styled.form`
+export const FormFieldRegister = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,7 +59,8 @@ export const RegisterLabelStyle = styled.label`
 export const AnotherContainer = styled.div`
   width: 47.5rem;
   height: 6rem;
-  background-color: var(--secondary-light-grey);
+  background-color: var(--cardgroundcolor);
+  border-radius: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -72,8 +73,8 @@ export const RegisterNavyButton = styled.button`
   width: fit-content;
   height: 2.5rem;
   padding: 1.25rem 2.5rem;
-  color: var(--secondary-very-light-grey);
-  background-color: var(--primary-dark-navy);
+  color: var(--primarynavybuttontext);
+  background-color: var(--primarynavybuttonbackground);
   font-weight: bold;
   border-radius: 0.5rem;
   display: flex;
@@ -82,6 +83,6 @@ export const RegisterNavyButton = styled.button`
   margin-top: 1rem;
   cursor: pointer;
   :hover {
-    background-color: var(--additional-navy);
+    background-color: var(--primarynavybuttonbackgroundhouver);
   }
 `;

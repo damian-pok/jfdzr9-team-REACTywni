@@ -1,6 +1,7 @@
 //import libraries:
 import { createGlobalStyle } from "styled-components";
 import { normalize } from "styled-normalize";
+import { Theme } from "./theme";
 
 const GlobalStyle = createGlobalStyle`
 ${normalize}
@@ -12,36 +13,80 @@ ${normalize}
   --light-grey-color: #C2D1D9;
   --very-light-grey-color: #F5F9FC;
   
+  //Finally colors styles - dark mode:
+
+
   
   //global color styles - light mode:
     // Here will be defined colors for light mode
-    --primary-green: #1AD079;
-    --primary-dark-navy: #07133B;
-    --secondary-very-light-grey: #F8F9FB;
-    --secondary-light-grey: #F3F3F6;
-    --secoundary-grey: #C2D1D9;
-    --secoundary-white: #fff;
-    //Hover Color
-    --additional-dark-green: #17b66a;
-    --additional-navy: #091849;
+    //Finally color
+    --inputbackgroundcolor: ${({ theme }: { theme: Theme }) => theme.inputbackgroundcolor};
+    --inputbordercolor: ${({ theme }: { theme: Theme }) => theme.inputbordercolor};
+    --placeholdertextcolor: ${({ theme }: { theme: Theme }) => theme.placeholdertextcolor};
+    --textcolor: ${({ theme }: { theme: Theme }) => theme.textcolor};
+    --inputactiveborder: ${({ theme }: { theme: Theme }) => theme.inputactiveborder};
+    --primarygreenbuttonbackground: ${({ theme }: { theme: Theme }) => theme.primarygreenbuttonbackground};
+    --primarygreenbuttontext: ${({ theme }: { theme: Theme }) => theme.primarygreenbuttontext};
+    --primarynavybuttonbackground: ${({ theme }: { theme: Theme }) => theme.primarynavybuttonbackground};
+    --primarynavybuttontext: ${({ theme }: { theme: Theme }) => theme.primarynavybuttontext};
+    --mainbackgroundcolorsite: ${({ theme }: { theme: Theme }) => theme.mainbackgroundcolorsite};
+    --cardgroundcolor: ${({ theme }: { theme: Theme }) => theme.cardgroundcolor};
+    --linktextcolor: ${({ theme }: { theme: Theme }) => theme.linktextcolor};
+    --linktextcolorhouver: ${({ theme }: { theme: Theme }) => theme.linktextcolorhouver};
+    --footerbackgroundcolor: ${({ theme }: { theme: Theme }) => theme.footerbackgroundcolor};
+    --footerlinktextcolor: ${({ theme }: { theme: Theme }) => theme.footerlinktextcolor};
+    --boxInputBackgroundColor: ${({ theme }: { theme: Theme }) => theme.boxInputBackgroundColor};
+    --boxInputBorderColor: ${({ theme }: { theme: Theme }) => theme.boxInputBorderColor};
+    --categoriesBackgroundColors: ${({ theme }: { theme: Theme }) => theme.categoriesBackgroundColors};
+    --tagBorderColors: ${({ theme }: { theme: Theme }) => theme.tagBorderColors};
 
-  //global color styles - dark mode:
-    // Here will be defined colors for dark mode
-    --primary-very-dark-navy: #141419;
-    --primary-very-dark-grey: #191a21;
-   
     //Hover Color
-    --additional-dark-green: #17b66a;
-    --additional-navy: #091849;
+    --primarygreenbuttonbackgroundhouver: ${({ theme }: { theme: Theme }) => theme.primarygreenbuttonbackgroundhouver};
+    --primarynavybuttonbackgroundhouver: ${({ theme }: { theme: Theme }) => theme.primarynavybuttonbackgroundhouver};
+    --footerlinktextcolorhouver: ${({ theme }: { theme: Theme }) => theme.footerlinktextcolorhouver};
+
+//---------------------------------
+
+    --lime-yellow: ${({ theme }: { theme: Theme }) => theme.limeYellow};
+    --dark-lime-yellow: ${({ theme }) => theme.darkLimeYellow};
+    --black: ${({ theme }) => theme.darkBlack};
+    --white-color: ${({ theme }) => theme.whiteColor};
+
+    --primary-green: ${({ theme }) => theme.primaryGreen};
+    --primary-dark-navy: ${({ theme }) => theme.primaryDarkNavy};
+    --secondary-very-light-grey: ${({ theme }) => theme.secondaryVeryLightGrey};
+    --secondary-light-grey: ${({ theme }) => theme.secondaryLightGrey};
+    --secondary-grey: ${({ theme }) => theme.secondaryGrey};
+    --secondary-white: ${({ theme }) => theme.secondaryWhite};
+    //Hover Color
+    --additional-dark-green: ${({ theme }) => theme.additionalDarkGreen};
+    --additional-navy: ${({ theme }) => theme.additionalNavy};
+
+
+
+    /* --lime-yellow: #e1f465;
+    --primary-green: #1ad079;
+    --primary-dark-navy: #07133b;
+    --secondary-very-light-grey: #f8f9fb;
+    --secondaryLightGrey: #f3f3f6;
+    --secoundaryGrey: #c2d1d9;
+    --secoundaryWhite: #eee;
+    //Hover Color
+    --additionalDarkGreen: #17b66a;
+    --additionalNavy: #091849; */
+
+
+
+
+
 
   //light/dark mode colors:
-
+    // Here will be place for light/dark mode
 
   //global font sizes:
   --Default-Headline-1-size: 2.5rem;
   --Default-Headline-2-size: 2rem;
   --Default-Headline-3-size: 1.5rem;
-  --Default-Headline-4-size: 1.2rem;
   --Default-Body-size: 1rem;
   --Default-Signatures-size: 0.75rem;
   --Default-Body-width: 83.25rem;
@@ -51,9 +96,9 @@ ${normalize}
   font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
 
   //global font style:
-  color: var(--primary-dark-navy);
+  color: var(--textcolor);
   line-height: 1.8;
-  background-color: var(--secondary-very-light-grey);
+  background-color: var(--mainbackgroundcolorsite);
   scroll-behavior: smooth;
 }
 
@@ -64,14 +109,14 @@ ${normalize}
 
 html{
     scroll-behavior: smooth;
-    display: flex;
-    justify-content: center;
 }
 
 body {
   width: 1440px;
   margin: 2rem;
   background-color: var(--very-light-color);
+  display: flex;
+  justify-content: center;
   min-width: 840px;
 }
 

@@ -14,6 +14,14 @@ import {
 } from "./ProfileInputFreelancer.styled";
 
 //types
+
+export interface IJob {
+  id: string;
+  author: string;
+  content: string;
+  date: string;
+  status: string;
+}
 export interface IProfileInputFreelancer {
   uid: string;
   firstName: string;
@@ -23,7 +31,6 @@ export interface IProfileInputFreelancer {
   city: string;
   experience: number;
   aboutMe: string;
-  //services: string;
   gallery: string;
   branding: string;
   print: string;
@@ -32,6 +39,7 @@ export interface IProfileInputFreelancer {
   ilustrations: string;
   other: string;
   tags: string;
+  jobs: IJob[];
 }
 
 export const ProfileInputFreelancer = () => {
@@ -96,9 +104,9 @@ export const ProfileInputFreelancer = () => {
     data.ux = data.ux ?? null;
     data.ilustrations = data.ilustrations ?? null;
     data.other = data.other ?? null;
-    //data.print = data.print !== null && data.print !== undefined ? data.print.toString() : "false";
 
     auth.currentUser != null ? (data.uid = String(auth.currentUser.uid)) : "error";
+    auth.currentUser != null ? (data.jobs = []) : "error";
     addFreelancer(data)
       .then(() => {
         setSuccess(true);
@@ -151,11 +159,6 @@ export const ProfileInputFreelancer = () => {
           control={control}
           render={({ field }) => <AboutMeStyled placeholder="Tagi..." type={"text"} {...field} />}
         />
-        {/* <Controller
-          name="services"
-          control={control}
-          render={({ field }) => <input placeholder="Usługi" type={"text"} {...field} />}
-        /> */}
         <Controller
           name="gallery"
           control={control}

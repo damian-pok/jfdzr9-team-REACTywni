@@ -4,6 +4,5 @@ import { IProfileInputFreelancer } from "../components/ProfileInputFreelancer/Pr
 import { db } from "./firebase.config";
 
 export const addFreelancer = async (freelancer: Partial<IProfileInputFreelancer>) => {
-  console.log("AAAA: ", freelancer);
   await setDoc(doc(db, "freelancer", String(freelancer.uid)), freelancer);
 };

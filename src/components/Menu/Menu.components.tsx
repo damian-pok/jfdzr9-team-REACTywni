@@ -11,7 +11,8 @@ import {
 } from "./Menu.styled";
 import { useUser } from "../../context/auth.context";
 import { getAuth, signOut } from "firebase/auth";
-import LogoFindADesigner from "./../../assets/logos/find-a-designer-logo.svg";
+import LightLogoFindADesigner from "./../../assets/logos/find-a-designer-logo.svg";
+//import DarkLogoFindADesigner from "./../../assets/logos/find-a-designer-white-logo.svg";
 import ToggleSwitch from "./../UI/Toggle/Toggle.components";
 
 const Menu = () => {
@@ -25,7 +26,7 @@ const Menu = () => {
     <MenuField>
       <LogosAndPrimaryButtonsField>
         <Link to={`/`}>
-          <Logo src={LogoFindADesigner} />
+          <Logo src={LightLogoFindADesigner} />
         </Link>
         <ButtonMenuField>
           {user ? (

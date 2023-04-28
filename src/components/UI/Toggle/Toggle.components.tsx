@@ -1,18 +1,12 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { ToggleButton } from "./Toggle.styled";
-
-interface ToggleSwitchState {
-  isActive: boolean;
-}
+import { NightModeContext } from "../../../context/darkTheme.context";
+import { lightTheme } from "../../../theme/theme";
 
 const ToggleSwitch = () => {
-  const [isActive, setIsActive] = useState<ToggleSwitchState["isActive"]>(false);
+  const { toggleTheme, theme } = useContext(NightModeContext);
 
-  const handleClick = () => {
-    setIsActive(!isActive);
-  };
-
-  return <ToggleButton onClick={handleClick} isActive={isActive} />;
+  return <ToggleButton onClick={toggleTheme} isActive={theme === lightTheme} />;
 };
 
 export default ToggleSwitch;

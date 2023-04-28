@@ -11,17 +11,19 @@ import {
   ProfileInformationContainer,
   ProfileClientCover,
   ProfileClientAbout,
-  ProfileClientCategories,
   ProfileClientTitleCategories,
   CategoriesBox,
   CategoriesButtonBox,
   ProfileClientGalery,
   TagBox,
   ProfileClientCategoriesLast,
+  ProfileClientFrameKey,
 } from "../components/ProfileClientFrame/ProfileClientFrame.styled";
 //import images
 import { getFreelancer } from "../firebase/getFreelancer";
-import cover from "../assets/images/Cover.png";
+import cover from "../assets/images/cover.png";
+import { TaskFreelancer } from "../components/TaskFreelancer/TaskFreelancer.component";
+import { IJob } from "../components/ProfileInputFreelancer/ProfileInputFreelancer.component";
 
 const ProfileClient = () => {
   const [userData, setUserData] = useState<any>();
@@ -72,30 +74,6 @@ const ProfileClient = () => {
                 <ProfileClientParagraph>Adres: {userData.street}</ProfileClientParagraph>
               </ProfileInformationContainer>
             </ProfileClientContainer>
-            <ProfileClientAbout>
-              <ProfileClientTitle>O mnie</ProfileClientTitle>
-              <ProfileClientParagraph>{userData.aboutMe}</ProfileClientParagraph>
-            </ProfileClientAbout>
-            <ProfileClientCategories>
-              <ProfileClientTitle>Usługi</ProfileClientTitle>
-              <ProfileClientTitleCategories>Kategorie</ProfileClientTitleCategories>
-              <CategoriesButtonBox>
-                {userData.branding ? <CategoriesBox>branding</CategoriesBox> : null}
-                {userData.print ? <CategoriesBox>druk</CategoriesBox> : null}
-                {userData.digital ? <CategoriesBox>digital</CategoriesBox> : null}
-                {userData.ux ? <CategoriesBox>UX/UI</CategoriesBox> : null}
-                {userData.ilustrations ? <CategoriesBox>ilustracje</CategoriesBox> : null}
-                {userData.other ? <CategoriesBox>inne</CategoriesBox> : null}
-              </CategoriesButtonBox>
-              <ProfileClientTitleCategories>Umiejętności</ProfileClientTitleCategories>
-              <ProfileClientParagraph>
-                <TagBox>{userData.tags}</TagBox>
-              </ProfileClientParagraph>
-            </ProfileClientCategories>
-            <ProfileClientGalery>
-              <ProfileClientTitle>Galeria</ProfileClientTitle>
-              <ProfileClientParagraph>Soon</ProfileClientParagraph>
-            </ProfileClientGalery>
           </>
         </>
       )}
@@ -134,6 +112,22 @@ const ProfileClient = () => {
               <TagBox>{userData.tags}</TagBox>
             </ProfileClientParagraph>
           </ProfileClientCategoriesLast>
+          <ProfileClientGalery>
+            <ProfileClientTitle>Galeria</ProfileClientTitle>
+            <ProfileClientParagraph>{userData.gallery}</ProfileClientParagraph>
+          </ProfileClientGalery>
+          <div>
+            <ProfileClientFrameKey>Zadania:</ProfileClientFrameKey>
+            {userData.jobs.map((job: IJob) => (
+              <TaskFreelancer
+                key={job.id}
+                author={job.author}
+                content={job.content}
+                date={job.date}
+                status={job.status}
+              />
+            ))}
+          </div>
         </>
       )}
     </>

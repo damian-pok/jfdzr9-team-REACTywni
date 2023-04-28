@@ -5,8 +5,8 @@ export const PrimaryGreenButton = styled.button`
   width: fit-content;
   height: 2.5rem;
   padding: 1.25rem 2.5rem;
-  color: var(--primary-dark-navy);
-  background-color: var(--primary-green);
+  color: var(--primarygreenbuttontext);
+  background-color: var(--primarygreenbuttonbackground);
   font-weight: bold;
   border-radius: 0.5rem;
   display: flex;
@@ -14,7 +14,7 @@ export const PrimaryGreenButton = styled.button`
   align-items: center;
   cursor: pointer;
   :hover {
-    background-color: var(--additional-dark-green);
+    background-color: var(--primarygreenbuttonbackgroundhouver);
   }
 `;
 
@@ -22,8 +22,8 @@ export const PrimaryNavyButton = styled.button`
   width: fit-content;
   height: 2.5rem;
   padding: 1.25rem 2.5rem;
-  color: var(--secondary-very-light-grey);
-  background-color: var(--primary-dark-navy);
+  color: var(--primarynavybuttontext);
+  background-color: var(--primarynavybuttonbackground);
   font-weight: bold;
   border-radius: 0.5rem;
   display: flex;
@@ -31,7 +31,7 @@ export const PrimaryNavyButton = styled.button`
   align-items: center;
   cursor: pointer;
   :hover {
-    background-color: var(--additional-navy);
+    background-color: var(--primarynavybuttonbackgroundhouver);
   }
 `;
 

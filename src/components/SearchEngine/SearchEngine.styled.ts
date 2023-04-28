@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SearchEngineWrapper = styled.div`
   width: 23.75rem;
   height: fit-content;
-  background: var(--secondary-light-grey);
+  background: var(--cardgroundcolor);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -70,9 +70,9 @@ export const Input = styled.input`
   /* Custom checkbox */
   width: 1.5rem;
   height: 1.5rem;
-  background-color: var(--secoundary-white);
+  background-color: var(--boxInputBackgroundColor);
 
-  border: 0.1rem solid var(--primary-dark-navy);
+  border: 0.1rem solid var(--boxInputBorderColor);
   border-radius: 0.3rem;
 
   display: grid;
@@ -85,7 +85,7 @@ export const Input = styled.input`
     border-radius: 0.3rem;
     transform: scale(0);
     transition: 120ms transform ease-in-out;
-    box-shadow: inset 1rem 1rem var(--primary-dark-navy);
+    box-shadow: inset 1rem 1rem var(--boxInputBorderColor);
   }
 
   :checked::before {
