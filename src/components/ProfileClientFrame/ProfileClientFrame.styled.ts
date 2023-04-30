@@ -63,12 +63,14 @@ export const ProfileClientLogo = styled.img`
 export const ProfileClientTitleCategories = styled.h4`
   font-size: var(--Default-Headline-4-size);
   font-weight: bold;
+  margin-top: 1rem;
 `;
 
 export const ProfileClientParagraph = styled.p`
   font-size: var(--Default-Body-size);
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
 `;
 
 export const ProfileClientCover = styled.img`

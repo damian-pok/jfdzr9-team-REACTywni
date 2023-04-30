@@ -24,6 +24,7 @@ import { getFreelancer } from "../firebase/getFreelancer";
 import cover from "../assets/images/cover.png";
 import { TaskFreelancer } from "../components/TaskFreelancer/TaskFreelancer.component";
 import { IJob } from "../components/ProfileInputFreelancer/ProfileInputFreelancer.component";
+import { DesignerServices } from "../components/DesignerServices/DesignerServices.component";
 
 const ProfileClient = () => {
   const [userData, setUserData] = useState<any>();
@@ -109,25 +110,23 @@ const ProfileClient = () => {
             </CategoriesButtonBox>
             <ProfileClientTitleCategories>Umiejętności</ProfileClientTitleCategories>
             <ProfileClientParagraph>
-              <TagBox>{userData.tags}</TagBox>
+              {userData.tags && <DesignerServices services={userData.tags}></DesignerServices>}
             </ProfileClientParagraph>
           </ProfileClientCategoriesLast>
           <ProfileClientGalery>
             <ProfileClientTitle>Galeria</ProfileClientTitle>
             <ProfileClientParagraph>{userData.gallery}</ProfileClientParagraph>
           </ProfileClientGalery>
-          <div>
-            <ProfileClientFrameKey>Zadania:</ProfileClientFrameKey>
-            {userData.jobs.map((job: IJob) => (
-              <TaskFreelancer
-                key={job.id}
-                author={job.author}
-                content={job.content}
-                date={job.date}
-                status={job.status}
-              />
-            ))}
-          </div>
+          <ProfileClientFrameKey>Zadania:</ProfileClientFrameKey>
+          {userData.jobs.map((job: IJob) => (
+            <TaskFreelancer
+              key={job.id}
+              author={job.author}
+              content={job.content}
+              date={job.date}
+              status={job.status}
+            />
+          ))}
         </>
       )}
     </>

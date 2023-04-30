@@ -34,6 +34,7 @@ export const TagsWrapper = styled.div`
 
 export const DesignerTags = styled.div`
   display: flex;
+  flex-wrap: wrap;
   column-gap: 0.7rem;
   margin-bottom: 0.7rem;
   height: auto;
@@ -43,6 +44,7 @@ export const DesignerTags = styled.div`
 
 export const DesignerTagsSecond = styled.div`
   display: flex;
+  flex-wrap: wrap;
   gap: 0.7rem;
   width: fit-content;
   grid-column: 1 / span 2;

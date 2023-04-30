@@ -58,7 +58,9 @@ const Menu = () => {
         <MainLinkMenu to={`/howfreelancer`}>Dla freelancerów</MainLinkMenu>
         <MainLinkMenu to={`/howclient`}>Dla klientów</MainLinkMenu>
         <LinkMenu to={`/search`}>Wyszukiwarka</LinkMenu>
-        <LinkMenu to={`/#contact`}>Kontakt</LinkMenu>
+        <LinkMenu smooth to={`/#contact`}>
+          Kontakt
+        </LinkMenu>
         <ToggleSwitch />
       </SecoundMenuField>
     </MenuField>
