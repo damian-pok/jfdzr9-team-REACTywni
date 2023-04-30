@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import { collection, CollectionReference, getDocs, DocumentData, updateDoc, doc } from "firebase/firestore";
-import { auth, db } from "../../firebase/firebase.config";
+import { DocumentData, updateDoc, doc } from "firebase/firestore";
 import { ProfileInputFreelancerStyled } from "./ProfileEditionInputFreelancer.styled";
+import { useNavigate } from "react-router-dom";
+import { useUser } from "../../context/auth.context";
+import { getFreelancer } from "../../firebase/getFreelancer";
 
 export interface IEditionFormFreelancer {
   uid: string;
@@ -23,26 +25,38 @@ export interface IEditionFormFreelancer {
 }
 
 export const FreelancerProfileEditionForm = () => {
-  const [freelancerData, setFreelancerData] = useState<string[]>([]);
+  const [freelancerData, setFreelancerData] = useState<DocumentData | null>(null);
+  const user = useUser();
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!user) navigate("/login");
+  }, [user]);
 
-  const freelancerCollectionRef: CollectionReference<DocumentData> = collection(db, "freelancer");
-
-  const getFreelancerData = async () => {
-    const data = await getDocs(freelancerCollectionRef);
-    const filteredData = data.docs.map((doc) => doc.id);
-    setFreelancerData(filteredData);
-  };
+  useEffect(() => {
+    const fetchDataFreelancer = async () => {
+      const { docSnapF } = await getFreelancer();
+      if (docSnapF.exists()) {
+        setFreelancerData(docSnapF.data());
+      }
+    };
+    fetchDataFreelancer();
+  }, []);
 
   return (
     <>
       <ProfileInputFreelancerStyled id="edition-form">
-        <input id="firstName" />
-        <input id="secondName" />
-        <input id="email" />
-        <input id="country" />
-        <input id="city" />
-        <input id="experience" />
-        <input id="aboutMe" />
+        <h2>Daj znać, co się zmieniło</h2>
+        {freelancerData && (
+          <>
+            <input placeholder={freelancerData.firstName} />
+            <input placeholder={freelancerData.secondName} />
+            <input placeholder={freelancerData.email} />
+            <input placeholder={freelancerData.country} />
+            <input placeholder={freelancerData.city} />
+            <input placeholder={freelancerData.experience} />
+            <input placeholder={freelancerData.aboutMe} />
+          </>
+        )}
       </ProfileInputFreelancerStyled>
     </>
   );
