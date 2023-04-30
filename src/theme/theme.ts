@@ -25,6 +25,9 @@ export const lightTheme = {
   primarynavybuttonbackgroundhouver: `#0f2776`,
   footerlinktextcolorhouver: `#21ff95`,
 
+  //Images
+  MenuLogo: `./../assets/logos/find-a-designer-logo.svg`,
+
   //---------------------------------
   limeYellow: `#e1f465`,
   darkLimeYellow: `#bacc46`,
@@ -67,6 +70,9 @@ export const darkTheme = {
   primarygreenbuttonbackgroundhouver: `#21ff95`,
   primarynavybuttonbackgroundhouver: `#2f3948`,
   footerlinktextcolorhouver: `#21ff95`,
+
+  //Images
+  MenuLogo: `./../assets/logos/find-a-designer-logo-white`,
 
   //---------------------------------
 

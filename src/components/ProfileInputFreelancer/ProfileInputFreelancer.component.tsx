@@ -5,13 +5,14 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/auth.context";
 import { addFreelancer } from "../../firebase/addFreelancer";
 import { auth } from "../../firebase/firebase.config";
-import { PrimaryButton } from "../UI/Buttons/Buttons.styled";
+import { PrimaryButton, PrimaryNavyButton } from "../UI/Buttons/Buttons.styled";
 import {
   AboutMeStyled,
   CategoryPair,
   ProfileInputFreelancerStyled,
   CategoryGroup,
 } from "./ProfileInputFreelancer.styled";
+import { InputForm, InputTextArea } from "../UI/Input/Input.styled";
 
 //types
 
@@ -122,47 +123,47 @@ export const ProfileInputFreelancer = () => {
         <Controller
           name="firstName"
           control={control}
-          render={({ field }) => <input placeholder="Imię" type={"text"} {...field} />}
+          render={({ field }) => <InputForm placeholder="Imię" type={"text"} {...field} />}
         />
         <Controller
           name="secondName"
           control={control}
-          render={({ field }) => <input placeholder="Nazwisko" type={"text"} {...field} />}
+          render={({ field }) => <InputForm placeholder="Nazwisko" type={"text"} {...field} />}
         />
         <Controller
           name="email"
           control={control}
-          render={({ field }) => <input placeholder="Email" type={"email"} {...field} />}
+          render={({ field }) => <InputForm placeholder="Email" type={"email"} {...field} />}
         />
         <Controller
           name="country"
           control={control}
-          render={({ field }) => <input placeholder="Kraj" type={"text"} {...field} />}
+          render={({ field }) => <InputForm placeholder="Kraj" type={"text"} {...field} />}
         />
         <Controller
           name="city"
           control={control}
-          render={({ field }) => <input placeholder="Miasto" type={"text"} {...field} />}
+          render={({ field }) => <InputForm placeholder="Miasto" type={"text"} {...field} />}
         />
         <Controller
           name="experience"
           control={control}
-          render={({ field }) => <input placeholder="Doświadczenie" type={"number"} {...field} />}
+          render={({ field }) => <InputForm placeholder="Doświadczenie" type={"number"} {...field} />}
         />
         <Controller
           name="aboutMe"
           control={control}
-          render={({ field }) => <AboutMeStyled placeholder="O mnie..." type={"text"} {...field} />}
+          render={({ field }) => <InputTextArea placeholder="O mnie..." type={"text"} {...field} />}
         />
         <Controller
           name="tags"
           control={control}
-          render={({ field }) => <AboutMeStyled placeholder="Tagi..." type={"text"} {...field} />}
+          render={({ field }) => <InputTextArea placeholder="Tagi..." type={"text"} {...field} />}
         />
         <Controller
           name="gallery"
           control={control}
-          render={({ field }) => <input placeholder="Galeria" type={"text"} {...field} />}
+          render={({ field }) => <InputForm placeholder="Galeria" type={"text"} {...field} />}
         />
         <h2>Usługi</h2>
         <CategoryGroup>
@@ -283,7 +284,7 @@ export const ProfileInputFreelancer = () => {
             )}
           />
         </CategoryGroup>
-        <PrimaryButton type="submit">Wyślij</PrimaryButton>
+        <PrimaryNavyButton type="submit">Wyślij</PrimaryNavyButton>
       </ProfileInputFreelancerStyled>
     </>
   );

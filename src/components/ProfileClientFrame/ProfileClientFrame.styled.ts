@@ -37,7 +37,7 @@ export const ProfileClientFrameWrapper = styled.div`
 export const ProfileClientContainer = styled.div`
   max-width: var(--Default-Body-width);
   height: fit-content;
-  background-color: var(--secondary-light-grey);
+  background-color: var(--cardgroundcolor);
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -67,6 +67,8 @@ export const ProfileClientTitleCategories = styled.h4`
 
 export const ProfileClientParagraph = styled.p`
   font-size: var(--Default-Body-size);
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 export const ProfileClientCover = styled.img`
@@ -79,7 +81,7 @@ export const ProfileClientCover = styled.img`
 export const ProfileClientAbout = styled.div`
   max-width: var(--Default-Body-width);
   height: fit-content;
-  background-color: var(--secondary-light-grey);
+  background-color: var(--cardgroundcolor);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -97,7 +99,7 @@ export const ProfileClientTitle = styled.h3`
 export const ProfileClientCategories = styled.div`
   max-width: var(--Default-Body-width);
   height: fit-content;
-  background-color: var(--secondary-light-grey);
+  background-color: var(--cardgroundcolor);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -110,7 +112,7 @@ export const ProfileClientCategories = styled.div`
 export const ProfileClientCategoriesLast = styled.div`
   max-width: var(--Default-Body-width);
   height: fit-content;
-  background-color: var(--secondary-light-grey);
+  background-color: var(--cardgroundcolor);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -118,12 +120,11 @@ export const ProfileClientCategoriesLast = styled.div`
   border-radius: 1rem;
   gap: 0.5rem;
   margin-top: 1rem;
-  margin-bottom: var(--Default-Distanse-beetween-sections);
 `;
 
 export const CategoriesBox = styled.button`
-  background-color: var(--primary-green);
-  color: var(--primary-dark-navy);
+  background-color: var(--primarygreenbuttonbackground);
+  color: var(--primarygreenbuttontext);
   padding: 0.5rem 1.5rem;
   border-radius: 0.5rem;
 `;
@@ -138,13 +139,13 @@ export const CategoriesButtonBox = styled.div`
 `;
 
 export const TagBox = styled.p`
-  color: var(--primary-dark-navy);
+  color: var(--textcolor);
 `;
 
 export const ProfileClientGalery = styled.div`
   max-width: var(--Default-Body-width);
   height: fit-content;
-  background-color: var(--secondary-light-grey);
+  background-color: var(--cardgroundcolor);
   display: flex;
   flex-direction: column;
   align-items: flex-start;

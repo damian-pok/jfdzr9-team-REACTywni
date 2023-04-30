@@ -45,6 +45,8 @@ ${normalize}
     --primarynavybuttonbackgroundhouver: ${({ theme }: { theme: Theme }) => theme.primarynavybuttonbackgroundhouver};
     --footerlinktextcolorhouver: ${({ theme }: { theme: Theme }) => theme.footerlinktextcolorhouver};
 
+    //Images
+    --MenuLogo: ${({ theme }: { theme: Theme }) => theme.MenuLogo};
 //---------------------------------
 
     --lime-yellow: ${({ theme }: { theme: Theme }) => theme.limeYellow};
@@ -61,19 +63,6 @@ ${normalize}
     //Hover Color
     --additional-dark-green: ${({ theme }) => theme.additionalDarkGreen};
     --additional-navy: ${({ theme }) => theme.additionalNavy};
-
-
-
-    /* --lime-yellow: #e1f465;
-    --primary-green: #1ad079;
-    --primary-dark-navy: #07133b;
-    --secondary-very-light-grey: #f8f9fb;
-    --secondaryLightGrey: #f3f3f6;
-    --secoundaryGrey: #c2d1d9;
-    --secoundaryWhite: #eee;
-    //Hover Color
-    --additionalDarkGreen: #17b66a;
-    --additionalNavy: #091849; */
 
 
 

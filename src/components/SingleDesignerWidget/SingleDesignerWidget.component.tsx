@@ -10,7 +10,7 @@ import {
   DesignerName,
   InfoContainer,
   DesignerDescription,
-} from "./SingleDesignerWidget.styled";
+} from "./SingleDesignerWidget";
 import designer from "./../../assets/photos/designer.jpg";
 import designer3 from "./../../assets/photos/designer3.jpg";
 
