@@ -20,9 +20,16 @@ export const EditionButton = styled.button`
 export const CloseButton = styled.button`
   border: 1px solid;
   border-radius: 5px;
-  background: none;
+  background-color: var(--primary-green);
   height: fit-content;
   padding: 0.3rem;
   display: flex;
   font-size: 18px;
+  transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+
+  :hover {
+    cursor: pointer;
+    border-color: var(--secondary-very-light-grey);
+    transform: scale(1.15);
+  }
 `;

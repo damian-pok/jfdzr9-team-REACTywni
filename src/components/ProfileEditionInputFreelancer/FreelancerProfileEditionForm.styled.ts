@@ -91,9 +91,12 @@ export const SubmitChangesButton = styled.button`
   border-radius: 5px;
   margin-top: 0.8rem;
   cursor: pointer;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 
   :hover {
     background-color: var(--primary-dark-navy);
     color: var(--secondary-very-light-grey);
+    transform: scale(1.15);
+    border-color: var(--secondary-very-light-grey);
   }
 `;

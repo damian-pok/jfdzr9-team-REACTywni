@@ -7,6 +7,7 @@ import { FreelancerProfileEditionForm } from "../ProfileEditionInputFreelancer/F
 
 const Freelancer = () => {
   const [showForm, setShowForm] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const openForm = () => {
     setShowForm(true);
