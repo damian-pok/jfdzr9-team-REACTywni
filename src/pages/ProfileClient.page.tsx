@@ -11,6 +11,8 @@ import {
   ProfileClientFrameWrapper,
 } from "../components/ProfileClientFrame/ProfileClientFrame.styled";
 import { getFreelancer } from "../firebase/getFreelancer";
+import { TaskFreelancer } from "../components/TaskFreelancer/TaskFreelancer.component";
+import { IJob } from "../components/ProfileInputFreelancer/ProfileInputFreelancer.component";
 
 const ProfileClient = () => {
   const [userData, setUserData] = useState<any>();
@@ -119,6 +121,18 @@ const ProfileClient = () => {
               </ProfileClientFrameData>
             </ProfileClientFrame>
           </ProfileClientFrameWrapper>
+          <div>
+            <ProfileClientFrameKey>Zadania:</ProfileClientFrameKey>
+            {userData.jobs.map((job: IJob) => (
+              <TaskFreelancer
+                key={job.id}
+                author={job.author}
+                content={job.content}
+                date={job.date}
+                status={job.status}
+              />
+            ))}
+          </div>
         </>
       )}
     </>

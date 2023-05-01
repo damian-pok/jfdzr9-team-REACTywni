@@ -9,7 +9,7 @@ export const DesignerWidget = styled.div`
   border-radius: 15px;
   background-color: var(--lime-yellow);
   padding: 20px 50px 34px 20px;
-  height: 259px;
+  height: fit-content;
 `;
 
 export const DesignerPhoto = styled.img`
@@ -64,7 +64,7 @@ export const TagSecond = styled.p`
   text-align: center;
 `;
 
-export const DesignerContent = styled.p`
+export const DesignerContent = styled.div`
   height: fit-content;
   padding: 1.7rem;
   display: flex;
