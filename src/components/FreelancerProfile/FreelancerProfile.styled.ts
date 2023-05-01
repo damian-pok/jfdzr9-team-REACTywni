@@ -11,10 +11,16 @@ export const FreelancerWrapper = styled.div`
 
 export const EditionButton = styled.button`
   height: fit-content;
-  width: 100px;
+  width: fit-content;
   background-color: #07133b;
   color: white;
   border-radius: 5px;
+  padding: 0.6rem 1.6rem;
+  cursor: pointer;
+
+  :hover {
+    background-color: var(--additional-navy);
+  }
 `;
 
 export const CloseButton = styled.button`

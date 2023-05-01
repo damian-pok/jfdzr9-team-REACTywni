@@ -17,6 +17,10 @@ export const FreelancerDataContainer = styled.div`
   row-gap: 0.4rem;
 `;
 
+export const FreelancerInputArea = styled.div`
+  display: grid;
+`;
+
 export const EditionField = styled.input`
   background-color: white;
   border: 1px solid #c2d1d9;
@@ -84,7 +88,7 @@ export const EditionInput = styled.input`
   }
 `;
 
-export const SubmitChangesButton = styled.button`
+export const SubmitChangesButtonSecondary = styled.button`
   align-self: center;
   background-color: var(--primary-green);
   padding: 0.6rem 1.6rem;
@@ -96,7 +100,21 @@ export const SubmitChangesButton = styled.button`
   :hover {
     background-color: var(--primary-dark-navy);
     color: var(--secondary-very-light-grey);
-    transform: scale(1.15);
+    transform: scale(1.05);
     border-color: var(--secondary-very-light-grey);
+  }
+`;
+
+export const SubmitChangesButtonPrimary = styled.button`
+  align-self: center;
+  background: none;
+  padding: 0.6rem 1.6rem;
+  border-radius: 5px;
+  margin-top: 0.8rem;
+  cursor: pointer;
+
+  :hover {
+    background-color: var(--primary-dark-navy);
+    color: var(--secondary-very-light-grey);
   }
 `;

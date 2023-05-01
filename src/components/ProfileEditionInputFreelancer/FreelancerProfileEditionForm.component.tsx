@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react";
-import { DocumentData, updateDoc, doc } from "firebase/firestore";
+import { collection, DocumentData, updateDoc, doc, addDoc, getDocs } from "firebase/firestore";
+import { auth, db } from "../../firebase/firebase.config";
 import {
   FreelancerProfileEditionWrapper,
   FreelancerDataContainer,
+  FreelancerInputArea,
   EditionField,
   EditionLabel,
   FreelancerCategoriesContainer,
   FreelancerCheckboxLabel,
   EditionInput,
-  SubmitChangesButton,
+  SubmitChangesButtonSecondary,
+  SubmitChangesButtonPrimary,
 } from "./FreelancerProfileEditionForm.styled";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../../context/auth.context";
@@ -35,6 +38,12 @@ export interface IEditionFormFreelancer {
 
 export const FreelancerProfileEditionForm = () => {
   const [freelancerData, setFreelancerData] = useState<DocumentData | null>(null);
+
+  // States to update freelancer's data
+  const [updatedFirstName, setUpdatedFirstName] = useState("");
+
+  // const freelancerCollectionRef = collection(db, "freelancer");
+
   const user = useUser();
   const navigate = useNavigate();
   useEffect(() => {
@@ -51,6 +60,23 @@ export const FreelancerProfileEditionForm = () => {
     fetchDataFreelancer();
   }, []);
 
+  const updateFreelancerData = async (id) => {
+    const freelancerDoc = doc(db, "freelancer", id);
+    await updateDoc(freelancerDoc, { firstName: updatedFirstName });
+    setFreelancerData(
+      freelancerData.map((freelancer) => {
+        if (freelancer.id === id) {
+          return {
+            ...freelancerData,
+            firstName: updatedFirstName,
+          };
+        } else {
+          return freelancerData;
+        }
+      }),
+    );
+  };
+
   return (
     <>
       <FreelancerProfileEditionWrapper id="edition-form">
@@ -58,23 +84,83 @@ export const FreelancerProfileEditionForm = () => {
         {freelancerData && (
           <>
             <FreelancerDataContainer>
-              <EditionLabel>Imię:</EditionLabel>
-              <EditionField placeholder={freelancerData.firstName} />
-              <EditionLabel>Nazwisko:</EditionLabel>
-              <EditionField placeholder={freelancerData.secondName} />
-              <EditionLabel>Adres e-mail:</EditionLabel>
-              <EditionField placeholder={freelancerData.email} />
-              <EditionLabel>Kraj:</EditionLabel>
-              <EditionField placeholder={freelancerData.country} />
-              <EditionLabel>Miasto:</EditionLabel>
-              <EditionField placeholder={freelancerData.city} />
-              <EditionLabel>Doświadczenie:</EditionLabel>
-              <EditionField placeholder={freelancerData.experience} />
-              <EditionLabel>O mnie...:</EditionLabel>
-              <EditionField placeholder={freelancerData.aboutMe} />
+              <FreelancerInputArea>
+                <EditionLabel>Imię</EditionLabel>
+                <EditionField
+                  placeholder={freelancerData.firstName}
+                  onChange={(e) => setUpdatedFirstName(e.target.value)}
+                />
+                <SubmitChangesButtonPrimary
+                  title="Zmienia tylko wartość danego pola"
+                  onClick={() => updateFreelancerData(freelancerData.id)}
+                >
+                  Zmień
+                </SubmitChangesButtonPrimary>
+              </FreelancerInputArea>
+
+              <FreelancerInputArea>
+                <EditionLabel>Nazwisko</EditionLabel>
+                <EditionField placeholder={freelancerData.secondName} />
+                <SubmitChangesButtonPrimary
+                  title="Zmienia tylko wartość danego pola"
+                  onClick={() => updateFreelancerData(freelancerData.id)}
+                >
+                  Zmień
+                </SubmitChangesButtonPrimary>
+              </FreelancerInputArea>
+              <FreelancerInputArea>
+                <EditionLabel>Adres e-mail</EditionLabel>
+                <EditionField placeholder={freelancerData.email} />
+                <SubmitChangesButtonPrimary
+                  title="Zmienia tylko wartość danego pola"
+                  onClick={() => updateFreelancerData(freelancerData.id)}
+                >
+                  Zmień
+                </SubmitChangesButtonPrimary>
+              </FreelancerInputArea>
+              <FreelancerInputArea>
+                <EditionLabel>Kraj</EditionLabel>
+                <EditionField placeholder={freelancerData.country} />
+                <SubmitChangesButtonPrimary
+                  title="Zmienia tylko wartość danego pola"
+                  onClick={() => updateFreelancerData(freelancerData.id)}
+                >
+                  Zmień
+                </SubmitChangesButtonPrimary>
+              </FreelancerInputArea>
+              <FreelancerInputArea>
+                <EditionLabel>Miasto</EditionLabel>
+                <EditionField placeholder={freelancerData.city} />
+                <SubmitChangesButtonPrimary
+                  title="Zmienia tylko wartość danego pola"
+                  onClick={() => updateFreelancerData(freelancerData.id)}
+                >
+                  Zmień
+                </SubmitChangesButtonPrimary>
+              </FreelancerInputArea>
+              <FreelancerInputArea>
+                <EditionLabel>Doświadczenie</EditionLabel>
+                <EditionField placeholder={freelancerData.experience} />
+                <SubmitChangesButtonPrimary
+                  title="Zmienia tylko wartość danego pola"
+                  onClick={() => updateFreelancerData(freelancerData.id)}
+                >
+                  Zmień
+                </SubmitChangesButtonPrimary>
+              </FreelancerInputArea>
+              <FreelancerInputArea>
+                <EditionLabel>O mnie...</EditionLabel>
+                <EditionField placeholder={freelancerData.aboutMe} />
+                <SubmitChangesButtonPrimary
+                  title="Zmienia tylko wartość danego pola"
+                  onClick={() => updateFreelancerData(freelancerData.id)}
+                >
+                  Zmień
+                </SubmitChangesButtonPrimary>
+              </FreelancerInputArea>
             </FreelancerDataContainer>
 
-            <EditionLabel>Kategorie usług, jakie świadczysz</EditionLabel>
+            <EditionLabel>Dodaj / usuń kategorie świadczonych usług</EditionLabel>
 
             <FreelancerCategoriesContainer>
               <FreelancerCheckboxLabel>
@@ -98,7 +184,9 @@ export const FreelancerProfileEditionForm = () => {
                 inne
               </FreelancerCheckboxLabel>
             </FreelancerCategoriesContainer>
-            <SubmitChangesButton>Zapisz zmiany</SubmitChangesButton>
+            <SubmitChangesButtonSecondary title="Zapisuje zmiany kategorii usług">
+              Zapisz zmiany
+            </SubmitChangesButtonSecondary>
           </>
         )}
       </FreelancerProfileEditionWrapper>
