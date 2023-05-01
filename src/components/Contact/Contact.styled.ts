@@ -13,7 +13,7 @@ export const SectionContactField = styled.div`
 export const ContactField = styled.div`
   width: 46.88rem;
   height: 31.25rem;
-  background-color: var(--secondary-light-grey);
+  background-color: var(--cardgroundcolor);
   border-radius: 1rem;
   margin-top: 1.5rem;
   display: flex;

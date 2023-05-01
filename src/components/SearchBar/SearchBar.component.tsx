@@ -15,7 +15,7 @@ export const SearchBar = ({ query, setQuery }: SearchBarProps) => {
     >
       <SearchInput
         role="search"
-        placeholder="Szukaj po tagach..."
+        placeholder="ulotka, plakat, broszura..."
         value={query}
         onChange={(event: ChangeEvent<HTMLInputElement>) => {
           setQuery(event.target.value);

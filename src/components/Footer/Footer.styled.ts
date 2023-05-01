@@ -7,7 +7,7 @@ export const FooterField = styled.div`
   display: flex;
   flex-direction: row;
   color: var(--secondary-very-light-grey);
-  background-color: var(--primary-dark-navy);
+  background-color: var(--footerbackgroundcolor);
   border-radius: 1rem;
   justify-content: space-between;
   align-items: center;
@@ -23,10 +23,10 @@ export const FooterNavField = styled.div`
 `;
 
 export const LinkFooter = styled(Link)`
-  color: var(--white-color);
+  color: var(--footerlinktextcolor);
   text-decoration: none;
   :hover {
-    color: var(--primary-green);
+    color: var(--footerlinktextcolorhouver);
   }
 `;
 

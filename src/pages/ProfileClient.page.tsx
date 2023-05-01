@@ -2,17 +2,29 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../context/auth.context";
 import { getClient } from "../firebase/getClient";
-import example from "../assets/example.jpg";
+import profileAvatar from "../assets/illustrations/Profile-avatar.svg";
 import {
-  ProfileClientFrame,
-  ProfileClientFrameData,
+  ProfileClientContainer,
+  ProfileClientLogo,
+  ProfileClientTitle,
+  ProfileClientParagraph,
+  ProfileInformationContainer,
+  ProfileClientCover,
+  ProfileClientAbout,
+  ProfileClientTitleCategories,
+  CategoriesBox,
+  CategoriesButtonBox,
+  ProfileClientGalery,
+  TagBox,
+  ProfileClientCategoriesLast,
   ProfileClientFrameKey,
-  ProfileClientFrameLogo,
-  ProfileClientFrameWrapper,
 } from "../components/ProfileClientFrame/ProfileClientFrame.styled";
+//import images
 import { getFreelancer } from "../firebase/getFreelancer";
+import cover from "../assets/images/cover.png";
 import { TaskFreelancer } from "../components/TaskFreelancer/TaskFreelancer.component";
 import { IJob } from "../components/ProfileInputFreelancer/ProfileInputFreelancer.component";
+import { DesignerServices } from "../components/DesignerServices/DesignerServices.component";
 
 const ProfileClient = () => {
   const [userData, setUserData] = useState<any>();
@@ -49,90 +61,72 @@ const ProfileClient = () => {
     <>
       {!freelancer && userData && (
         <>
-          <h1>Profil: {userData.company}!</h1>
-          <ProfileClientFrame>
-            <ProfileClientFrameLogo src={example} alt="logo" width="300" />
-            <ProfileClientFrameData>
-              <p>
-                <ProfileClientFrameKey>Nazwa:</ProfileClientFrameKey> {userData.company}
-              </p>
-              <p>
-                <ProfileClientFrameKey>e-mail:</ProfileClientFrameKey> {userData.email}
-              </p>
-              <p>
-                <ProfileClientFrameKey>NIP:</ProfileClientFrameKey> {userData.nip}
-              </p>
-              <p>
-                <ProfileClientFrameKey>Kraj:</ProfileClientFrameKey> {userData.country}
-              </p>
-              <p>
-                <ProfileClientFrameKey>Miasto:</ProfileClientFrameKey> {userData.city}
-              </p>
-              <p>
-                <ProfileClientFrameKey>Adres:</ProfileClientFrameKey> {userData.street}
-              </p>
-            </ProfileClientFrameData>
-          </ProfileClientFrame>
+          <>
+            <ProfileClientCover src={cover} />
+            <ProfileClientContainer>
+              <ProfileClientLogo src={profileAvatar} alt="logo" />
+              <ProfileInformationContainer>
+                <ProfileClientTitle>{userData.company}</ProfileClientTitle>
+                <ProfileClientParagraph>Nazwa: {userData.company}</ProfileClientParagraph>
+                <ProfileClientParagraph>e-mail: {userData.email}</ProfileClientParagraph>
+                <ProfileClientParagraph>NIP:: {userData.nip}</ProfileClientParagraph>
+                <ProfileClientParagraph>Kraj: {userData.country}</ProfileClientParagraph>
+                <ProfileClientParagraph>Miasto: {userData.city}</ProfileClientParagraph>
+                <ProfileClientParagraph>Adres: {userData.street}</ProfileClientParagraph>
+              </ProfileInformationContainer>
+            </ProfileClientContainer>
+          </>
         </>
       )}
       {freelancer && userData && (
         <>
-          <ProfileClientFrameWrapper>
-            <h1>Profil: {userData.firstName}!</h1>
-            <ProfileClientFrame>
-              <ProfileClientFrameLogo src={example} alt="logo" width="300" />
-              <ProfileClientFrameData>
-                <p>
-                  <ProfileClientFrameKey>Imię:</ProfileClientFrameKey> {userData.firstName}
-                </p>
-                <p>
-                  <ProfileClientFrameKey>Nazwisko:</ProfileClientFrameKey> {userData.secondName}
-                </p>
-                <p>
-                  <ProfileClientFrameKey>O mnie:</ProfileClientFrameKey> {userData.aboutMe}
-                </p>
-                <p>
-                  <ProfileClientFrameKey>e-mail:</ProfileClientFrameKey> {userData.email}
-                </p>
-                <p>
-                  <ProfileClientFrameKey>Kraj:</ProfileClientFrameKey> {userData.country}
-                </p>
-                <p>
-                  <ProfileClientFrameKey>Miasto:</ProfileClientFrameKey> {userData.city}
-                </p>
-                <p>
-                  <ProfileClientFrameKey>Doświadczenie:</ProfileClientFrameKey> {userData.experience}
-                </p>
-                <p>
-                  <ProfileClientFrameKey>Tagi:</ProfileClientFrameKey> {userData.tags}
-                </p>
-                <p>
-                  <ProfileClientFrameKey>Usługi:</ProfileClientFrameKey>
-                  {userData.branding ? <button>Branding</button> : null}
-                  {userData.print ? <button>Druk</button> : null}
-                  {userData.digital ? <button>Digital</button> : null}
-                  {userData.ux ? <button>UX/UI</button> : null}
-                  {userData.ilustrations ? <button>Ilustracje</button> : null}
-                  {userData.other ? <button>Inne</button> : null}
-                </p>
-                <p>
-                  <ProfileClientFrameKey>Galeria:</ProfileClientFrameKey> {userData.gallery}
-                </p>
-              </ProfileClientFrameData>
-            </ProfileClientFrame>
-          </ProfileClientFrameWrapper>
-          <div>
-            <ProfileClientFrameKey>Zadania:</ProfileClientFrameKey>
-            {userData.jobs.map((job: IJob) => (
-              <TaskFreelancer
-                key={job.id}
-                author={job.author}
-                content={job.content}
-                date={job.date}
-                status={job.status}
-              />
-            ))}
-          </div>
+          <ProfileClientCover src={cover} />
+          <ProfileClientContainer>
+            <ProfileClientLogo src={profileAvatar} alt="logo" />
+            <ProfileInformationContainer>
+              <ProfileClientTitle>{userData.firstName}</ProfileClientTitle>
+              <ProfileClientParagraph>Imię: {userData.firstName}</ProfileClientParagraph>
+              <ProfileClientParagraph>Nazwisko: {userData.secondName}</ProfileClientParagraph>
+              <ProfileClientParagraph>e-mail: {userData.email}</ProfileClientParagraph>
+              <ProfileClientParagraph>Kraj: {userData.country}</ProfileClientParagraph>
+              <ProfileClientParagraph>Miasto: {userData.city}</ProfileClientParagraph>
+              <ProfileClientParagraph>Doświadczenie: {userData.experience}</ProfileClientParagraph>
+            </ProfileInformationContainer>
+          </ProfileClientContainer>
+          <ProfileClientAbout>
+            <ProfileClientTitle>O mnie</ProfileClientTitle>
+            <ProfileClientParagraph>{userData.aboutMe}</ProfileClientParagraph>
+          </ProfileClientAbout>
+          <ProfileClientCategoriesLast>
+            <ProfileClientTitle>Usługi</ProfileClientTitle>
+            <ProfileClientTitleCategories>Kategorie</ProfileClientTitleCategories>
+            <CategoriesButtonBox>
+              {userData.branding ? <CategoriesBox>branding</CategoriesBox> : null}
+              {userData.print ? <CategoriesBox>druk</CategoriesBox> : null}
+              {userData.digital ? <CategoriesBox>digital</CategoriesBox> : null}
+              {userData.ux ? <CategoriesBox>UX/UI</CategoriesBox> : null}
+              {userData.ilustrations ? <CategoriesBox>ilustracje</CategoriesBox> : null}
+              {userData.other ? <CategoriesBox>inne</CategoriesBox> : null}
+            </CategoriesButtonBox>
+            <ProfileClientTitleCategories>Umiejętności</ProfileClientTitleCategories>
+            <ProfileClientParagraph>
+              {userData.tags && <DesignerServices services={userData.tags}></DesignerServices>}
+            </ProfileClientParagraph>
+          </ProfileClientCategoriesLast>
+          <ProfileClientGalery>
+            <ProfileClientTitle>Galeria</ProfileClientTitle>
+            <ProfileClientParagraph>{userData.gallery}</ProfileClientParagraph>
+          </ProfileClientGalery>
+          <ProfileClientFrameKey>Zadania:</ProfileClientFrameKey>
+          {userData.jobs.map((job: IJob) => (
+            <TaskFreelancer
+              key={job.id}
+              author={job.author}
+              content={job.content}
+              date={job.date}
+              status={job.status}
+            />
+          ))}
         </>
       )}
     </>

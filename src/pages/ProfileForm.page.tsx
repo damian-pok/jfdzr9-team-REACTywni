@@ -5,14 +5,21 @@ import { useForm, Controller } from "react-hook-form";
 import {
   ChoiceRadio,
   ChoiceRadioGroup,
+  HeaderStyles,
+  HeadlineTitle,
+  ParagraphStyle,
   ProfileInput,
   ProfileInputWrapper,
-  ProfileInputWrapperSecondary,
+  ProfileSelectionBoxContainer,
+  ProfileSelectionBoxImages,
 } from "../components/ProfileInput/ProfileInput.styled";
 
 //firebase config files
 import { ProfileInputClient } from "../components/ProfileInputClient/ProfileInputClient.component";
 import { ProfileInputFreelancer } from "../components/ProfileInputFreelancer/ProfileInputFreelancer.component";
+
+//import images
+import ImagesProfileSelection from "./../assets/illustrations/choice_register_illustration.svg";
 
 //types and interfaces
 interface IProfileForm {
@@ -30,10 +37,13 @@ const ProfileForm = () => {
 
   return (
     <>
-      <ProfileInputWrapperSecondary>
+      <ProfileSelectionBoxContainer>
+        <HeaderStyles>Uzupełnij profil!</HeaderStyles>
         <ProfileInputWrapper>
-          <h1>Uzupełnij profil!</h1>
+          <ProfileSelectionBoxImages src={ImagesProfileSelection} />
           <ProfileInput>
+            <HeadlineTitle>Kim jesteś?</HeadlineTitle>
+            <ParagraphStyle>Wybierz jedno z dwóch opcji.</ParagraphStyle>
             <ChoiceRadioGroup>
               <Controller
                 name="client"
@@ -57,10 +67,10 @@ const ProfileForm = () => {
               />
             </ChoiceRadioGroup>
           </ProfileInput>
-          {role === "client" && <ProfileInputClient />}
-          {role === "freelancer" && <ProfileInputFreelancer />}
         </ProfileInputWrapper>
-      </ProfileInputWrapperSecondary>
+        {role === "client" && <ProfileInputClient />}
+        {role === "freelancer" && <ProfileInputFreelancer />}
+      </ProfileSelectionBoxContainer>
     </>
   );
 };
