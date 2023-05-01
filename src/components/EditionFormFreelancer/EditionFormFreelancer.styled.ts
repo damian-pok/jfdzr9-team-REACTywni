@@ -7,7 +7,7 @@ interface FormWrapperProps {
 export const FormWrapper = styled.div<FormWrapperProps>`
   display: ${({ open }) => (open ? "block" : "none")};
   position: fixed;
-  top: 60%;
+  top: 340%;
   left: 50%;
   transform: translate(-50%, -50%);
   border: 1px solid #07133b;
@@ -15,7 +15,7 @@ export const FormWrapper = styled.div<FormWrapperProps>`
 
   width: fit-content;
   height: fit-content;
-  padding: 3rem;
+  padding: 1.5rem 3rem;
   background-color: #fff;
 
   display: flex;
