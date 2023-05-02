@@ -1,41 +1,57 @@
 import styled from "styled-components";
 
-export const ProfileInput = styled.form`
-  width: 600px;
+export const ProfileSelectionBoxContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  margin: var(--Default-Distanse-beetween-sections) 0;
+`;
+
+export const HeaderStyles = styled.h2`
+  font-size: var(--Default-Headline-2-size);
+  padding-bottom: 1.5rem;
+`;
+
+export const HeadlineTitle = styled.h4`
+  font-size: var(--Default-Body-size);
+`;
+
+export const ParagraphStyle = styled.p`
+  font-size: var(--Default-Body-size);
+  margin-bottom: 1rem;
+`;
+
+export const ProfileInputWrapper = styled.div`
+  width: 47.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cardgroundcolor);
+  border-radius: 1rem;
+  padding: 3.125rem;
+  gap: 3.125rem;
+`;
+
+export const ProfileSelectionBoxImages = styled.img`
+  width: 12.5rem;
+`;
+
+export const ProfileInput = styled.form`
+  display: flex;
+  flex-direction: column;
   border-radius: 5px;
   padding: 1rem;
 `;
 
 export const ChoiceRadio = styled.div`
   display: flex;
-  direction: row;
-  gap: 10px;
+  flex-direction: row;
+  gap: 1rem;
 `;
 
 export const ChoiceRadioGroup = styled.div`
   display: flex;
-  direction: row;
-  gap: 50px;
-`;
-
-export const ProfileInputWrapper = styled.div`
-  width: 600px;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 50px 0;
-  padding-bottom: 50px;
-  background-color: var(--very-light-grey-color);
-  border: solid 1px black;
-  border-radius: 15px;
-`;
-
-export const ProfileInputWrapperSecondary = styled.div`
-  display: flex;
-  justify-content: center;
+  gap: 0.5rem;
 `;

@@ -11,8 +11,10 @@ import {
 } from "./Menu.styled";
 import { useUser } from "../../context/auth.context";
 import { getAuth, signOut } from "firebase/auth";
-import LogoFindADesigner from "./../../assets/logos/find-a-designer-logo.svg";
+//import DarkLogoFindADesigner from "./../../assets/logos/find-a-designer-white-logo.svg";
 import ToggleSwitch from "./../UI/Toggle/Toggle.components";
+import LightLogoMode from "./../../assets/logos/find-a-designer-logo.svg";
+//import DarkLogoMode from "./../../assets/logos/find-a-designer-logo-white.svg";
 
 const Menu = () => {
   const user = useUser();
@@ -21,20 +23,18 @@ const Menu = () => {
     signOut(auth).then().catch();
     //skonsultowac powyszy zapis
   };
+
   return (
     <MenuField>
       <LogosAndPrimaryButtonsField>
         <Link to={`/`}>
-          <Logo src={LogoFindADesigner} />
+          <Logo src={LightLogoMode} />
         </Link>
         <ButtonMenuField>
           {user ? (
             <>
-              <Link to={`/search`}>
-                <PrimaryNavyButton>Szukaj</PrimaryNavyButton>
-              </Link>
               <Link to={`/client`}>
-                <PrimaryNavyButton>Mój Profil</PrimaryNavyButton>
+                <PrimaryGreenButton>Mój Profil</PrimaryGreenButton>
               </Link>
               <Link to={`/homepage`}>
                 <PrimaryNavyButton onClick={logOut}>Wyloguj się</PrimaryNavyButton>
@@ -58,7 +58,9 @@ const Menu = () => {
         <MainLinkMenu to={`/howfreelancer`}>Dla freelancerów</MainLinkMenu>
         <MainLinkMenu to={`/howclient`}>Dla klientów</MainLinkMenu>
         <LinkMenu to={`/search`}>Wyszukiwarka</LinkMenu>
-        <LinkMenu to={`/#contact`}>Kontakt</LinkMenu>
+        <LinkMenu smooth to={`/#contact`}>
+          Kontakt
+        </LinkMenu>
         <ToggleSwitch />
       </SecoundMenuField>
     </MenuField>

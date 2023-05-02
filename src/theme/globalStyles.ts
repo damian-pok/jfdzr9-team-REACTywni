@@ -13,9 +13,42 @@ ${normalize}
   --light-grey-color: #C2D1D9;
   --very-light-grey-color: #F5F9FC;
   
+  //Finally colors styles - dark mode:
+
+
   
   //global color styles - light mode:
     // Here will be defined colors for light mode
+    //Finally color
+    --inputbackgroundcolor: ${({ theme }: { theme: Theme }) => theme.inputbackgroundcolor};
+    --inputbordercolor: ${({ theme }: { theme: Theme }) => theme.inputbordercolor};
+    --placeholdertextcolor: ${({ theme }: { theme: Theme }) => theme.placeholdertextcolor};
+    --textcolor: ${({ theme }: { theme: Theme }) => theme.textcolor};
+    --inputactiveborder: ${({ theme }: { theme: Theme }) => theme.inputactiveborder};
+    --primarygreenbuttonbackground: ${({ theme }: { theme: Theme }) => theme.primarygreenbuttonbackground};
+    --primarygreenbuttontext: ${({ theme }: { theme: Theme }) => theme.primarygreenbuttontext};
+    --primarynavybuttonbackground: ${({ theme }: { theme: Theme }) => theme.primarynavybuttonbackground};
+    --primarynavybuttontext: ${({ theme }: { theme: Theme }) => theme.primarynavybuttontext};
+    --mainbackgroundcolorsite: ${({ theme }: { theme: Theme }) => theme.mainbackgroundcolorsite};
+    --cardgroundcolor: ${({ theme }: { theme: Theme }) => theme.cardgroundcolor};
+    --linktextcolor: ${({ theme }: { theme: Theme }) => theme.linktextcolor};
+    --linktextcolorhouver: ${({ theme }: { theme: Theme }) => theme.linktextcolorhouver};
+    --footerbackgroundcolor: ${({ theme }: { theme: Theme }) => theme.footerbackgroundcolor};
+    --footerlinktextcolor: ${({ theme }: { theme: Theme }) => theme.footerlinktextcolor};
+    --boxInputBackgroundColor: ${({ theme }: { theme: Theme }) => theme.boxInputBackgroundColor};
+    --boxInputBorderColor: ${({ theme }: { theme: Theme }) => theme.boxInputBorderColor};
+    --categoriesBackgroundColors: ${({ theme }: { theme: Theme }) => theme.categoriesBackgroundColors};
+    --tagBorderColors: ${({ theme }: { theme: Theme }) => theme.tagBorderColors};
+
+    //Hover Color
+    --primarygreenbuttonbackgroundhouver: ${({ theme }: { theme: Theme }) => theme.primarygreenbuttonbackgroundhouver};
+    --primarynavybuttonbackgroundhouver: ${({ theme }: { theme: Theme }) => theme.primarynavybuttonbackgroundhouver};
+    --footerlinktextcolorhouver: ${({ theme }: { theme: Theme }) => theme.footerlinktextcolorhouver};
+
+    //Images
+    --MenuLogo: ${({ theme }: { theme: Theme }) => theme.MenuLogo};
+//---------------------------------
+
     --lime-yellow: ${({ theme }: { theme: Theme }) => theme.limeYellow};
     --dark-lime-yellow: ${({ theme }) => theme.darkLimeYellow};
     --black: ${({ theme }) => theme.darkBlack};
@@ -33,24 +66,7 @@ ${normalize}
 
 
 
-    /* --lime-yellow: #e1f465;
-    --dark-lime-yellow: #bacc46;
-    --black: #000000;
-    --white-color: #fff;
 
-    --primary-green: #1ad079;
-    --primary-dark-navy: #07133b;
-    --secondary-very-light-grey: #f8f9fb;
-    --secondaryLightGrey: #f3f3f6;
-    --secoundaryGrey: #c2d1d9;
-    --secoundaryWhite: #eee;
-    //Hover Color
-    --additionalDarkGreen: #17b66a;
-    --additionalNavy: #091849; */
-
-
-
-  //global color styles - dark mode:
 
 
   //light/dark mode colors:
@@ -69,9 +85,9 @@ ${normalize}
   font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
 
   //global font style:
-  color: var(--primary-dark-navy);
+  color: var(--textcolor);
   line-height: 1.8;
-  background-color: var(--secondary-very-light-grey);
+  background-color: var(--mainbackgroundcolorsite);
   scroll-behavior: smooth;
 }
 

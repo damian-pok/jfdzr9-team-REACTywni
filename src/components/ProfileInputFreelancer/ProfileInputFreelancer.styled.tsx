@@ -1,10 +1,15 @@
 import styled from "styled-components";
 
 export const ProfileInputFreelancerStyled = styled.form`
+  width: 47.5rem;
+  padding: 3.125rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: var(--Default-Distanse-beetween-sections);
+  background-color: var(--cardgroundcolor);
 `;
 
 export const AboutMeStyled = styled.input`
@@ -15,7 +20,8 @@ export const CategoryPair = styled.div`
   display: flex;
   flex-direction: row;
   width: 100px;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 1rem;
 `;
 
 export const CategoryGroup = styled.div`

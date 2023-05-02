@@ -8,7 +8,7 @@ export const SingleStepContainer = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 1rem;
-  background-color: var(--secondary-light-grey);
+  background-color: var(--cardgroundcolor);
 `;
 
 export const IconStep = styled.img`
