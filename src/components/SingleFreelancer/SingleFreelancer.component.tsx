@@ -1,4 +1,4 @@
-import { IJob, IProfileInputFreelancer } from "../ProfileInputFreelancer/ProfileInputFreelancer.component";
+import { IJob, IJobs, IProfileInputFreelancer } from "../ProfileInputFreelancer/ProfileInputFreelancer.component";
 import {
   DesignerContent,
   DesignerPhoto,
@@ -28,9 +28,11 @@ export const SingleFreelancer = ({ freelancerData }: IFreelacerData) => {
     setShowBooking(true);
   };
 
-  const onSubmit = handleSubmit((data) => {
-    const jobsData = freelancerData.jobs;
-    console.log("Updated jobs: ", jobsData.push(data));
+  const onSubmit = handleSubmit((data: IJob) => {
+    let jobsData: any = null;
+    jobsData = freelancerData.jobs;
+    jobsData.push(data);
+    //console.log("Updated jobs: ", jobsData.push(data));
     const docRef = doc(db, "freelancer", freelancerData.uid);
     updateDoc(docRef, { jobs: jobsData });
   });

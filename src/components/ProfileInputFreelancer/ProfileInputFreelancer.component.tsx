@@ -43,7 +43,7 @@ export interface IProfileInputFreelancer {
   ilustrations: string;
   other: string;
   tags: string;
-  jobs: IJobs;
+  jobs?: IJobs | [];
 }
 
 export const ProfileInputFreelancer = () => {
@@ -101,7 +101,7 @@ export const ProfileInputFreelancer = () => {
   const { loading } = useAuth();
   if (loading) return <div>Loading...</div>;
 
-  const onSubmit = handleSubmit((data) => {
+  const onSubmit = handleSubmit((data: IProfileInputFreelancer) => {
     data.branding = data.branding ?? null;
     data.print = data.print ?? null;
     data.digital = data.digital ?? null;
