@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { collection, DocumentData, updateDoc, doc, addDoc, getDocs } from "firebase/firestore";
+import { collection, DocumentData, updateDoc, doc, addDoc, getDocs, CollectionReference } from "firebase/firestore";
 import { auth, db } from "../../firebase/firebase.config";
 import {
   FreelancerProfileEditionWrapper,
@@ -17,7 +17,7 @@ import { useNavigate } from "react-router-dom";
 import { useUser } from "../../context/auth.context";
 import { getFreelancer } from "../../firebase/getFreelancer";
 
-export interface IEditionFormFreelancer {
+type Freelancer = {
   uid: string;
   firstName: string;
   secondName: string;
@@ -34,7 +34,7 @@ export interface IEditionFormFreelancer {
   ilustrations: string;
   other: string;
   tags: string;
-}
+};
 
 export const FreelancerProfileEditionForm = () => {
   const [freelancerData, setFreelancerData] = useState<DocumentData | null>(null);
@@ -42,7 +42,7 @@ export const FreelancerProfileEditionForm = () => {
   // States to update freelancer's data
   const [updatedFirstName, setUpdatedFirstName] = useState("");
 
-  // const freelancerCollectionRef = collection(db, "freelancer");
+  const freelancersCollection = collection(db, "freelancer") as CollectionReference<Freelancer>;
 
   const user = useUser();
   const navigate = useNavigate();
