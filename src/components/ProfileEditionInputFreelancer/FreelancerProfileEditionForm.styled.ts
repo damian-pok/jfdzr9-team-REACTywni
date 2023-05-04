@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FreelancerProfileEditionWrapper = styled.div`
+export const FreelancerProfileEditionWrapper = styled.form`
   background: #f3f3f6;
   border-radius: 15px;
   display: flex;
