@@ -1,4 +1,4 @@
-import { IJob, IJobs, IProfileInputFreelancer } from "../ProfileInputFreelancer/ProfileInputFreelancer.component";
+import { IJob, IProfileInputFreelancer } from "../ProfileInputFreelancer/ProfileInputFreelancer.component";
 import {
   DesignerContent,
   DesignerPhoto,
@@ -16,12 +16,15 @@ import { Controller, useForm } from "react-hook-form";
 
 import { db } from "../../firebase/firebase.config";
 import { doc, updateDoc } from "firebase/firestore";
+
+import "firebase/firestore";
 export interface IFreelacerData {
   freelancerData: IProfileInputFreelancer;
 }
 
 export const SingleFreelancer = ({ freelancerData }: IFreelacerData) => {
   const [showBooking, setShowBooking] = useState(false);
+  const [success, setSuccess] = useState(false);
   const { control, handleSubmit } = useForm<IJob>();
 
   const handleBooking = () => {
@@ -35,6 +38,8 @@ export const SingleFreelancer = ({ freelancerData }: IFreelacerData) => {
     //console.log("Updated jobs: ", jobsData.push(data));
     const docRef = doc(db, "freelancer", freelancerData.uid);
     updateDoc(docRef, { jobs: jobsData });
+    setShowBooking(false);
+    setSuccess(true);
   });
 
   return (
@@ -81,11 +86,18 @@ export const SingleFreelancer = ({ freelancerData }: IFreelacerData) => {
                   control={control}
                   render={({ field }) => <input placeholder="Do kiedy?" type={"text"} {...field} />}
                 />
-                <Controller name="status" control={control} defaultValue="0" render={() => <p>Waiting...</p>} />
+                <Controller
+                  name="email"
+                  control={control}
+                  render={({ field }) => <input placeholder="Podaj email" type={"text"} {...field} />}
+                />
+                <Controller name="status" control={control} defaultValue="0" render={() => <p> </p>} />
+
                 <button type="submit">Zarezerwuj</button>
               </ProfileInputFreelancerStyled>
             </>
           )}
+          {success && <p>Zapytanie zostało wysłane - poczekaj na kontak ze strony grafika</p>}
         </TagsWrapper>
       </DesignerWidget>
     </>

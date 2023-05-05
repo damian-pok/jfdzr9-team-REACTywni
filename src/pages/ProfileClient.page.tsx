@@ -124,13 +124,17 @@ const ProfileClient = () => {
           <div>
             <ProfileClientFrameKey>Zadania:</ProfileClientFrameKey>
             {userData.jobs.map((job: IJob) => (
-              <TaskFreelancer
-                key={job.id}
-                author={job.author}
-                content={job.content}
-                date={job.date}
-                status={job.status}
-              />
+              <>
+                {" "}
+                <TaskFreelancer
+                  key={job.id}
+                  author={job.author}
+                  content={job.content}
+                  date={job.date}
+                  status={job.status}
+                  email={job.email}
+                />
+              </>
             ))}
           </div>
         </>
