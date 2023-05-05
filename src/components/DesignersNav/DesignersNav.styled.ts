@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FreelancersGrid = styled.section`
+export const DesignersWrapper = styled.div`
   height: fit-content;
   width: fit-content;
   display: grid;

@@ -7,7 +7,7 @@ export const DesignerWidget = styled.div`
   grid-template-rows: 2fr 1fr;
   column-gap: 1.8rem;
   border-radius: 1rem;
-  background-color: var(--cardgroundcolor);
+  background-color: var(--secondary-light-grey);
   padding: 2rem;
 `;
 
@@ -34,7 +34,6 @@ export const TagsWrapper = styled.div`
 
 export const DesignerTags = styled.div`
   display: flex;
-  flex-wrap: wrap;
   column-gap: 0.7rem;
   margin-bottom: 0.7rem;
   height: auto;
@@ -44,16 +43,15 @@ export const DesignerTags = styled.div`
 
 export const DesignerTagsSecond = styled.div`
   display: flex;
-  flex-wrap: wrap;
   gap: 0.7rem;
   width: fit-content;
   grid-column: 1 / span 2;
 `;
 
 export const Tag = styled.p`
-  color: var(--primarygreenbuttontext);
+  color: var(--primary-dark-navy);
   font-size: bold;
-  background-color: var(--categoriesBackgroundColors);
+  background-color: var(--primary-green);
   border-radius: 0.3rem;
   padding: 0.2rem 2rem;
   text-align: center;
@@ -61,9 +59,9 @@ export const Tag = styled.p`
 
 export const TagSecond = styled.p`
   height: fit-content;
-  color: var(--textcolor);
+  color: var(--primary-dark-navy);
   font-size: bold;
-  border: 0.1rem solid var(--tagBorderColors);
+  border: 0.1rem solid var(--primary-dark-navy);
   border-radius: 0.3rem;
   padding: 0.2rem 2rem;
   text-align: center;

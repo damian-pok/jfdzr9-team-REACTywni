@@ -20,7 +20,7 @@ export const NavigationBox = styled.div`
   gap: 1.5rem;
   padding: 3rem;
   border-radius: 1rem;
-  background-color: var(--secondary-light-grey);
+  background-color: var(--cardgroundcolor);
 `;
 
 export const Images = styled.img`

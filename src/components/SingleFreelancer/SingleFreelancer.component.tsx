@@ -8,7 +8,7 @@ import {
   Tag,
   TagsWrapper,
 } from "../SingleFreelancer/SingleFreelancer.styled";
-import example from "../../assets/example.jpg";
+import ProfileAvatar from "../../assets/illustrations/Profile-avatar.svg";
 import { DesignerServices } from "../DesignerServices/DesignerServices.component";
 import { useState } from "react";
 import { ProfileInputFreelancerStyled } from "../ProfileInputFreelancer/ProfileInputFreelancer.styled";
@@ -45,7 +45,7 @@ export const SingleFreelancer = ({ freelancerData }: IFreelacerData) => {
   return (
     <>
       <DesignerWidget>
-        <DesignerPhoto src={example} />
+        <DesignerPhoto src={ProfileAvatar} />
 
         <DesignerContent>
           <h3>

@@ -13,10 +13,10 @@ const Footer = () => {
         <p>©2023 - Find a Designer | All right reserved</p>
       </LogoField>
       <FooterNavField>
-        <LinkFooter to={`/howfreelancer`}>Designer</LinkFooter>
-        <LinkFooter to={`/howclient`}>Zleceniodawca</LinkFooter>
+        <LinkFooter to={`/howfreelancer`}>Freelancer</LinkFooter>
+        <LinkFooter to={`/howclient`}>Klient</LinkFooter>
         <LinkFooter to={`/privacy-policy`}>Polityka prywatności</LinkFooter>
-        <LinkFooter to={`/statue`}>Regulamin</LinkFooter>
+        <LinkFooter to={`/statute`}>Regulamin</LinkFooter>
       </FooterNavField>
     </FooterField>
   );

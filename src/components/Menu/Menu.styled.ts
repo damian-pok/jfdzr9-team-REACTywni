@@ -1,12 +1,11 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 
 export const MenuField = styled.div`
   max-width: var(--Default-Body-width);
   height: fit-content;
-  color: var(--primary-dark-navy);
   border-radius: 1rem;
-  background-color: var(--secondary-light-grey);
+  background-color: var(--cardgroundcolor);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,19 +35,19 @@ export const SecoundMenuField = styled.div`
 `;
 
 export const LinkMenu = styled(Link)`
-  color: var(--primary-dark-navy);
+  color: var(--linktextcolor);
   text-decoration: none;
   :hover {
-    color: var(--primary-green);
+    color: var(--linktextcolorhouver);
   }
 `;
 
 export const MainLinkMenu = styled(Link)`
-  color: var(--primary-dark-navy);
+  color: var(--linktextcolor);
   text-decoration: none;
   font-weight: bold;
   :hover {
-    color: var(--primary-green);
+    color: var(--linktextcolorhouver);
   }
 `;
 
