@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { HashLink as Link } from "react-router-hash-link";
 
 export const MenuField = styled.div`
-  max-width: var(--Default-Body-width);
+  //max-width: var(--Default-Body-width);
+  width: 1440px;
   height: fit-content;
   border-radius: 1rem;
   background-color: var(--cardgroundcolor);

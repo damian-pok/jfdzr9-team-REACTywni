@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const FooterField = styled.div`
-  max-width: var(--Default-Body-width);
+  //max-width: var(--Default-Body-width);
+  width: 1440px;
   height: fit-content;
   display: flex;
   flex-direction: row;
@@ -13,6 +14,8 @@ export const FooterField = styled.div`
   align-items: center;
   box-sizing: content-box;
   padding: 1.5rem 2.5rem;
+  position: absolute;
+  bottom: 0;
 `;
 
 export const FooterNavField = styled.div`

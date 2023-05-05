@@ -18,6 +18,7 @@ import { db } from "../../firebase/firebase.config";
 import { doc, updateDoc } from "firebase/firestore";
 
 import "firebase/firestore";
+import { useUser } from "../../context/auth.context";
 export interface IFreelacerData {
   freelancerData: IProfileInputFreelancer;
 }
@@ -30,6 +31,8 @@ export const SingleFreelancer = ({ freelancerData }: IFreelacerData) => {
   const handleBooking = () => {
     setShowBooking(true);
   };
+
+  const user = useUser();
 
   const onSubmit = handleSubmit((data: IJob) => {
     let jobsData: any = null;
@@ -67,7 +70,7 @@ export const SingleFreelancer = ({ freelancerData }: IFreelacerData) => {
           <DesignerTagsSecond>
             {freelancerData.tags && <DesignerServices services={freelancerData.tags}></DesignerServices>}
           </DesignerTagsSecond>
-          <button onClick={handleBooking}>Kliknij aby zapytać</button>
+          {user ? <button onClick={handleBooking}>Kliknij aby zapytać</button> : null}
           {showBooking && (
             <>
               <ProfileInputFreelancerStyled onSubmit={onSubmit}>

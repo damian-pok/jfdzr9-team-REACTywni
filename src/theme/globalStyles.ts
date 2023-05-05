@@ -101,18 +101,19 @@ html{
 }
 
 body {
-  width: 1440px;
+  width: 100%;
   margin: 2rem;
   background-color: var(--very-light-color);
   display: flex;
   justify-content: center;
-  min-width: 840px;
 }
 
-.root{
-    
+main {
+  display: flex;
+  justify-content: center;
+    position: relative;
+  min-height: 95vh;
 }
-
 
 h1 {
   font-size: var(--Default-Headline-1-size);
