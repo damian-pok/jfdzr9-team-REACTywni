@@ -17,6 +17,7 @@ import {
   ProfileClientCategoriesLast,
   ProfileClientFrameKey,
   ProfileWrapper,
+  ProfileClientCategoriesVeryLast,
 } from "../components/ProfileClientFrame/ProfileClientFrame.styled";
 //import images
 import { getFreelancer } from "../firebase/getFreelancer";
@@ -114,22 +115,23 @@ const ProfileClient = () => {
                 {userData.tags && <DesignerServices services={userData.tags}></DesignerServices>}
               </ProfileClientParagraph>
             </ProfileClientCategoriesLast>
-
-            <ProfileClientFrameKey>Zadania:</ProfileClientFrameKey>
-            <JobTaskWrapper>
-              {userData.jobs.map((job: IJob) => (
-                <>
-                  <TaskFreelancer
-                    key={job.id}
-                    author={job.author}
-                    content={job.content}
-                    date={job.date}
-                    status={job.status}
-                    email={job.email}
-                  />
-                </>
-              ))}
-            </JobTaskWrapper>
+            <ProfileClientCategoriesVeryLast>
+              <ProfileClientTitle>Zlecenia</ProfileClientTitle>
+              <JobTaskWrapper>
+                {userData.jobs.map((job: IJob) => (
+                  <>
+                    <TaskFreelancer
+                      key={job.id}
+                      author={job.author}
+                      content={job.content}
+                      date={job.date}
+                      status={job.status}
+                      email={job.email}
+                    />
+                  </>
+                ))}
+              </JobTaskWrapper>
+            </ProfileClientCategoriesVeryLast>
           </>
         )}
       </div>

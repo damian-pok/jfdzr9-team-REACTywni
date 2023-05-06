@@ -1,23 +1,22 @@
 import { IJob } from "../ProfileInputFreelancer/ProfileInputFreelancer.component";
-import { JobTask } from "./TaskFreelancer.styled";
+import { JobTask, JobTaskContent } from "./TaskFreelancer.styled";
 
 export const TaskFreelancer = ({ email, author, date, content, status }: Omit<IJob, "id">) => {
-  // const acceptMe = () => {
-  //   status = "1";
-  //   console.log(status);
-  // };
-  // const declineMe = () => {
-  //   status = "2";
-  // };
-
   return (
     <>
       <JobTask>
-        Zadanie od {author}, o treści: {content}, termin wykonania: {date},
-        {status === "0" ? <span> Czeka na decyzje</span> : null}
-        {status === "1" ? <span> Zaakceptowano</span> : null}
-        {status === "2" ? <span> Odrzucono</span> : null}
-        Kontakt: {email}
+        <JobTaskContent>
+          <strong>Zleceniodawca:</strong> {author}
+        </JobTaskContent>
+        <JobTaskContent>
+          <strong>Zlecenie:</strong> {content}
+        </JobTaskContent>
+        <JobTaskContent>
+          <strong>Termin:</strong> {date}
+        </JobTaskContent>
+        <JobTaskContent>
+          <strong>Kontakt:</strong> {email}
+        </JobTaskContent>
       </JobTask>
     </>
   );

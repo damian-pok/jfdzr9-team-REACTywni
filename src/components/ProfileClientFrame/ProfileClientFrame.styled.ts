@@ -124,6 +124,20 @@ export const ProfileClientCategoriesLast = styled.div`
   margin-top: 1rem;
 `;
 
+export const ProfileClientCategoriesVeryLast = styled.div`
+  max-width: var(--Default-Body-width);
+  //height: fit-content;
+  background-color: var(--cardgroundcolor);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 100px;
+`;
+
 export const CategoriesBox = styled.button`
   background-color: var(--primarygreenbuttonbackground);
   color: var(--primarygreenbuttontext);
