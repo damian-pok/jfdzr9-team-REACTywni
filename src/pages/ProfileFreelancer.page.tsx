@@ -1,7 +1,7 @@
-import Freelancer from "../components/FreelancerProfile/FreelancerProfile.component";
+import UpdateFreelancer from "../components/FreelancerProfile/FreelancerProfile.component";
 
 function ProfileFreelancer() {
-  return <Freelancer />;
+  return <UpdateFreelancer />;
 }
 
 export default ProfileFreelancer;

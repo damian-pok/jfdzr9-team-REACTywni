@@ -12,7 +12,7 @@ import {
   FreelancerCheckboxLabel,
   EditionInput,
   SubmitChangesButtonSecondary,
-} from "./FreelancerProfileEditionForm.styled";
+} from "./FreelancerProfileUpdateForm.styled";
 import { Controller, useForm } from "react-hook-form";
 
 type Freelancer = {
@@ -57,12 +57,51 @@ type FreelancersForm = HTMLFormElement & {
   elements: FormElements;
 };
 
-export const FreelancerProfileEditionForm = () => {
+export const FreelancerProfileUpdateForm = () => {
   const [freelancerData, setFreelancerData] = useState<Freelancer>();
 
   const { control, handleSubmit } = useForm<Freelancer>();
 
   const freelancersCollection = collection(db, "freelancer") as CollectionReference<Freelancer>;
+
+  //Branding
+  const [isBrandingChecked, setIsBrandingChecked] = useState(false);
+
+  //Printing - category
+  const [isPrintChecked, setIsPrintChecked] = useState(false);
+
+  function handleChangePrint(event: React.ChangeEvent<HTMLInputElement>) {
+    setIsPrintChecked(event.target.checked);
+  }
+  //Digital - category
+  const [isDigitalChecked, setIsDigitalChecked] = useState(false);
+
+  function handleChangeDigital(event: React.ChangeEvent<HTMLInputElement>) {
+    setIsDigitalChecked(event.target.checked);
+  }
+  //UX - category
+  const [isUxChecked, setIsUxChecked] = useState(false);
+
+  function handleChangeUx(event: React.ChangeEvent<HTMLInputElement>) {
+    setIsUxChecked(event.target.checked);
+  }
+  //Ilustrations - category
+  const [isIlustrationChecked, setIsIlustrationChecked] = useState(false);
+
+  function handleChangeIlustration(event: React.ChangeEvent<HTMLInputElement>) {
+    setIsIlustrationChecked(event.target.checked);
+  }
+  //Other - category
+  const [isOtherChecked, setIsOtherChecked] = useState(false);
+
+  function handleChangeOther(event: React.ChangeEvent<HTMLInputElement>) {
+    setIsOtherChecked(event.target.checked);
+  }
+  // END - category
+
+  function handleChangeBranding(event: React.ChangeEvent<HTMLInputElement>) {
+    setIsBrandingChecked(event.target.checked);
+  }
 
   const handleUpdate = handleSubmit((updates) => {
     if (!freelancerData) return;
@@ -160,30 +199,134 @@ export const FreelancerProfileEditionForm = () => {
               </FreelancerInputArea>
             </FreelancerDataContainer>
 
-            {/* <EditionLabel>Dodaj / usuń kategorie świadczonych usług</EditionLabel> */}
+            <EditionLabel>Dodaj / usuń kategorie świadczonych usług</EditionLabel>
 
-            {/* <FreelancerCategoriesContainer>
+            <FreelancerCategoriesContainer>
               <FreelancerCheckboxLabel>
-                <EditionInput type="checkbox" />
-                branding
+                <Controller
+                  name="branding"
+                  control={control}
+                  render={({ field }) => (
+                    <>
+                      <EditionInput
+                        type={"checkbox"}
+                        checked={isBrandingChecked}
+                        {...field}
+                        onChange={(e) => {
+                          handleChangeBranding(e);
+                          field.onChange(e);
+                        }}
+                      />
+                      <label htmlFor="branding">branding</label>
+                    </>
+                  )}
+                />
+              </FreelancerCheckboxLabel>
+
+              <FreelancerCheckboxLabel>
+                <Controller
+                  name="digital"
+                  control={control}
+                  render={({ field }) => (
+                    <>
+                      <EditionInput
+                        type={"checkbox"}
+                        checked={isDigitalChecked}
+                        {...field}
+                        onChange={(e) => {
+                          handleChangeDigital(e);
+                          field.onChange(e);
+                        }}
+                      />
+                      <label htmlFor="digital">digital</label>
+                    </>
+                  )}
+                />
+              </FreelancerCheckboxLabel>
+
+              <FreelancerCheckboxLabel>
+                <Controller
+                  name="print"
+                  control={control}
+                  render={({ field }) => (
+                    <>
+                      <EditionInput
+                        type={"checkbox"}
+                        checked={isPrintChecked}
+                        {...field}
+                        onChange={(e) => {
+                          handleChangePrint(e);
+                          field.onChange(e);
+                        }}
+                      />
+                      <label htmlFor="print">druk</label>
+                    </>
+                  )}
+                />
+              </FreelancerCheckboxLabel>
+
+              <FreelancerCheckboxLabel>
+                <Controller
+                  name="ux"
+                  control={control}
+                  render={({ field }) => (
+                    <>
+                      <EditionInput
+                        type={"checkbox"}
+                        checked={isUxChecked}
+                        {...field}
+                        onChange={(e) => {
+                          handleChangeUx(e);
+                          field.onChange(e);
+                        }}
+                      />
+                      <label htmlFor="ux">UX/UI</label>
+                    </>
+                  )}
+                />
+              </FreelancerCheckboxLabel>
+
+              <FreelancerCheckboxLabel>
+                <Controller
+                  name="ilustrations"
+                  control={control}
+                  render={({ field }) => (
+                    <>
+                      <EditionInput
+                        type={"checkbox"}
+                        checked={isIlustrationChecked}
+                        {...field}
+                        onChange={(e) => {
+                          handleChangeIlustration(e);
+                          field.onChange(e);
+                        }}
+                      />
+                      <label htmlFor="ilustration">ilustracje</label>
+                    </>
+                  )}
+                />
               </FreelancerCheckboxLabel>
               <FreelancerCheckboxLabel>
-                <EditionInput type="checkbox" />
-                digital
+                <Controller
+                  name="other"
+                  control={control}
+                  render={({ field }) => (
+                    <>
+                      <EditionInput
+                        type={"checkbox"}
+                        checked={isOtherChecked}
+                        {...field}
+                        onChange={(e) => {
+                          handleChangeOther(e);
+                          field.onChange(e);
+                        }}
+                      />
+                      <label htmlFor="other">inne</label>
+                    </>
+                  )}
+                />
               </FreelancerCheckboxLabel>
-              <FreelancerCheckboxLabel>
-                <EditionInput type="checkbox" />
-                druk
-              </FreelancerCheckboxLabel>
-              <FreelancerCheckboxLabel>
-                <EditionInput type="checkbox" />
-                ux / ui
-              </FreelancerCheckboxLabel>
-              <FreelancerCheckboxLabel>
-                <EditionInput type="checkbox" />
-                inne
-              </FreelancerCheckboxLabel>
-            </FreelancerCategoriesContainer> */}
+            </FreelancerCategoriesContainer>
             <SubmitChangesButtonSecondary type="submit">Zapisz zmiany</SubmitChangesButtonSecondary>
           </>
         )}

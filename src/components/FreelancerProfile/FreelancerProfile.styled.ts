@@ -1,11 +1,6 @@
 import styled from "styled-components";
 
 export const FreelancerWrapper = styled.div`
-  height: fit-content;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 2.5rem;
   transform: scale(0.75);
 `;
 

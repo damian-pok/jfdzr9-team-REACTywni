@@ -25,6 +25,7 @@ import cover from "../assets/images/cover.png";
 import { TaskFreelancer } from "../components/TaskFreelancer/TaskFreelancer.component";
 import { IJob } from "../components/ProfileInputFreelancer/ProfileInputFreelancer.component";
 import { DesignerServices } from "../components/DesignerServices/DesignerServices.component";
+import UpdateFreelancer from "../components/FreelancerProfile/FreelancerProfile.component";
 
 const ProfileClient = () => {
   const [userData, setUserData] = useState<any>();
@@ -91,6 +92,7 @@ const ProfileClient = () => {
               <ProfileClientParagraph>Kraj: {userData.country}</ProfileClientParagraph>
               <ProfileClientParagraph>Miasto: {userData.city}</ProfileClientParagraph>
               <ProfileClientParagraph>Doświadczenie: {userData.experience}</ProfileClientParagraph>
+              <UpdateFreelancer />
             </ProfileInformationContainer>
           </ProfileClientContainer>
           <ProfileClientAbout>

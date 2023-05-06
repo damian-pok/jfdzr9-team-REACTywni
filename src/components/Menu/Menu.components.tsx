@@ -14,6 +14,7 @@ import { getAuth, signOut } from "firebase/auth";
 //import DarkLogoFindADesigner from "./../../assets/logos/find-a-designer-white-logo.svg";
 import ToggleSwitch from "./../UI/Toggle/Toggle.components";
 import LightLogoMode from "./../../assets/logos/find-a-designer-logo.svg";
+
 //import DarkLogoMode from "./../../assets/logos/find-a-designer-logo-white.svg";
 
 const Menu = () => {

@@ -3,9 +3,9 @@ import { CloseButton, FreelancerWrapper } from "./FreelancerProfile.styled";
 import { EditionButton } from "./FreelancerProfile.styled";
 import { EditionFormFreelancer } from "../EditionFormFreelancer/EditionFormFreelancer.component";
 import { GrClose } from "react-icons/gr";
-import { FreelancerProfileEditionForm } from "../ProfileEditionInputFreelancer/FreelancerProfileEditionForm.component";
+import { FreelancerProfileUpdateForm } from "../ProfileEditionInputFreelancer/FreelancerProfileUpdateForm.component";
 
-const Freelancer = () => {
+const UpdateFreelancer = () => {
   const [showForm, setShowForm] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -19,11 +19,10 @@ const Freelancer = () => {
 
   return (
     <FreelancerWrapper>
-      Witaj na swoim profilu
       <EditionButton onClick={openForm}>Edytuj profil</EditionButton>
       {showForm && (
         <EditionFormFreelancer open={showForm}>
-          <FreelancerProfileEditionForm />
+          <FreelancerProfileUpdateForm />
           <CloseButton onClick={closeForm}>
             <GrClose />
           </CloseButton>
@@ -33,4 +32,4 @@ const Freelancer = () => {
   );
 };
 
-export default Freelancer;
+export default UpdateFreelancer;
