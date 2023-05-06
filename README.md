@@ -46,7 +46,7 @@ The Find a Designer application has two target groups:
 <a href="https://nodejs.org/en" target="_blank"><img src="/public/readme-assets/icons/node-icon.svg" height="50px"></a>
 <a href="https://firebase.google.com/" target="_blank"><img src="/public/readme-assets/icons/firebase-icon.svg" height="50px"></a>
 <a href="https://vitejs.dev/" target="_blank"><img src="/public/readme-assets/icons/vite-icon.svg" height="50px"></a>
-<a href="https://styled-components.com/" target="_blank"><img src="/public/readme-assets/icons/styled-components-icon.svg" height="50px"></a>
+<a href="https://styled-components.com/" target="_blank"><img src="/public/readme-assets/icons/styled-components-icon.png" height="50px"></a>
 <a href="https://www.npmjs.com/" target="_blank"><img src="/public/readme-assets/icons/npm-icon.svg" height="50px"></a>
 
 <a href="https://git-scm.com/" target="_blank"><img src="/public/readme-assets/icons/git-icon.svg" height="50px"></a>
