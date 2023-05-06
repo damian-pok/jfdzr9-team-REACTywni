@@ -111,6 +111,7 @@ body {
 main {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   position: relative;
   min-height: 95vh;
 }
