@@ -37,7 +37,7 @@ The Find a Designer application has two target groups:
 
 #### Frontend
 
-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><img src="/public/readme-assets/icons/html5-icon.svg" height="30px"></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><img src="/public/readme-assets/icons/html5-icon.svg" height="40px"></a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img src="/public/readme-assets/icons/css-icon.svg"></a>
 <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design" target="_blank"><img src="/public/readme-assets/icons/rwd-icon.svg"></a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="/public/readme-assets/icons/javascript-icon.svg"></a>
