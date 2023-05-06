@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 
 export const FooterField = styled.div`
   //max-width: var(--Default-Body-width);
-  width: 1440px;
-  height: fit-content;
+  width: 80vw;
+  max-width: 1440px;
+  height: 50px;
   display: flex;
   flex-direction: row;
   color: var(--secondary-very-light-grey);
