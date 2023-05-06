@@ -12,7 +12,6 @@ import {
   FreelancerCheckboxLabel,
   EditionInput,
   SubmitChangesButtonSecondary,
-  EditionCheckbox,
 } from "./FreelancerProfileUpdateForm.styled";
 import { Controller, useForm } from "react-hook-form";
 
@@ -114,7 +113,7 @@ export const FreelancerProfileUpdateForm = () => {
       ...freelancerData,
       ...updates,
     };
-    console.log(updatedData);
+
     await updateDoc(docRef, updatedData);
     window.location.reload();
   });

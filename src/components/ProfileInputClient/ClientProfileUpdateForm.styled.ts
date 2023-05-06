@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FreelancerProfileEditionWrapper = styled.form`
+export const ClientProfileEditionWrapper = styled.form`
   background: #f3f3f6;
   border-radius: 15px;
   display: flex;
@@ -11,17 +11,17 @@ export const FreelancerProfileEditionWrapper = styled.form`
   grid-row: 1 / span auto;
 `;
 
-export const FreelancerDataContainer = styled.div`
+export const ClientDataContainer = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 0.4rem;
 `;
 
-export const FreelancerInputArea = styled.div`
+export const ClientInputArea = styled.div`
   display: grid;
 `;
 
-export const EditionField = styled.input`
+export const ClientEditionField = styled.input`
   background-color: white;
   border: 1px solid #c2d1d9;
   border-radius: 3px;
@@ -31,7 +31,7 @@ export const EditionField = styled.input`
   padding: 0.3rem;
 `;
 
-export const EditionLabel = styled.p`
+export const ClientEditionLabel = styled.p`
   display: grid;
   margin-top: 0.3rem;
   font-size: 16px;
