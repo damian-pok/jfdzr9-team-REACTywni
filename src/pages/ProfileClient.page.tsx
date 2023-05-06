@@ -24,6 +24,7 @@ import cover from "../assets/images/cover.png";
 import { TaskFreelancer } from "../components/TaskFreelancer/TaskFreelancer.component";
 import { IJob } from "../components/ProfileInputFreelancer/ProfileInputFreelancer.component";
 import { DesignerServices } from "../components/DesignerServices/DesignerServices.component";
+import { JobTaskWrapper } from "../components/TaskFreelancer/TaskFreelancer.styled";
 
 const ProfileClient = () => {
   const [userData, setUserData] = useState<any>();
@@ -115,18 +116,20 @@ const ProfileClient = () => {
             </ProfileClientCategoriesLast>
 
             <ProfileClientFrameKey>Zadania:</ProfileClientFrameKey>
-            {userData.jobs.map((job: IJob) => (
-              <>
-                <TaskFreelancer
-                  key={job.id}
-                  author={job.author}
-                  content={job.content}
-                  date={job.date}
-                  status={job.status}
-                  email={job.email}
-                />
-              </>
-            ))}
+            <JobTaskWrapper>
+              {userData.jobs.map((job: IJob) => (
+                <>
+                  <TaskFreelancer
+                    key={job.id}
+                    author={job.author}
+                    content={job.content}
+                    date={job.date}
+                    status={job.status}
+                    email={job.email}
+                  />
+                </>
+              ))}
+            </JobTaskWrapper>
           </>
         )}
       </div>

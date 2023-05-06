@@ -1,17 +1,21 @@
 import { IJob, IProfileInputFreelancer } from "../ProfileInputFreelancer/ProfileInputFreelancer.component";
 import {
   DesignerContent,
+  DesignerContentAboutMe,
   DesignerPhoto,
   DesignerTags,
   DesignerTagsSecond,
   DesignerWidget,
+  DesignerWidgetInput,
+  DesignerWidgetInputOrder,
+  DesignerWidgetWrapper,
   Tag,
   TagsWrapper,
 } from "../SingleFreelancer/SingleFreelancer.styled";
 import ProfileAvatar from "../../assets/illustrations/Profile-avatar.svg";
 import { DesignerServices } from "../DesignerServices/DesignerServices.component";
 import { useState } from "react";
-import { ProfileInputFreelancerStyled } from "../ProfileInputFreelancer/ProfileInputFreelancer.styled";
+import { ProfileInputFreelancerStyledOrder } from "../ProfileInputFreelancer/ProfileInputFreelancer.styled";
 import { Controller, useForm } from "react-hook-form";
 
 import { db } from "../../firebase/firebase.config";
@@ -19,6 +23,7 @@ import { doc, updateDoc } from "firebase/firestore";
 
 import "firebase/firestore";
 import { useUser } from "../../context/auth.context";
+import { PrimaryNavyButton } from "../UI/Buttons/Buttons.styled";
 export interface IFreelacerData {
   freelancerData: IProfileInputFreelancer;
 }
@@ -29,7 +34,7 @@ export const SingleFreelancer = ({ freelancerData }: IFreelacerData) => {
   const { control, handleSubmit } = useForm<IJob>();
 
   const handleBooking = () => {
-    setShowBooking(true);
+    setShowBooking(showBooking ? false : true);
   };
 
   const user = useUser();
@@ -46,15 +51,15 @@ export const SingleFreelancer = ({ freelancerData }: IFreelacerData) => {
   });
 
   return (
-    <>
+    <DesignerWidgetWrapper>
       <DesignerWidget>
         <DesignerPhoto src={ProfileAvatar} />
 
         <DesignerContent>
           <h3>
-            {freelancerData.firstName} {freelancerData.secondName}{" "}
+            {freelancerData.firstName} {freelancerData.secondName}
           </h3>
-          <p> {freelancerData.aboutMe}</p>
+          <DesignerContentAboutMe> {freelancerData.aboutMe}</DesignerContentAboutMe>
         </DesignerContent>
 
         <TagsWrapper>
@@ -70,39 +75,41 @@ export const SingleFreelancer = ({ freelancerData }: IFreelacerData) => {
           <DesignerTagsSecond>
             {freelancerData.tags && <DesignerServices services={freelancerData.tags}></DesignerServices>}
           </DesignerTagsSecond>
-          {user ? <button onClick={handleBooking}>Kliknij aby zapytać</button> : null}
-          {showBooking && (
-            <>
-              <ProfileInputFreelancerStyled onSubmit={onSubmit}>
-                <Controller
-                  name="author"
-                  control={control}
-                  render={({ field }) => <input placeholder="Nazwa firmy" type={"text"} {...field} />}
-                />
-                <Controller
-                  name="content"
-                  control={control}
-                  render={({ field }) => <input placeholder="Zamówienie" type={"text"} {...field} />}
-                />
-                <Controller
-                  name="date"
-                  control={control}
-                  render={({ field }) => <input placeholder="Do kiedy?" type={"text"} {...field} />}
-                />
-                <Controller
-                  name="email"
-                  control={control}
-                  render={({ field }) => <input placeholder="Podaj email" type={"text"} {...field} />}
-                />
-                <Controller name="status" control={control} defaultValue="0" render={() => <p> </p>} />
-
-                <button type="submit">Zarezerwuj</button>
-              </ProfileInputFreelancerStyled>
-            </>
-          )}
-          {success && <p>Zapytanie zostało wysłane - poczekaj na kontak ze strony grafika</p>}
         </TagsWrapper>
       </DesignerWidget>
-    </>
+      {user ? (
+        <PrimaryNavyButton onClick={handleBooking}>{showBooking ? "< Zwiń" : "Kliknij aby zapytać"}</PrimaryNavyButton>
+      ) : null}
+      {showBooking && (
+        <>
+          <ProfileInputFreelancerStyledOrder onSubmit={onSubmit}>
+            <Controller
+              name="author"
+              control={control}
+              render={({ field }) => <DesignerWidgetInput placeholder="Nazwa firmy" type={"text"} {...field} />}
+            />
+            <Controller
+              name="content"
+              control={control}
+              render={({ field }) => <DesignerWidgetInputOrder placeholder="Zamówienie" type={"text"} {...field} />}
+            />
+            <Controller
+              name="date"
+              control={control}
+              render={({ field }) => <DesignerWidgetInput placeholder="Do kiedy?" type={"text"} {...field} />}
+            />
+            <Controller
+              name="email"
+              control={control}
+              render={({ field }) => <DesignerWidgetInput placeholder="Podaj email" type={"text"} {...field} />}
+            />
+            <Controller name="status" control={control} defaultValue="0" render={() => <p> </p>} />
+
+            <PrimaryNavyButton type="submit">Zarezerwuj</PrimaryNavyButton>
+          </ProfileInputFreelancerStyledOrder>
+        </>
+      )}
+      {success && <p>Zapytanie zostało wysłane - poczekaj na kontak ze strony grafika</p>}
+    </DesignerWidgetWrapper>
   );
 };

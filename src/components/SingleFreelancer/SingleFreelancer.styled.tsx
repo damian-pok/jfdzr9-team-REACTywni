@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const DesignerWidget = styled.div`
-  height: fit-content;
+  //height: fit-content;
+  //height: 500px;
   display: grid;
   grid-template-columns: 1fr 5fr;
   grid-template-rows: 2fr 1fr;
@@ -9,6 +10,8 @@ export const DesignerWidget = styled.div`
   border-radius: 1rem;
   background-color: var(--cardgroundcolor);
   padding: 2rem;
+  margin-bottom: 50px;
+  //margin-top: 10px;
 `;
 
 export const DesignerPhoto = styled.img`
@@ -37,7 +40,7 @@ export const DesignerTags = styled.div`
   flex-wrap: wrap;
   column-gap: 0.7rem;
   margin-bottom: 0.7rem;
-  height: auto;
+  //height: auto;
   width: fit-content;
   grid-column: 1 / span 2;
 `;
@@ -52,6 +55,7 @@ export const DesignerTagsSecond = styled.div`
 
 export const Tag = styled.p`
   color: var(--primarygreenbuttontext);
+  height: 30px;
   font-size: bold;
   background-color: var(--categoriesBackgroundColors);
   border-radius: 0.3rem;
@@ -69,7 +73,7 @@ export const TagSecond = styled.p`
   text-align: center;
 `;
 
-export const DesignerContent = styled.p`
+export const DesignerContent = styled.div`
   display: flex;
   flex-direction: column;
 `;
@@ -77,5 +81,23 @@ export const DesignerContent = styled.p`
 export const InfoContainer = styled.p`
   display: flex;
   flex-direction: row;
-  //margin-bottom: 1rem;
+`;
+
+export const DesignerWidgetWrapper = styled.div`
+  margin-bottom: 30px;
+`;
+
+export const DesignerWidgetInput = styled.input`
+  text-indent: 10px;
+  border-radius: 5px;
+`;
+
+export const DesignerWidgetInputOrder = styled.input`
+  text-indent: 10px;
+  border-radius: 5px;
+  height: 100px;
+`;
+
+export const DesignerContentAboutMe = styled.div`
+  //height: 300px;
 `;
