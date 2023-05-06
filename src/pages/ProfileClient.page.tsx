@@ -26,6 +26,7 @@ import { TaskFreelancer } from "../components/TaskFreelancer/TaskFreelancer.comp
 import { IJob } from "../components/ProfileInputFreelancer/ProfileInputFreelancer.component";
 import { DesignerServices } from "../components/DesignerServices/DesignerServices.component";
 import UpdateFreelancer from "../components/FreelancerProfile/FreelancerProfile.component";
+import UpdateClient from "../components/ClientProfile/ClientProfile.component";
 
 const ProfileClient = () => {
   const [userData, setUserData] = useState<any>();
@@ -74,6 +75,7 @@ const ProfileClient = () => {
                 <ProfileClientParagraph>Kraj: {userData.country}</ProfileClientParagraph>
                 <ProfileClientParagraph>Miasto: {userData.city}</ProfileClientParagraph>
                 <ProfileClientParagraph>Adres: {userData.street}</ProfileClientParagraph>
+                <UpdateClient />
               </ProfileInformationContainer>
             </ProfileClientContainer>
           </>
