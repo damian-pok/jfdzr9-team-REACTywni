@@ -1,13 +1,21 @@
 import styled from "styled-components";
 
 export const PlanWidgetArea = styled.div`
-  max-width: var(--Default-Body-width);
+  //max-width: var(--Default-Body-width);
+  box-sizing: border-box;
+  width: 80vw;
+  max-width: 1440px;
   height: fit-content;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   justify-content: center;
   gap: 2.5rem;
   padding-bottom: 3.75rem;
+
+  @media (max-width: 900px) {
+    display: grid;
+    grid-template-columns: repeat(2, 265px);
+  }
 `;
 
 export const Headlines3 = styled.h3`
