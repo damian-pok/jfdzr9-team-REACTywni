@@ -176,4 +176,15 @@ export const ProfileWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 80vw;
+  max-width: 1440px;
+`;
+
+export const ProfileWrapperDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  max-width: 1440px;
 `;

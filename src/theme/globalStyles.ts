@@ -111,7 +111,7 @@ body {
 main {
   display: flex;
   justify-content: center;
-    position: relative;
+  position: relative;
   min-height: 95vh;
 }
 

@@ -1,13 +1,23 @@
 import styled from "styled-components";
 
 export const CounterWidgetArea = styled.div`
-  height: fit-content;
+  //height: fit-content;
+  width: 80vw;
+  max-width: 1440px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 2.5rem;
   padding-top: 2rem;
+
+  @media (max-width: 900px) {
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(2, 265px);
+    gap: 2rem;
+    justify-content: center;
+  }
 `;
 
 export const SingleCounterWidgetField = styled.div`
@@ -15,7 +25,7 @@ export const SingleCounterWidgetField = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-self: center;
   gap: 1.5rem;
 `;
 

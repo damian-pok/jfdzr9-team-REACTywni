@@ -1,17 +1,17 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../Footer/Footer.components";
 import Menu from "../Menu/Menu.components";
-import { LayoutWrapper } from "./Layout.styled";
+import { LayoutWrapper, LayoutWrapperDiv } from "./Layout.styled";
 
 const Layout = () => {
   return (
     <main>
       <LayoutWrapper>
-        <div>
+        <LayoutWrapperDiv>
           <Menu />
           <Outlet />
           <Footer />
-        </div>
+        </LayoutWrapperDiv>
       </LayoutWrapper>
     </main>
   );
