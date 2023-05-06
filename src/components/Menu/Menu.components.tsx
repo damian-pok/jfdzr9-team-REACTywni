@@ -33,7 +33,7 @@ const Menu = () => {
         <ButtonMenuField>
           {user ? (
             <>
-              <Link to={`/client`}>
+              <Link to={`/user`}>
                 <PrimaryGreenButton>Mój Profil</PrimaryGreenButton>
               </Link>
               <Link to={`/homepage`}>
