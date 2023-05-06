@@ -88,6 +88,8 @@ export const EditionInput = styled.input`
   }
 `;
 
+export const EditionCheckbox = styled(EditionInput).attrs({ type: "checkbox" });
+
 export const SubmitChangesButtonSecondary = styled.button`
   align-self: center;
   background-color: var(--primary-green);

@@ -1,7 +1,5 @@
-import UpdateFreelancer from "../components/FreelancerProfile/FreelancerProfile.component";
-
 function ProfileFreelancer() {
-  return <UpdateFreelancer />;
+  return <h1>Tu miała być strona freelancera</h1>;
 }
 
 export default ProfileFreelancer;

@@ -42,7 +42,7 @@ export const ProfileClientContainer = styled.div`
   flex-direction: row;
   align-items: flex-start;
   padding: 2.5rem;
-  overflow: hidden;
+  /* overflow: hidden; */
   border-radius: 0 0 1rem 1rem;
   gap: 2rem;
 `;

@@ -12,6 +12,7 @@ import {
   FreelancerCheckboxLabel,
   EditionInput,
   SubmitChangesButtonSecondary,
+  EditionCheckbox,
 } from "./FreelancerProfileUpdateForm.styled";
 import { Controller, useForm } from "react-hook-form";
 
@@ -25,12 +26,12 @@ type Freelancer = {
   experience: number;
   aboutMe: string;
   gallery: string;
-  branding: string;
-  print: string;
-  digital: string;
-  ux: string;
-  ilustrations: string;
-  other: string;
+  branding: boolean;
+  print: boolean;
+  digital: boolean;
+  ux: boolean;
+  ilustrations: boolean;
+  other: boolean;
   tags: string;
 };
 
@@ -60,7 +61,9 @@ type FreelancersForm = HTMLFormElement & {
 export const FreelancerProfileUpdateForm = () => {
   const [freelancerData, setFreelancerData] = useState<Freelancer>();
 
-  const { control, handleSubmit } = useForm<Freelancer>();
+  const { control, handleSubmit } = useForm<Freelancer>({
+    defaultValues: { branding: false, print: false, digital: false, ux: false, ilustrations: false, other: false },
+  });
 
   const freelancersCollection = collection(db, "freelancer") as CollectionReference<Freelancer>;
 
@@ -103,7 +106,7 @@ export const FreelancerProfileUpdateForm = () => {
     setIsBrandingChecked(event.target.checked);
   }
 
-  const handleUpdate = handleSubmit((updates) => {
+  const handleUpdate = handleSubmit(async (updates) => {
     if (!freelancerData) return;
     const { uid } = freelancerData;
     const docRef = doc(freelancersCollection, uid);
@@ -111,7 +114,9 @@ export const FreelancerProfileUpdateForm = () => {
       ...freelancerData,
       ...updates,
     };
-    updateDoc(docRef, updatedData);
+    console.log(updatedData);
+    await updateDoc(docRef, updatedData);
+    window.location.reload();
   });
 
   useEffect(() => {
@@ -212,6 +217,7 @@ export const FreelancerProfileUpdateForm = () => {
                         type={"checkbox"}
                         checked={isBrandingChecked}
                         {...field}
+                        value={undefined}
                         onChange={(e) => {
                           handleChangeBranding(e);
                           field.onChange(e);
@@ -233,6 +239,7 @@ export const FreelancerProfileUpdateForm = () => {
                         type={"checkbox"}
                         checked={isDigitalChecked}
                         {...field}
+                        value={undefined}
                         onChange={(e) => {
                           handleChangeDigital(e);
                           field.onChange(e);
@@ -254,6 +261,7 @@ export const FreelancerProfileUpdateForm = () => {
                         type={"checkbox"}
                         checked={isPrintChecked}
                         {...field}
+                        value={undefined}
                         onChange={(e) => {
                           handleChangePrint(e);
                           field.onChange(e);
@@ -275,6 +283,7 @@ export const FreelancerProfileUpdateForm = () => {
                         type={"checkbox"}
                         checked={isUxChecked}
                         {...field}
+                        value={undefined}
                         onChange={(e) => {
                           handleChangeUx(e);
                           field.onChange(e);
@@ -296,6 +305,7 @@ export const FreelancerProfileUpdateForm = () => {
                         type={"checkbox"}
                         checked={isIlustrationChecked}
                         {...field}
+                        value={undefined}
                         onChange={(e) => {
                           handleChangeIlustration(e);
                           field.onChange(e);
@@ -316,6 +326,7 @@ export const FreelancerProfileUpdateForm = () => {
                         type={"checkbox"}
                         checked={isOtherChecked}
                         {...field}
+                        value={undefined}
                         onChange={(e) => {
                           handleChangeOther(e);
                           field.onChange(e);
