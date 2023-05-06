@@ -15,7 +15,6 @@ import {
   CategoriesBox,
   CategoriesButtonBox,
   ProfileClientCategoriesLast,
-  ProfileClientFrameKey,
   ProfileWrapper,
   ProfileClientCategoriesVeryLast,
 } from "../components/ProfileClientFrame/ProfileClientFrame.styled";
@@ -92,7 +91,24 @@ const ProfileClient = () => {
                 <ProfileClientParagraph>e-mail: {userData.email}</ProfileClientParagraph>
                 <ProfileClientParagraph>Kraj: {userData.country}</ProfileClientParagraph>
                 <ProfileClientParagraph>Miasto: {userData.city}</ProfileClientParagraph>
-                <ProfileClientParagraph>Doświadczenie: {userData.experience}</ProfileClientParagraph>
+                <ProfileClientParagraph>
+                  Doświadczenie: {userData.experience}{" "}
+                  {userData.experience == 1
+                    ? "rok"
+                    : 2 <= userData.experience && userData.experience <= 4
+                    ? "lata"
+                    : 5 <= userData.experience && userData.experience <= 21
+                    ? "lat"
+                    : 22 <= userData.experience && userData.experience <= 24
+                    ? "lata"
+                    : 25 <= userData.experience && userData.experience <= 31
+                    ? "lat"
+                    : 32 <= userData.experience && userData.experience <= 34
+                    ? "lata"
+                    : 35 <= userData.experience && userData.experience <= 41
+                    ? "lat"
+                    : null}
+                </ProfileClientParagraph>
               </ProfileInformationContainer>
             </ProfileClientContainer>
             <ProfileClientAbout>

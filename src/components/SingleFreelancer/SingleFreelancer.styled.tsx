@@ -88,11 +88,13 @@ export const DesignerWidgetWrapper = styled.div`
 `;
 
 export const DesignerWidgetInput = styled.input`
+  min-width: 400px;
   text-indent: 10px;
   border-radius: 5px;
 `;
 
-export const DesignerWidgetInputOrder = styled.input`
+export const DesignerWidgetInputOrder = styled.textarea`
+  min-width: 400px;
   text-indent: 10px;
   border-radius: 5px;
   height: 100px;

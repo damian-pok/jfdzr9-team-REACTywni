@@ -37,6 +37,7 @@ export const ProfileInputFreelancerStyledOrder = styled.form`
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  margin-top: 20px;
   margin-bottom: var(--Default-Distanse-beetween-sections);
   background-color: var(--cardgroundcolor);
 `;

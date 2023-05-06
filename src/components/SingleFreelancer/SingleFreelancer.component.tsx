@@ -91,7 +91,7 @@ export const SingleFreelancer = ({ freelancerData }: IFreelacerData) => {
             <Controller
               name="content"
               control={control}
-              render={({ field }) => <DesignerWidgetInputOrder placeholder="Zamówienie" type={"text"} {...field} />}
+              render={({ field }) => <DesignerWidgetInputOrder placeholder="Zamówienie" {...field} />}
             />
             <Controller
               name="date"
