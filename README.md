@@ -38,26 +38,26 @@ The Find a Designer application has two target groups:
 #### Frontend
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><img src="/public/readme-assets/icons/html5-icon.svg" height="50px"></a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img src="/public/readme-assets/icons/css-icon.svg"></a>
-<a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design" target="_blank"><img src="/public/readme-assets/icons/rwd-icon.svg"></a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="/public/readme-assets/icons/javascript-icon.svg"></a>
-<a href="https://react.dev/" target="_blank"><img src="/public/readme-assets/icons/react-icon.svg"></a>
-<a href="https://www.typescriptlang.org/" target="_blank"><img src="/public/readme-assets/icons/typescript-icon.svg"></a>
-<a href="https://nodejs.org/en" target="_blank"><img src="/public/readme-assets/icons/node-icon.svg"></a>
-<a href="https://firebase.google.com/" target="_blank"><img src="/public/readme-assets/icons/firebase-icon.svg"></a>
-<a href="https://vitejs.dev/" target="_blank"><img src="/public/readme-assets/icons/vite-icon.svg"></a>
-<a href="https://styled-components.com/" target="_blank"><img src="/public/readme-assets/icons/styled-components-icon.svg"></a>
-<a href="https://www.npmjs.com/" target="_blank"><img src="/public/readme-assets/icons/npm-icon.svg"></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img src="/public/readme-assets/icons/css-icon.svg" height="50px"></a>
+<a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design" target="_blank"><img src="/public/readme-assets/icons/rwd-icon.svg" height="50px"></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="/public/readme-assets/icons/javascript-icon.svg" height="50px"></a>
+<a href="https://react.dev/" target="_blank"><img src="/public/readme-assets/icons/react-icon.svg" height="50px"></a>
+<a href="https://www.typescriptlang.org/" target="_blank"><img src="/public/readme-assets/icons/typescript-icon.svg" height="50px"></a>
+<a href="https://nodejs.org/en" target="_blank"><img src="/public/readme-assets/icons/node-icon.svg" height="50px"></a>
+<a href="https://firebase.google.com/" target="_blank"><img src="/public/readme-assets/icons/firebase-icon.svg" height="50px"></a>
+<a href="https://vitejs.dev/" target="_blank"><img src="/public/readme-assets/icons/vite-icon.svg" height="50px"></a>
+<a href="https://styled-components.com/" target="_blank"><img src="/public/readme-assets/icons/styled-components-icon.svg" height="50px"></a>
+<a href="https://www.npmjs.com/" target="_blank"><img src="/public/readme-assets/icons/npm-icon.svg" height="50px"></a>
 
-<a href="https://git-scm.com/" target="_blank"><img src="/public/readme-assets/icons/git-icon.svg"></a>
-<a href="https://github.com/" target="_blank"><img src="/public/readme-assets/icons/github-icon.svg"></a>
-<a href="https://code.visualstudio.com/" target="_blank"><img src="/public/readme-assets/icons/vscode-icon.svg"></a>
+<a href="https://git-scm.com/" target="_blank"><img src="/public/readme-assets/icons/git-icon.svg" height="50px"></a>
+<a href="https://github.com/" target="_blank"><img src="/public/readme-assets/icons/github-icon.svg" height="50px"></a>
+<a href="https://code.visualstudio.com/" target="_blank"><img src="/public/readme-assets/icons/vscode-icon.svg" height="50px"></a>
 
 #### Design
 
-<a href="https://www.figma.com/" target="_blank"><img src="/public/readme-assets/icons/figma-icon.svg"></a>
-<a href="https://affinity.serif.com/en-gb/photo/" target="_blank"><img src="/public/readme-assets/icons/affinity-photo-icon.svg"></a>
-<a href="https://affinity.serif.com/en-gb/designer/" target="_blank"><img src="/public/readme-assets/icons/affinity-designer-icon.svg"></a>
+<a href="https://www.figma.com/" target="_blank"><img src="/public/readme-assets/icons/figma-icon.svg" height="50px"></a>
+<a href="https://affinity.serif.com/en-gb/photo/" target="_blank"><img src="/public/readme-assets/icons/affinity-photo-icon.svg" height="50px"></a>
+<a href="https://affinity.serif.com/en-gb/designer/" target="_blank"><img src="/public/readme-assets/icons/affinity-designer-icon.svg" height="50px"></a>
 
 ---
 
