@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 //General Styles
 export const SiteContainer = styled.div`
-  max-width: var(--Default-Body-width);
+  //max-width: var(--Default-Body-width);
   height: fit-content;
   display: flex;
   flex-direction: column;

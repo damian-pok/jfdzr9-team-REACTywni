@@ -29,3 +29,15 @@ export const CategoryGroup = styled.div`
   grid-template-columns: 1fr 1fr;
   column-gap: 50px;
 `;
+
+export const ProfileInputFreelancerStyledOrder = styled.form`
+  border-radius: 1rem;
+  padding: 3.125rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 20px;
+  margin-bottom: var(--Default-Distanse-beetween-sections);
+  background-color: var(--cardgroundcolor);
+`;

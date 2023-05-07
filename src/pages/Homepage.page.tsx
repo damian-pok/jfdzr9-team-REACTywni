@@ -2,17 +2,20 @@ import NavigationFreelancerClient from "./../components/Navigation-freelancer-cl
 import Counter from "./../components/Counter/Counter.components";
 import BusinessPartners from "../components/BusinessPartners/BusinessPartners.componentes";
 import Contact from "../components/Contact/Contact.components";
+import { ProfileWrapper, ProfileWrapperDiv } from "../components/ProfileClientFrame/ProfileClientFrame.styled";
 
 const Homepage = () => {
   return (
-    <>
-      <NavigationFreelancerClient />
-      <Counter />
-      <BusinessPartners />
-      <div id="contact">
-        <Contact />
-      </div>
-    </>
+    <ProfileWrapper>
+      <ProfileWrapperDiv>
+        <NavigationFreelancerClient />
+        <Counter />
+        <BusinessPartners />
+        <div id="contact">
+          <Contact />
+        </div>
+      </ProfileWrapperDiv>
+    </ProfileWrapper>
   );
 };
 

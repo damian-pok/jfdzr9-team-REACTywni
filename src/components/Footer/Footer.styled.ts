@@ -2,8 +2,11 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const FooterField = styled.div`
-  max-width: var(--Default-Body-width);
-  height: fit-content;
+  //max-width: var(--Default-Body-width);
+  box-sizing: border-box;
+  width: 80vw;
+  max-width: 1440px;
+  height: 70px;
   display: flex;
   flex-direction: row;
   color: var(--secondary-very-light-grey);
@@ -12,13 +15,15 @@ export const FooterField = styled.div`
   justify-content: space-between;
   align-items: center;
   box-sizing: content-box;
-  padding: 1.5rem 2.5rem;
+  position: absolute;
+  bottom: 0;
 `;
 
 export const FooterNavField = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding-right: 20px;
   gap: 3rem;
 `;
 
@@ -35,6 +40,7 @@ export const LogoFooter = styled.img`
   :hover {
     opacity: 0.5;
   }
+  padding-left: 10px;
 `;
 
 export const LogoField = styled.div`

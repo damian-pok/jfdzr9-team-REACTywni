@@ -35,7 +35,10 @@ export const ProfileClientFrameWrapper = styled.div`
 // ---------------------------------------------------------------
 
 export const ProfileClientContainer = styled.div`
-  max-width: var(--Default-Body-width);
+  //max-width: var(--Default-Body-width);
+  box-sizing: border-box;
+  width: 80vw;
+  max-width: 1440px;
   height: fit-content;
   background-color: var(--cardgroundcolor);
   display: flex;
@@ -74,14 +77,18 @@ export const ProfileClientParagraph = styled.p`
 `;
 
 export const ProfileClientCover = styled.img`
-  width: var(--Default-Body-width);
+  width: 80vw;
+  max-width: 1440px;
   height: auto;
   border-radius: 1rem 1rem 0 0;
   margin-top: var(--Default-Distanse-beetween-sections);
 `;
 
 export const ProfileClientAbout = styled.div`
-  max-width: var(--Default-Body-width);
+  //max-width: var(--Default-Body-width);
+  box-sizing: border-box;
+  width: 80vw;
+  max-width: 1440px;
   height: fit-content;
   background-color: var(--cardgroundcolor);
   display: flex;
@@ -99,7 +106,10 @@ export const ProfileClientTitle = styled.h3`
 `;
 
 export const ProfileClientCategories = styled.div`
-  max-width: var(--Default-Body-width);
+  //max-width: var(--Default-Body-width);
+  box-sizing: border-box;
+  width: 80vw;
+  max-width: 1440px;
   height: fit-content;
   background-color: var(--cardgroundcolor);
   display: flex;
@@ -112,7 +122,10 @@ export const ProfileClientCategories = styled.div`
 `;
 
 export const ProfileClientCategoriesLast = styled.div`
-  max-width: var(--Default-Body-width);
+  // max-width: var(--Default-Body-width);
+  box-sizing: border-box;
+  width: 80vw;
+  max-width: 1440px;
   height: fit-content;
   background-color: var(--cardgroundcolor);
   display: flex;
@@ -124,6 +137,23 @@ export const ProfileClientCategoriesLast = styled.div`
   margin-top: 1rem;
 `;
 
+export const ProfileClientCategoriesVeryLast = styled.div`
+  //max-width: var(--Default-Body-width);
+  //height: fit-content;
+  box-sizing: border-box;
+  width: 80vw;
+  max-width: 1440px;
+  background-color: var(--cardgroundcolor);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 100px;
+`;
+
 export const CategoriesBox = styled.button`
   background-color: var(--primarygreenbuttonbackground);
   color: var(--primarygreenbuttontext);
@@ -133,6 +163,7 @@ export const CategoriesBox = styled.button`
 
 export const CategoriesButtonBox = styled.div`
   max-width: fit-content;
+
   height: fit-content;
   display: flex;
   flex-direction: row;
@@ -145,7 +176,10 @@ export const TagBox = styled.p`
 `;
 
 export const ProfileClientGalery = styled.div`
-  max-width: var(--Default-Body-width);
+  //max-width: var(--Default-Body-width);
+  box-sizing: border-box;
+  width: 80vw;
+  max-width: 1440px;
   height: fit-content;
   background-color: var(--cardgroundcolor);
   display: flex;
@@ -156,4 +190,23 @@ export const ProfileClientGalery = styled.div`
   gap: 0.5rem;
   margin-top: 1rem;
   margin-bottom: var(--Default-Distanse-beetween-sections);
+`;
+
+export const ProfileWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  max-width: 1440px;
+  box-sizing: border-box;
+`;
+
+export const ProfileWrapperDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  max-width: 1440px;
+  box-sizing: border-box;
 `;

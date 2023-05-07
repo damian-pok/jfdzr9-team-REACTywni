@@ -46,7 +46,7 @@ const Login = () => {
   return (
     <>
       <SiteContainer>
-        <HeaderStyles>Logowanie</HeaderStyles>
+        <HeaderStyles>Zaloguj się!</HeaderStyles>
         <FormContainer>
           <ImageStyle src={LoginIllustration} />
           <FormFieldRegister onSubmit={handleSubmit(onSubmit)}>

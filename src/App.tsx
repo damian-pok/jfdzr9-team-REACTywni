@@ -44,7 +44,7 @@ function App() {
         <Route path="register" element={<Register />} />
         <Route path="profile" element={<ProfileForm />} />
         <Route element={<AuthRequired />}>
-          <Route path="client" element={<ProfileClient />} />
+          <Route path="user" element={<ProfileClient />} />
           <Route path="freelancer" element={<ProfileFreelancer />} />
           <Route path="admin" element={<AdminPanel />} />
         </Route>
