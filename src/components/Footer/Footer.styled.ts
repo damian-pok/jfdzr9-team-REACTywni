@@ -17,6 +17,13 @@ export const FooterField = styled.div`
   box-sizing: content-box;
   position: absolute;
   bottom: 0;
+
+  @media (max-width: 900px) {
+    display: grid;
+    min-width: 600px;
+    height: 100px;
+    justify-content: center;
+  }
 `;
 
 export const FooterNavField = styled.div`
