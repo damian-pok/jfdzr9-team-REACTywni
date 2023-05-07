@@ -1,4 +1,4 @@
-import { HashLink as Link } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 import { PrimaryGreenButton, PrimaryNavyButton } from "../UI/Buttons/Buttons.styled";
 import {
   MenuField,
@@ -14,6 +14,7 @@ import { getAuth, signOut } from "firebase/auth";
 //import DarkLogoFindADesigner from "./../../assets/logos/find-a-designer-white-logo.svg";
 import ToggleSwitch from "./../UI/Toggle/Toggle.components";
 import LightLogoMode from "./../../assets/logos/find-a-designer-logo.svg";
+
 //import DarkLogoMode from "./../../assets/logos/find-a-designer-logo-white.svg";
 
 const Menu = () => {
