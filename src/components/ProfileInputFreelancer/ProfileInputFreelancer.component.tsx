@@ -22,6 +22,11 @@ export interface IJob {
   content: string;
   date: string;
   status: string;
+  email: string;
+}
+
+export interface IJobs {
+  jobs: IJob[] | [];
 }
 export interface IProfileInputFreelancer {
   uid: string;
@@ -32,7 +37,6 @@ export interface IProfileInputFreelancer {
   city: string;
   experience: number;
   aboutMe: string;
-  gallery: string;
   branding: string;
   print: string;
   digital: string;
@@ -40,7 +44,7 @@ export interface IProfileInputFreelancer {
   ilustrations: string;
   other: string;
   tags: string;
-  jobs: IJob[];
+  jobs: IJobs | [];
 }
 
 export const ProfileInputFreelancer = () => {
@@ -98,7 +102,7 @@ export const ProfileInputFreelancer = () => {
   const { loading } = useAuth();
   if (loading) return <div>Loading...</div>;
 
-  const onSubmit = handleSubmit((data) => {
+  const onSubmit = handleSubmit((data: IProfileInputFreelancer) => {
     data.branding = data.branding ?? null;
     data.print = data.print ?? null;
     data.digital = data.digital ?? null;
@@ -159,11 +163,6 @@ export const ProfileInputFreelancer = () => {
           name="tags"
           control={control}
           render={({ field }) => <InputTextArea placeholder="Tagi..." type={"text"} {...field} />}
-        />
-        <Controller
-          name="gallery"
-          control={control}
-          render={({ field }) => <InputForm placeholder="Galeria" type={"text"} {...field} />}
         />
         <h2>Usługi</h2>
         <CategoryGroup>

@@ -72,7 +72,7 @@ export const darkTheme = {
   footerlinktextcolorhouver: `#21ff95`,
 
   //Images
-  MenuLogo: `./../assets/logos/find-a-designer-logo-white`,
+  MenuLogo: `./../assets/logos/find-a-designer-logo-white.svg`,
 
   //---------------------------------
 

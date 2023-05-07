@@ -2,33 +2,39 @@ import styled from "styled-components";
 import { HashLink as Link } from "react-router-hash-link";
 
 export const MenuField = styled.div`
-  max-width: var(--Default-Body-width);
+  //width: var(--Default-Body-width);
+  box-sizing: border-box;
+  width: 80vw;
+  max-width: 1440px;
   height: fit-content;
   border-radius: 1rem;
   background-color: var(--cardgroundcolor);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1.5rem 2.5rem;
+  padding: 1rem 2.5rem;
   align-items: center;
 `;
 
 export const LogosAndPrimaryButtonsField = styled.div`
   box-sizing: border-box;
-  width: 78.25rem;
+  width: 80vw;
+  max-width: 1440px;
   display: flex;
-  flex-direction: row;
+  //flex-direction: row;
   justify-content: space-between;
   align-items: center;
   border-bottom: 0.01rem solid var(--secoundary-grey);
   padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 `;
 
 export const SecoundMenuField = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: right;
   align-items: center;
   padding-top: 1rem;
   gap: 2rem;
@@ -61,7 +67,7 @@ export const Logo = styled.img`
 export const ButtonMenuField = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: right;
   align-items: center;
   gap: 1.5rem;
 `;
