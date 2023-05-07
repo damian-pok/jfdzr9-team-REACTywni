@@ -28,6 +28,11 @@ export const LogosAndPrimaryButtonsField = styled.div`
   padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
+
+  @media (max-width: 900px) {
+    display: grid;
+    min-width: 600px;
+  }
 `;
 
 export const SecoundMenuField = styled.div`
