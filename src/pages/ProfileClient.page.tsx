@@ -15,7 +15,6 @@ import {
   CategoriesBox,
   CategoriesButtonBox,
   ProfileClientGalery,
-  TagBox,
   ProfileClientCategoriesLast,
   ProfileClientFrameKey,
 } from "../components/ProfileClientFrame/ProfileClientFrame.styled";
